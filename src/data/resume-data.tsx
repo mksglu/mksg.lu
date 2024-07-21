@@ -17,6 +17,7 @@ import {
   TastyCloudLogo,
   YearProgressLogo,
 } from "@/images/logos";
+import Mert from "@/images/pp-mert.jpg";
 import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
 
 export const RESUME_DATA = {
@@ -28,8 +29,7 @@ export const RESUME_DATA = {
     "Founding Engineer, Technical Lead, Architect, Detail-oriented Developer, Engineering Leader.",
   summary:
     "My name is Mert Köseoğlu, and I am a Senior Software Engineer with over ten years of experience in software development. I have worked in roles such as Founding Engineer, Architect, Technical Lead, and Engineering Leader in fully remote teams worldwide and contributed to business value by developing high-quality products. I am particularly interested in front-end heavy full-stack JavaScript engineer roles. I specialize in JavaScript and TypeScript and have a strong interest in Software Architecture, Design Patterns, Node.js, Test-driven development, React, Next.js/Remix and React Native.",
-  avatarUrl:
-    "https://media.licdn.com/dms/image/D4D03AQGXKZrPS_-dEw/profile-displayphoto-shrink_400_400/0/1721517154582?e=1727308800&v=beta&t=JOR23URVVVA0bJ-9jPQoQoPdNfaG8HfMbZQJZqokGFY",
+  avatarUrl: Mert,
   personalWebsiteUrl: "https://mksg.lu",
   contact: {
     email: "bm.ksglu@gmail.com",
