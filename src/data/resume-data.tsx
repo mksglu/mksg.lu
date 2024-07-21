@@ -86,6 +86,7 @@ export const RESUME_DATA = {
         "GraphQL",
         "Next.js",
         "tRPC",
+        "React Native",
       ],
       description:
         "Easy appointment management platform for businesses. Update your business information, manage your services, keep track of your employees, and monitor your customers. See statistics, and communicate with them.",
