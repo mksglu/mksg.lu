@@ -29,7 +29,7 @@ export const RESUME_DATA = {
   summary:
     "My name is Mert Köseoğlu, and I am a Senior Software Engineer with over ten years of experience in software development. I have worked in roles such as Founding Engineer, Architect, Technical Lead, and Engineering Leader in fully remote teams worldwide and contributed to business value by developing high-quality products. I am particularly interested in front-end heavy full-stack JavaScript engineer roles. I specialize in JavaScript and TypeScript and have a strong interest in Software Architecture, Design Patterns, Node.js, Test-driven development, React, Next.js/Remix and React Native.",
   avatarUrl:
-    "https://pbs.twimg.com/profile_images/1814799198388191233/iD50bdu3_400x400.jpg",
+    "https://media.licdn.com/dms/image/D4D03AQGXKZrPS_-dEw/profile-displayphoto-shrink_400_400/0/1721517154582?e=1727308800&v=beta&t=JOR23URVVVA0bJ-9jPQoQoPdNfaG8HfMbZQJZqokGFY",
   personalWebsiteUrl: "https://mksg.lu",
   contact: {
     email: "bm.ksglu@gmail.com",
