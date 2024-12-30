@@ -121,8 +121,8 @@ export const RESUME_DATA = {
     {
       title: "D-Charge - Admin Panel",
       techStack: [
-        "TypeScript",
-        "Zod",
+        "TypeScript/Zod",
+        "Shadcn UI",
         "TanStack",
         "Zustand",
         "React.js",
