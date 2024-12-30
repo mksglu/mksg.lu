@@ -26,9 +26,9 @@ export const RESUME_DATA = {
   location: "Ankara, Türkiye",
   locationLink: "https://www.google.com/maps/place/Ankara/",
   about:
-    "Founding Engineer, Technical Lead, Architect, Detail-oriented Developer, Engineering Leader.",
+    "Founding Engineer, Technical Lead, Software Architect, Detail-oriented Developer, Engineering Leader, Senior Software Engineer",
   summary:
-    "My name is Mert Köseoğlu, and I am a Senior Software Engineer with over ten years of experience in software development. I have worked in roles such as Founding Engineer, Architect, Technical Lead, and Engineering Leader in fully remote teams worldwide and contributed to business value by developing high-quality products. I am particularly interested in front-end heavy full-stack JavaScript engineer roles. I specialize in JavaScript and TypeScript and have a strong interest in Software Architecture, Design Patterns, Node.js, Test-driven development, React, Next.js/Remix and React Native.",
+    "My name is Mert Köseoğlu, I am a Senior Software Engineer with over 10 years of experience in front-end–heavy full-stack JavaScript development and technical leadership within fully remote, global teams. Adept at architecting scalable solutions, building and mentoring engineering teams, and delivering high-impact software products. Expertise in test-driven development (TDD), TypeScript, Node.js, Bun, React, and React Native.",
   avatarUrl: Mert,
   personalWebsiteUrl: "https://mksg.lu",
   contact: {
@@ -56,20 +56,17 @@ export const RESUME_DATA = {
     {
       company: "Mert Koseoglu, Software Forge",
       link: "https://mksg.lu",
-      badges: ["Remote"],
+      badges: ["TR", "NL", "DE", "Remote"],
       title: "Founder",
       logo: ConsultlyLogo,
       start: "2024",
       end: null,
       description:
-        "As a technology consultancy, Mert Koseoglu, Software Forge delivers expert services and high-quality products to a variety of projects and clients. Tech-stack: Node.js, React, Next.js, TypeScript, Tanstack, Zustand, Vite, Radix UI, Tailwind, React Native, Zod, Hono.js, AWS",
+        "Mert Koseoğlu, Software Forge, is a software consultancy brand that provides strategic guidance to projects spanning from early-stage ventures to enterprise-grade initiatives. It assembles bespoke engineering teams aligned with specific project needs and leverages AI alongside cloud-native architectures to deliver highly scalable solutions.",
     },
   ],
   skills: [
-    "JavaScript",
-    "TypeScript",
-    "React/Next.js/Remix",
-    "Node.js",
+    "Senior Software Engineer",
     "Engineering Management",
     "Technical Leadership",
     "Founding Engineer",
@@ -94,6 +91,53 @@ export const RESUME_DATA = {
       link: {
         label: "https://github.com/oxvo",
         href: "https://github.com/oxvo",
+      },
+    },
+    {
+      title: "VDF - Website (It's not live yet.)",
+      techStack: [
+        "TypeScript",
+        "Zod",
+        "TanStack",
+        "Zustand",
+        "Next.js",
+        "Tailwind",
+        "Storybook",
+        "E2E Testing",
+        ".NET 8",
+        "Strapi CMS",
+        "Docker",
+        "Kubernetes",
+        "Nginx"
+      ],
+      description:
+        "Built and led an eight-person engineering team to deliver a large-scale web application leveraging Next.js (SSR/SSG), a custom design system, and a modern stack. Combined strategic guidance with hands-on coding, ensuring a seamless journey from architecture to deployment.",
+      logo: ParabolLogo,
+      link: {
+        label: "https://www.linkedin.com/company/vdf",
+        href: "https://www.linkedin.com/company/vdf",
+      },
+    },
+    {
+      title: "D-Charge - Admin Panel",
+      techStack: [
+        "TypeScript",
+        "Zod",
+        "TanStack",
+        "Zustand",
+        "React.js",
+        "Tailwind",
+        "Node.js",
+        "Docker",
+        "Kubernetes",
+        "Nginx"
+      ],
+      description:
+        "Leading the front-end and BFF REST API development of an admin panel—utilized by distributors, administrators, and various stakeholders—while overseeing two interns.",
+      logo: ParabolLogo,
+      link: {
+        label: "https://www.linkedin.com/company/d-charge",
+        href: "https://www.linkedin.com/company/d-charge",
       },
     },
   ],
