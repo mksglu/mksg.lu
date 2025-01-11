@@ -4,29 +4,30 @@ import { Inter } from "next/font/google";
 
 import "./globals.css";
 import React from "react";
+import { RESUME_DATA } from "@/data/resume-data";
 
 export const metadata: Metadata = {
-  title: "Mert Köseoğlu - Software Engineering, LLMs, Agents, Generative AI",
-  description: "Senior Software Engineer with over 10 years of experience in front-end–heavy full-stack JavaScript development and technical leadership within fully remote, global teams.",
+  title: `${RESUME_DATA.name} • ${RESUME_DATA.about}`,
+  description: RESUME_DATA.summary,
   icons: {
     icon: [
       {
-        url: '/favicon.ico',
-        sizes: '32x32',
+        url: "/favicon.ico",
+        sizes: "32x32",
       },
       {
-        url: '/favicon/icon.png',
-        sizes: '192x192',
-        type: 'image/png',
+        url: "/favicon/icon.png",
+        sizes: "192x192",
+        type: "image/png",
       },
     ],
     apple: {
-      url: '/favicon/apple-touch-icon.png',
-      sizes: '180x180',
-      type: 'image/png',
+      url: "/favicon/apple-touch-icon.png",
+      sizes: "180x180",
+      type: "image/png",
     },
   },
-  manifest: '/favicon/site.webmanifest',
+  manifest: "/favicon/site.webmanifest",
 };
 
 // If loading a variable font, you don't need to specify the font weight

@@ -10,10 +10,6 @@ import { RESUME_DATA } from "@/data/resume-data";
 import { ProjectCard } from "@/components/project-card";
 import Image from "next/image";
 
-export const metadata: Metadata = {
-  title: `${RESUME_DATA.name} - ${RESUME_DATA.about}`,
-  description: RESUME_DATA.summary,
-};
 import Mert from "@/images/pp-mert.jpg";
 export default function Page() {
   return (
