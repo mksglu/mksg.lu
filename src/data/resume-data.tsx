@@ -1,22 +1,4 @@
-import {
-  AmbitLogo,
-  BarepapersLogo,
-  BimLogo,
-  CDGOLogo,
-  ClevertechLogo,
-  ConsultlyLogo,
-  EvercastLogo,
-  Howdy,
-  JarockiMeLogo,
-  JojoMobileLogo,
-  Minimal,
-  MobileVikingsLogo,
-  MonitoLogo,
-  NSNLogo,
-  ParabolLogo,
-  TastyCloudLogo,
-  YearProgressLogo,
-} from "@/images/logos";
+import { ConsultlyLogo, ParabolLogo } from "@/images/logos";
 import Mert from "@/images/pp-mert.jpg";
 import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
 
@@ -25,10 +7,9 @@ export const RESUME_DATA = {
   initials: "MK",
   location: "Ankara, Türkiye",
   locationLink: "https://www.google.com/maps/place/Ankara/",
-  about:
-    "Founding Engineer, Technical Lead, Software Architect, Detail-oriented Developer, Engineering Leader, Senior Software Engineer",
+  about: "Software Engineering, LLMs, Agents, Generative AI",
   summary:
-    "My name is Mert Köseoğlu, I am a Senior Software Engineer with over 10 years of experience in front-end–heavy full-stack JavaScript development and technical leadership within fully remote, global teams. Adept at architecting scalable solutions, building and mentoring engineering teams, and delivering high-impact software products. Expertise in test-driven development (TDD), TypeScript, Node.js, Bun, React, and React Native.",
+    "My name is Mert Köseoğlu, I am a Senior Software Engineer with over 10 years of experience in front-end–heavy full-stack JavaScript development and technical leadership within fully remote, global teams. Adept at architecting scalable solutions, building and mentoring engineering teams, and delivering high-impact software products. Expertise in test-driven development (TDD), TypeScript, Node.js, Bun, React, and React Native, AI, LLMs, Agents",
   avatarUrl: Mert,
   personalWebsiteUrl: "https://mksg.lu",
   contact: {
@@ -74,6 +55,25 @@ export const RESUME_DATA = {
   ],
   projects: [
     {
+      title: "LLMs Agency",
+      techStack: [
+        "LLMs",
+        "Agents",
+        "Generative AI",
+        "Prompt Engineering",
+        "Langchain",
+        "RAG",
+        "Vector Databases",
+      ],
+      description:
+        "Empowering Businesses through AI and Large Language Models.",
+      logo: ParabolLogo,
+      link: {
+        label: "https://llms.agency/",
+        href: "https://llms.agency/",
+      },
+    },
+    {
       title: "OXVO",
       techStack: [
         "CTO",
@@ -108,7 +108,7 @@ export const RESUME_DATA = {
         "Strapi CMS",
         "Docker",
         "Kubernetes",
-        "Nginx"
+        "Nginx",
       ],
       description:
         "Built and led an eight-person engineering team to deliver a large-scale web application leveraging Next.js (SSR/SSG), a custom design system, and a modern stack. Combined strategic guidance with hands-on coding, ensuring a seamless journey from architecture to deployment.",
@@ -130,7 +130,7 @@ export const RESUME_DATA = {
         "Node.js",
         "Docker",
         "Kubernetes",
-        "Nginx"
+        "Nginx",
       ],
       description:
         "Leading the front-end and BFF REST API development of an admin panel—utilized by distributors, administrators, and various stakeholders—while overseeing two interns.",
