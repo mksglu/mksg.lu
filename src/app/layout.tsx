@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { Inter } from "next/font/google";
+import Script from 'next/script';
 
 import "./globals.css";
 import React from "react";
@@ -44,6 +45,18 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.className}>
       <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-NW0ZXNL54H"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-NW0ZXNL54H');
+          `}
+        </Script>
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
