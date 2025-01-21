@@ -9,7 +9,7 @@ export const RESUME_DATA = {
   locationLink: "https://www.google.com/maps/place/Ankara/",
   about: "Software Engineering, LLMs, Agents, Generative AI",
   summary:
-    "My name is Mert Köseoğlu, I am a Senior Software Engineer with over 10 years of experience in front-end–heavy full-stack JavaScript development and technical leadership within fully remote, global teams. Adept at architecting scalable solutions, building and mentoring engineering teams, and delivering high-impact software products. Expertise in test-driven development (TDD), TypeScript, Node.js, Bun, React, and React Native, AI, LLMs, Agents",
+    "My name is Mert Köseoğlu, I am a Senior Software Engineer with over 10 years of experience in development and technical leadership within fully remote, global teams. Adept at architecting scalable solutions, building and mentoring engineering teams, and delivering high-impact software products. Expertise in test-driven development (TDD), TypeScript, Node.js, Bun, React, and React Native, AI, LLMs, Agents",
   avatarUrl: Mert,
   personalWebsiteUrl: "https://mksg.lu",
   contact: {
