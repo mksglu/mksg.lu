@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import { ProjectCard } from "@/components/project-card";
 import Image from "next/image";
+import { RecommendationCard } from "@/components/recommendation-card";
 
 import Mert from "@/images/pp-mert.jpg";
 export default function Page() {
@@ -134,6 +135,17 @@ export default function Page() {
               </Card>
             );
           })}
+        </Section>
+        <Section>
+          <h2 className="text-xl font-bold">Recommendations</h2>
+          <div className="grid grid-cols-1 gap-3 print:grid-cols-2 print:gap-2">
+            {RESUME_DATA.recommendations.map((recommendation) => (
+              <RecommendationCard
+                key={`${recommendation.name}-${recommendation.date}`}
+                {...recommendation}
+              />
+            ))}
+          </div>
         </Section>
         {/* <Section>
           <h2 className="text-xl font-bold">Education</h2>
