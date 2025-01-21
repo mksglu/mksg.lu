@@ -14,7 +14,6 @@ export const RESUME_DATA = {
   personalWebsiteUrl: "https://mksg.lu",
   contact: {
     email: "bm.ksglu@gmail.com",
-    tel: "+90",
     social: [
       {
         name: "GitHub",

@@ -45,18 +45,6 @@ export default function Page() {
                   </a>
                 </Button>
               ) : null}
-              {RESUME_DATA.contact.tel ? (
-                <Button
-                  className="size-8"
-                  variant="outline"
-                  size="icon"
-                  asChild
-                >
-                  <a href={`tel:${RESUME_DATA.contact.tel}`}>
-                    <PhoneIcon className="size-4" />
-                  </a>
-                </Button>
-              ) : null}
               {RESUME_DATA.contact.social.map((social) => (
                 <Button
                   key={social.name}
@@ -71,17 +59,23 @@ export default function Page() {
                 </Button>
               ))}
             </div>
-            <div className="hidden flex-col gap-x-1 font-mono text-sm text-muted-foreground print:flex print:text-[12px]">
+            <div className="hidden flex-col gap-y-1 font-mono text-sm text-muted-foreground print:flex">
               {RESUME_DATA.contact.email ? (
-                <a href={`mailto:${RESUME_DATA.contact.email}`}>
-                  <span className="underline">{RESUME_DATA.contact.email}</span>
+                <a href={`mailto:${RESUME_DATA.contact.email}`} className="inline-flex gap-x-2 items-center">
+                  <MailIcon className="size-3" />
+                  <span>{RESUME_DATA.contact.email}</span>
                 </a>
               ) : null}
-              {RESUME_DATA.contact.tel ? (
-                <a href={`tel:${RESUME_DATA.contact.tel}`}>
-                  <span className="underline">{RESUME_DATA.contact.tel}</span>
+              {RESUME_DATA.contact.social.map((social) => (
+                <a 
+                  key={social.name}
+                  href={social.url}
+                  className="inline-flex gap-x-2 items-center"
+                >
+                  <social.icon className="size-3" />
+                  <span>{social.url}</span>
                 </a>
-              ) : null}
+              ))}
             </div>
           </div>
 
