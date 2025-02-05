@@ -78,3 +78,46 @@
 .print-force-new-page {
   page-break-before: always;
 }
+
+@media print {
+  @page {
+    size: auto;
+    margin: 12mm 0;
+  }
+
+  @page :first {
+    margin: 12mm 0;
+  }
+
+  @page :left {
+    margin: 12mm 0;
+  }
+
+  @page :right {
+    margin: 12mm 0;
+  }
+
+  html {
+    margin: 0 !important;
+    padding: 0 10mm !important;
+  }
+
+  body {
+    margin: 0;
+    padding: 0 !important;
+    min-height: 100%;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  section:has(h2:contains("Skills")) {
+    break-before: page;
+    break-after: avoid;
+  }
+}
+
+/* Hide all headers and footers */
+@page {
+  size: auto;
+  margin: 0mm;
+}

@@ -14,7 +14,7 @@ import { RecommendationCard } from "@/components/recommendation-card";
 import Mert from "@/images/pp-mert.jpg";
 export default function Page() {
   return (
-    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
+    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-0 md:p-16">
       <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-4">
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
@@ -76,6 +76,10 @@ export default function Page() {
                   <span>{social.url}</span>
                 </a>
               ))}
+              <span className="inline-flex gap-x-2 items-center">
+                <GlobeIcon className="size-3" />
+                {RESUME_DATA.personalWebsiteUrl}
+              </span>
             </div>
           </div>
 
@@ -94,7 +98,7 @@ export default function Page() {
           <h2 className="text-xl font-bold">Work Experience</h2>
           {RESUME_DATA.work.map((work) => {
             return (
-              <Card key={work.company}>
+              <Card key={work.company} className="print:break-inside-avoid">
                 <CardHeader>
                   <div className="flex items-center justify-between gap-x-2 text-base">
                     <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
@@ -136,6 +140,7 @@ export default function Page() {
             {RESUME_DATA.recommendations.map((recommendation) => (
               <RecommendationCard
                 key={`${recommendation.name}-${recommendation.date}`}
+                className="print:break-inside-avoid"
                 {...recommendation}
               />
             ))}
@@ -163,7 +168,7 @@ export default function Page() {
             );
           })}
         </Section> */}
-        <Section>
+        <Section className="print:break-inside-avoid">
           <h2 className="text-xl font-bold">Skills</h2>
           <div className="flex flex-wrap gap-1">
             {RESUME_DATA.skills.map((skill) => {
@@ -175,8 +180,7 @@ export default function Page() {
             })}
           </div>
         </Section>
-
-        <Section className="print-force-new-page scroll-mb-16">
+        <Section className="scroll-mb-16 print:break-inside-avoid">
           <h2 className="text-xl font-bold">Projects</h2>
           <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
             {RESUME_DATA.projects.map((project) => {

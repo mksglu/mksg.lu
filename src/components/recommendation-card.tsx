@@ -7,6 +7,7 @@ interface RecommendationCardProps {
   date: string;
   content: string;
   linkedIn?: string;
+  className?: string;
 }
 
 export function RecommendationCard({
@@ -16,9 +17,10 @@ export function RecommendationCard({
   date,
   content,
   linkedIn,
+  className,
 }: RecommendationCardProps) {
   return (
-    <Card>
+    <Card className={className}>
       <CardHeader>
         <div className="flex items-center justify-between gap-x-2 text-base">
           <div className="flex-1">
