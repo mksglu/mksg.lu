@@ -58,6 +58,16 @@ export default function Page() {
                   </a>
                 </Button>
               ))}
+              <Button
+                className="size-8"
+                variant="outline"
+                size="icon"
+                asChild
+              >
+                <a href="https://cal.com/mksglu" target="_blank" rel="noopener noreferrer">
+                  <GlobeIcon className="size-4" />
+                </a>
+              </Button>
             </div>
             <div className="hidden flex-col gap-y-1 font-mono text-sm text-muted-foreground print:flex">
               {RESUME_DATA.contact.email ? (
@@ -80,6 +90,15 @@ export default function Page() {
                 <GlobeIcon className="size-3" />
                 {RESUME_DATA.personalWebsiteUrl}
               </span>
+              <a 
+                href="https://cal.com/mksglu"
+                className="inline-flex gap-x-2 items-center"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <GlobeIcon className="size-3" />
+                <span>https://cal.com/mksglu</span>
+              </a>
             </div>
           </div>
 
