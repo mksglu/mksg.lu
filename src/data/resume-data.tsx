@@ -34,7 +34,7 @@ export const RESUME_DATA = {
   },
   work: [
     {
-      company: "Doğuş Technology",
+      company: "Mert Koseoglu, Software Forge",
       link: "https://mksg.lu",
       badges: ["TR", "Remote"],
       title: "Senior Software Engineering Consultant",
@@ -42,7 +42,7 @@ export const RESUME_DATA = {
       start: "2024",
       end: null,
       description:
-        "Software consultancy providing strategic guidance and engineering solutions. Key projects: VDF Web, D-Charge.",
+        "Software consultancy providing strategic guidance and engineering solutions. Key projects: Doğuş Technology - VDF Web, D-Charge.",
     },
     {
       company: "Planhat",
