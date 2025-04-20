@@ -9,7 +9,9 @@ export const RESUME_DATA = {
   locationLink: "https://www.google.com/maps/place/Ankara/",
   about: "Software Engineering, LLMs, Agents, Generative AI",
   summary:
-    "My name is Mert Köseoğlu, I am a Software Engineer with over 10 years of experience in development and technical leadership within fully remote, global teams. Adept at architecting scalable solutions, building and mentoring engineering teams, and delivering high-impact software products. Expertise in test-driven development (TDD), TypeScript, Node.js, Bun, React, and React Native, AI, LLMs, Agents",
+    "Senior Software Engineer and Technical Leader with over 10 years of experience delivering high-impact software products for global, remote teams. Proven ability to architect scalable solutions and lead high-performing engineering teams. Expertise in modern web technologies including TypeScript, Node.js, Bun, React, and React Native, alongside advanced AI/LLM applications, agent development including MCP and A2A protocols, and robust testing methodologies.",
+  availability:
+    "Now open to consulting opportunities in AI, full-stack development, and technical leadership.",
   avatarUrl: Mert,
   personalWebsiteUrl: "https://mksg.lu",
   contact: {
@@ -36,13 +38,13 @@ export const RESUME_DATA = {
     {
       company: "Mert Koseoglu, Software Forge",
       link: "https://mksg.lu",
-      badges: ["TR", "Remote"],
+      badges: ["London, England, United Kingdom", "Remote"],
       title: "Senior Software Engineering Consultant",
       logo: dt,
       start: "2024",
       end: null,
       description:
-        "Software consultancy providing strategic guidance and engineering solutions. Key projects: Doğuş Technology - VDF Web, D-Charge.",
+        "Software consultancy providing strategic guidance and engineering solutions. Key projects: Doğuş Technology - VDF Web, D-Charge, Architectural Standards & Boilerplates",
     },
     {
       company: "Planhat",
@@ -113,7 +115,7 @@ export const RESUME_DATA = {
     {
       company: "Mert Koseoglu, Software Forge",
       link: "https://mksg.lu",
-      badges: ["TR", "DE", "NL", "Remote"],
+      badges: ["London, England, United Kingdom", "Remote"],
       title: "Software Engineering Consultant",
       logo: ConsultlyLogo,
       start: "2013",
@@ -134,7 +136,7 @@ export const RESUME_DATA = {
     },
     {
       name: "Enes Öztürk",
-      title: "Senior Software Engineer",
+      title: "Senior Software Engineer at Qooper",
       relationship: "reported directly to Mert Köseoğlu",
       date: "June 28, 2022",
       content:
@@ -143,7 +145,7 @@ export const RESUME_DATA = {
     },
     {
       name: "Emre Deger",
-      title: "Lead Backend Engineer at Qooper Analytics",
+      title: "Lead Backend Engineer at Qooper",
       relationship: "reported directly to Mert Köseoğlu",
       date: "June 28, 2022",
       content:
@@ -152,7 +154,7 @@ export const RESUME_DATA = {
     },
     {
       name: "Sitki Bagdat",
-      title: "Senior Software Engineer",
+      title: "Senior Software Engineer at Qooper",
       relationship: "reported directly to Mert Köseoğlu",
       date: "June 27, 2022",
       content:
@@ -186,6 +188,66 @@ export const RESUME_DATA = {
   ],
   projects: [
     {
+      title: "MCP Directory & Hub",
+      techStack: [
+        "Cloudflare Pages",
+        "Cloudflare Workers",
+        "Cloudflare Durable Objects",
+        "Cloudflare Registrar",
+        "Next.js (SSR)",
+        "Infrastructure Operations",
+        "Web Crawling",
+        "Indexing",
+      ],
+      description:
+        "Operating the infrastructure for model-context-protocol.com, the open directory for discovering and connecting to MCP servers and clients, handling 30K daily requests. In collaboration with Cloudflare, built the entire platform on their ecosystem including Pages for Next.js SSR, Workers and Durable Objects for crawling and indexing, and Cloudflare Registrar for domain management.URL: model-context-protocol.com",
+      logo: ParabolLogo,
+      link: {
+        label: "model-context-protocol.com",
+        href: "https://model-context-protocol.com/",
+      },
+    },
+    {
+      title: "xASO",
+      techStack: [
+        "TypeScript",
+        "Node.js",
+        "React",
+        "Next.js",
+        "Data Analysis",
+        "SEO/ASO Algorithms",
+        "Market Trend Analysis",
+        "SaaS Development",
+      ],
+      description:
+        "Comprehensive App Store Optimization platform that helps developers improve their app's visibility and performance through keyword analysis, competition tracking, and market trend insights. The platform provides in-depth metrics including search volume, market position, competition analysis, and AI-powered recommendations. URL: xaso.io",
+      logo: ParabolLogo,
+      link: {
+        label: "xaso.io",
+        href: "https://xaso.io/",
+      },
+    },
+    {
+      title: "xHabit",
+      techStack: [
+        "React Native",
+        "Expo",
+        "TypeScript",
+        "iOS Development",
+        "Mobile UX/UI",
+        "AI Integration",
+        "Habit Formation Algorithms",
+        "Behavioral Science",
+      ],
+      description:
+        "Designed and developed xHabit, an innovative iOS habit tracker application that leverages artificial intelligence to help users build and maintain positive habits. The app provides personalized recommendations, adaptive reminders, and progress insights based on individual behavior patterns and goals. Built with Expo and React Native for a seamless, native-like user experience.",
+      logo: ParabolLogo,
+      link: {
+        label: "Coming Soon",
+        href: "#",
+      },
+    },
+    {
       title: "LLMs Agency",
       techStack: [
         "LLMs",
@@ -197,7 +259,7 @@ export const RESUME_DATA = {
         "Vector Databases",
       ],
       description:
-        "Empowering Businesses through AI and Large Language Models.",
+        "Empowering Businesses through AI and Large Language Models. URL: llms.agency",
       logo: ParabolLogo,
       link: {
         label: "https://llms.agency/",
@@ -217,7 +279,7 @@ export const RESUME_DATA = {
         "React Native",
       ],
       description:
-        "Easy appointment management platform for businesses. Update your business information, manage your services, keep track of your employees, and monitor your customers. See statistics, and communicate with them.",
+        "Easy appointment management platform for businesses. Update your business information, manage your services, keep track of your employees, and monitor your customers. See statistics, and communicate with them. URL: github.com/oxvo",
       logo: ParabolLogo,
       link: {
         label: "https://github.com/oxvo",
@@ -242,7 +304,7 @@ export const RESUME_DATA = {
         "Nginx",
       ],
       description:
-        "Built and led an eight-person engineering team to deliver a large-scale web application leveraging Next.js (SSR/SSG), a custom design system, and a modern stack. Combined strategic guidance with hands-on coding, ensuring a seamless journey from architecture to deployment.",
+        "Built and led an eight-person engineering team to deliver a large-scale web application leveraging Next.js (SSR/SSG), a custom design system, and a modern stack. Combined strategic guidance with hands-on coding, ensuring a seamless journey from architecture to deployment. URL: vdf.com.tr",
       logo: ParabolLogo,
       link: {
         label: "https://www.linkedin.com/company/vdf",
@@ -250,7 +312,7 @@ export const RESUME_DATA = {
       },
     },
     {
-      title: "D-Charge Admin Panel",
+      title: "D-Charge",
       techStack: [
         "TypeScript/Zod",
         "Shadcn UI",
@@ -264,11 +326,31 @@ export const RESUME_DATA = {
         "Nginx",
       ],
       description:
-        "Leading the front-end and BFF REST API development of an admin panel—utilized by distributors, administrators, and various stakeholders—while overseeing two interns.",
+        "Leading the front-end and BFF REST API development of an admin panel—utilized by distributors, administrators, and various stakeholders—while overseeing two interns. URL: dcharge.com.tr",
       logo: ParabolLogo,
       link: {
         label: "https://www.linkedin.com/company/d-charge",
         href: "https://www.linkedin.com/company/d-charge",
+      },
+    },
+    {
+      title: "Architectural Standards & Boilerplates",
+      techStack: [
+        "System Architecture",
+        "Frontend Architecture",
+        "Next.js",
+        "React Server Components (RSC)",
+        "AWS",
+        "Boilerplate Development",
+        "Standardization",
+        "CI/CD Optimization",
+      ],
+      description:
+        "Led the design and implementation of architectural standards and reusable boilerplates for Doğuş Technology in Digital Solutions projects, utilizing Next.js with RSC and AWS infrastructure. Focused on enhancing developer experience, code quality, and deployment efficiency across multiple teams.",
+      logo: dt,
+      link: {
+        label: "Internal Project (Doğuş Technology)",
+        href: "#",
       },
     },
   ],

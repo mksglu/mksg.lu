@@ -58,41 +58,43 @@ export default function Page() {
                   </a>
                 </Button>
               ))}
-              <Button
-                className="size-8"
-                variant="outline"
-                size="icon"
-                asChild
-              >
-                <a href="https://cal.com/mksglu" target="_blank" rel="noopener noreferrer">
+              <Button className="size-8" variant="outline" size="icon" asChild>
+                <a
+                  href="https://cal.com/mksglu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <GlobeIcon className="size-4" />
                 </a>
               </Button>
             </div>
             <div className="hidden flex-col gap-y-1 font-mono text-sm text-muted-foreground print:flex">
               {RESUME_DATA.contact.email ? (
-                <a href={`mailto:${RESUME_DATA.contact.email}`} className="inline-flex gap-x-2 items-center">
+                <a
+                  href={`mailto:${RESUME_DATA.contact.email}`}
+                  className="inline-flex items-center gap-x-2"
+                >
                   <MailIcon className="size-3" />
                   <span>{RESUME_DATA.contact.email}</span>
                 </a>
               ) : null}
               {RESUME_DATA.contact.social.map((social) => (
-                <a 
+                <a
                   key={social.name}
                   href={social.url}
-                  className="inline-flex gap-x-2 items-center"
+                  className="inline-flex items-center gap-x-2"
                 >
                   <social.icon className="size-3" />
                   <span>{social.url}</span>
                 </a>
               ))}
-              <span className="inline-flex gap-x-2 items-center">
+              <span className="inline-flex items-center gap-x-2">
                 <GlobeIcon className="size-3" />
                 {RESUME_DATA.personalWebsiteUrl}
               </span>
-              <a 
+              <a
                 href="https://cal.com/mksglu"
-                className="inline-flex gap-x-2 items-center"
+                className="inline-flex items-center gap-x-2"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -113,7 +115,7 @@ export default function Page() {
             {RESUME_DATA.summary}
           </p>
         </Section>
-        <Section className="print:break-inside-avoid">
+        {/* <Section className="print:break-inside-avoid">
           <h2 className="text-xl font-bold">Skills</h2>
           <div className="flex flex-wrap gap-1">
             {RESUME_DATA.skills.map((skill) => {
@@ -124,7 +126,7 @@ export default function Page() {
               );
             })}
           </div>
-        </Section>
+        </Section> */}
         <Section>
           <h2 className="text-xl font-bold">Work Experience</h2>
           {RESUME_DATA.work.map((work) => {
@@ -229,6 +231,13 @@ export default function Page() {
           })),
         ]}
       />
+      <a
+        href="https://esenbogaresidence.com"
+        style={{ display: "none" }}
+        rel="noopener noreferrer"
+      >
+        Ankara Esenboğa Airport Aparthotel - Luxury Rental
+      </a>
     </main>
   );
 }
