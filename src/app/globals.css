@@ -81,43 +81,67 @@
 
 @media print {
   @page {
-    size: auto;
-    margin: 12mm 0;
-  }
-
-  @page :first {
-    margin: 12mm 0;
-  }
-
-  @page :left {
-    margin: 12mm 0;
-  }
-
-  @page :right {
-    margin: 12mm 0;
+    size: A4;
+    margin: 8mm 12mm;
   }
 
   html {
     margin: 0 !important;
-    padding: 0 10mm !important;
+    padding: 0 !important;
+    font-size: 14px;
   }
 
   body {
     margin: 0;
     padding: 0 !important;
-    min-height: 100%;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
 
-  section:has(h2:contains("Skills")) {
-    break-before: page;
-    break-after: avoid;
+  /* Tighter spacing for print */
+  .space-y-8 {
+    gap: 1rem !important;
   }
-}
 
-/* Hide all headers and footers */
-@page {
-  size: auto;
-  margin: 0mm;
+  .space-y-3 {
+    gap: 0.5rem !important;
+  }
+
+  .gap-y-3 {
+    gap: 0.5rem !important;
+  }
+
+  /* Prevent orphans and widows */
+  p, li {
+    orphans: 2;
+    widows: 2;
+  }
+
+  /* Keep headings with content */
+  h1, h2, h3, h4, h5, h6 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  /* Cards and sections should not break mid-content */
+  .print\\:break-inside-avoid,
+  [class*="Card"] {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Allow page breaks between major sections */
+  section {
+    break-inside: auto;
+  }
+
+  /* Ensure content flows properly */
+  main {
+    display: block !important;
+  }
+
+  /* Links should show URL */
+  a[href^="http"]:not(.print-no-url)::after {
+    content: none; /* Remove default - we handle URLs manually where needed */
+  }
 }

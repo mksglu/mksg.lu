@@ -7,15 +7,14 @@ import { Section } from "@/components/ui/section";
 import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
-import { ProjectCard } from "@/components/project-card";
 import Image from "next/image";
-import { RecommendationCard } from "@/components/recommendation-card";
+import { XIcon, LinkedInIcon } from "@/components/icons";
 
 import Mert from "@/images/pp-mert.jpg";
 export default function Page() {
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-0 md:p-16">
-      <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-4">
+      <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-3">
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
             <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
@@ -129,9 +128,9 @@ export default function Page() {
         </Section> */}
         <Section>
           <h2 className="text-xl font-bold">Work Experience</h2>
-          {RESUME_DATA.work.map((work) => {
+          {RESUME_DATA.work.map((work, index) => {
             return (
-              <Card key={work.company} className="print:break-inside-avoid">
+              <Card key={`${work.company}-${index}`} className="print:break-inside-avoid">
                 <CardHeader>
                   <div className="flex items-center justify-between gap-x-2 text-base">
                     <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
@@ -151,7 +150,7 @@ export default function Page() {
                         ))}
                       </span>
                     </h3>
-                    <div className="text-sm tabular-nums text-gray-500">
+                    <div className="text-sm tabular-nums text-gray-500 print:text-[10px]">
                       {work.start} - {work.end ?? "Present"}
                     </div>
                   </div>
@@ -160,61 +159,135 @@ export default function Page() {
                     {work.title}
                   </h4>
                 </CardHeader>
-                <CardContent className="mt-2 text-xs print:text-[10px]">
-                  {work.description}
+                <CardContent className="mt-2">
+                  {"description" in work && work.description && (
+                    <p className="text-xs text-muted-foreground mb-2 print:text-[10px]">
+                      {work.description}
+                    </p>
+                  )}
+                  <ul className="list-disc list-inside space-y-1 text-xs print:text-[10px]">
+                    {work.bullets.map((bullet, bulletIndex) => (
+                      <li key={bulletIndex} className="text-muted-foreground">
+                        {bullet}
+                      </li>
+                    ))}
+                  </ul>
                 </CardContent>
               </Card>
             );
           })}
         </Section>
-        <Section>
-          <h2 className="text-xl font-bold">Recommendations</h2>
-          <div className="grid grid-cols-1 gap-3 print:grid-cols-2 print:gap-2">
-            {RESUME_DATA.recommendations.map((recommendation) => (
-              <RecommendationCard
-                key={`${recommendation.name}-${recommendation.date}`}
-                className="print:break-inside-avoid"
-                {...recommendation}
-              />
+        <Section className="print:break-inside-avoid">
+          <h2 className="text-xl font-bold">Projects</h2>
+          {RESUME_DATA.projects.map((project) => {
+            return (
+              <Card key={project.title} className="print:break-inside-avoid">
+                <CardHeader>
+                  <div className="flex items-center justify-between gap-x-2 text-base">
+                    <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
+                      {"link" in project && project.link.href !== "#" ? (
+                        <a className="hover:underline" href={project.link.href} target="_blank">
+                          {project.title}
+                          <span className="ml-1 inline-block size-1.5 rounded-full bg-green-500"></span>
+                        </a>
+                      ) : (
+                        project.title
+                      )}
+                    </h3>
+                    {"link" in project && project.link.href !== "#" && (
+                      <div className="text-xs tabular-nums text-gray-500 print:text-[10px]">
+                        {project.link.label}
+                      </div>
+                    )}
+                  </div>
+                  <div className="flex flex-wrap gap-1 mt-1">
+                    {project.techStack.slice(0, 5).map((tech) => (
+                      <Badge
+                        variant="secondary"
+                        className="text-[10px] px-1 py-0 print:px-1 print:py-0.5 print:text-[8px] print:leading-tight"
+                        key={tech}
+                      >
+                        {tech}
+                      </Badge>
+                    ))}
+                    {project.techStack.length > 5 && (
+                      <Badge
+                        variant="secondary"
+                        className="text-[10px] px-1 py-0 print:px-1 print:py-0.5 print:text-[8px] print:leading-tight"
+                      >
+                        +{project.techStack.length - 5}
+                      </Badge>
+                    )}
+                  </div>
+                </CardHeader>
+                <CardContent className="mt-2 text-xs print:text-[10px]">
+                  {project.description}
+                </CardContent>
+              </Card>
+            );
+          })}
+        </Section>
+        <Section className="print:break-inside-avoid">
+          <h2 className="text-xl font-bold">Blog & Insights</h2>
+          <div className="space-y-2">
+            {RESUME_DATA.blogPosts.map((post, index) => (
+              <div key={index} className="border-l-2 border-muted pl-3 py-1">
+                <p className="text-sm font-medium">{post.title}</p>
+                <p className="text-xs text-muted-foreground mt-0.5 print:text-[10px]">
+                  {post.description}
+                </p>
+                <div className="flex gap-3 mt-1">
+                  <a
+                    href={post.linkedinUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:underline"
+                  >
+                    <LinkedInIcon className="size-3" />
+                    <span>LinkedIn</span>
+                  </a>
+                  <a
+                    href={post.xUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:underline"
+                  >
+                    <XIcon className="size-3" />
+                    <span>X</span>
+                  </a>
+                </div>
+              </div>
             ))}
           </div>
         </Section>
-        {/* <Section>
-          <h2 className="text-xl font-bold">Education</h2>
-          {RESUME_DATA.education.map((education) => {
-            return (
-              <Card key={education.school}>
-                <CardHeader>
-                  <div className="flex items-center justify-between gap-x-2 text-base">
-                    <h3 className="font-semibold leading-none">
-                      {education.school}
-                    </h3>
-                    <div className="text-sm tabular-nums text-gray-500">
-                      {education.start} - {education.end}
-                    </div>
-                  </div>
-                </CardHeader>
-                <CardContent className="mt-2 print:text-[12px]">
-                  {education.degree}
-                </CardContent>
-              </Card>
-            );
-          })}
-        </Section> */}
-        <Section className="scroll-mb-16 print:break-inside-avoid">
-          <h2 className="text-xl font-bold">Projects</h2>
-          <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
-            {RESUME_DATA.projects.map((project) => {
-              return (
-                <ProjectCard
-                  key={project.title}
-                  title={project.title}
-                  description={project.description}
-                  tags={project.techStack}
-                  link={"link" in project ? project.link.href : undefined}
-                />
-              );
-            })}
+        <Section>
+          <h2 className="text-xl font-bold">Recommendations</h2>
+          <div className="space-y-3">
+            {RESUME_DATA.recommendations.map((recommendation) => (
+              <div key={`${recommendation.name}-${recommendation.date}`} className="border-l-2 border-muted pl-3 py-1 print:break-inside-avoid">
+                <div className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
+                  {recommendation.linkedIn ? (
+                    <a
+                      href={recommendation.linkedIn}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-semibold text-sm hover:underline"
+                    >
+                      {recommendation.name}
+                    </a>
+                  ) : (
+                    <span className="font-semibold text-sm">{recommendation.name}</span>
+                  )}
+                  <span className="text-xs text-muted-foreground">{recommendation.title}</span>
+                </div>
+                <p className="text-xs text-muted-foreground/80 mt-0.5 italic print:text-[10px]">
+                  {recommendation.relationship} • {recommendation.date}
+                </p>
+                <p className="text-xs text-muted-foreground mt-1.5 print:text-[10px]">
+                  &ldquo;{recommendation.content}&rdquo;
+                </p>
+              </div>
+            ))}
           </div>
         </Section>
       </section>
