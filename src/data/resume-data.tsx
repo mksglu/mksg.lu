@@ -159,6 +159,7 @@ export const RESUME_DATA = {
       logo: ConsultlyLogo,
       start: "Feb 2018",
       end: "Apr 2018",
+      description: "San Francisco-based no-code form builder platform founded in 2006, now serving 35M+ users worldwide:",
       bullets: [
         "Contributed to form builder platform serving 4M+ users (grew to 25M by 2024) by developing React components for drag-and-drop form editor.",
       ],
