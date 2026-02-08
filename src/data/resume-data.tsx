@@ -77,7 +77,7 @@ export const RESUME_DATA = {
         "Clearing Service (EV Roaming): Led development of OCPI 2.2.1–compliant Clearing House enabling interoperability between 50+ CPOs/eMSPs. Built with Next.js (RSC), PostgreSQL, and AWS.",
         "Architectural Standards: Owned and delivered reusable boilerplates adopted across 5+ teams, reducing project setup time by 60% (2 weeks → 3 days).",
         "D-Charge: Built real-time admin panel for 1,000+ charging stations, replacing legacy tracking systems. Led frontend and BFF development with React, TypeScript, and Kubernetes.",
-        "VDF Web: Led 8-person cross-functional team to ship greenfield enterprise financing platform for Turkey's leading automotive finance company with Next.js, custom design system, and .NET 8.",
+        "VDF Web: Hired, built, and led 8-person cross-functional team to ship greenfield enterprise financing platform for Turkey's leading automotive finance company with Next.js, custom design system, and .NET 8.",
       ],
     },
     {
