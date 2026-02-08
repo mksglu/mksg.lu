@@ -7,7 +7,7 @@ export const RESUME_DATA = {
   initials: "MK",
   location: "London Area, United Kingdom",
   locationLink: "https://www.google.com/maps/place/London/",
-  about: "Software Engineering, LLMs, Agents, Generative AI",
+  about: "Senior SWE (IC) with 10+ YoE building AI-native products and agentic systems.",
   summary:
     "Senior SWE (IC) with 10+ YoE building AI-native products and agentic systems. Hands-on Tech Lead experience—scaled teams, improved DX, and delivered greenfield products for distributed orgs. Deep in AI/LLM: RAG pipelines, tool-use patterns, edge-native architectures. Primary stack: TypeScript, Node.js, React/RN, Next.js, Cloudflare. Exploring Rust and Go.",
   availability:
