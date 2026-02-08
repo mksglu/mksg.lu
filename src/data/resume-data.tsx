@@ -74,10 +74,10 @@ export const RESUME_DATA = {
       end: "Sep 2025",
       description: "Doğuş Group's technology arm founded in 2012, delivering next-generation digital solutions with 500+ engineers across AI, data analytics, IoT, and enterprise platforms.",
       bullets: [
-        "Clearing Service (EV Roaming): Enabled interoperability between 50+ CPOs/eMSPs (previously siloed) by delivering OCPI 2.2.1–compliant Clearing House with Next.js (RSC), PostgreSQL, and AWS.",
-        "Architectural Standards: Reduced project setup time by 60% (from 2 weeks to 3 days) by creating reusable boilerplates adopted across 5+ teams.",
-        "D-Charge: Streamlined operations for 1,000+ charging stations (previously legacy tracking systems) by leading admin panel development with React, TypeScript, and Kubernetes.",
-        "VDF Web: Shipped greenfield enterprise financing platform for Turkey's leading automotive finance company by leading 8-person cross-functional team with Next.js, design system, and .NET 8.",
+        "Clearing Service (EV Roaming): Led development of OCPI 2.2.1–compliant Clearing House enabling interoperability between 50+ CPOs/eMSPs. Built with Next.js (RSC), PostgreSQL, and AWS.",
+        "Architectural Standards: Owned and delivered reusable boilerplates adopted across 5+ teams, reducing project setup time by 60% (2 weeks → 3 days).",
+        "D-Charge: Built real-time admin panel for 1,000+ charging stations, replacing legacy tracking systems. Led frontend and BFF development with React, TypeScript, and Kubernetes.",
+        "VDF Web: Led 8-person cross-functional team to ship greenfield enterprise financing platform for Turkey's leading automotive finance company with Next.js, custom design system, and .NET 8.",
       ],
     },
     {
