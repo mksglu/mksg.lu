@@ -76,7 +76,7 @@ export const RESUME_DATA = {
       bullets: [
         "Clearing Service (EV Roaming): Enabled interoperability between 50+ CPOs/eMSPs (previously siloed) by delivering OCPI 2.2.1–compliant Clearing House with Next.js (RSC), PostgreSQL, and AWS.",
         "Architectural Standards: Reduced project setup time by 60% (from 2 weeks to 3 days) by creating reusable boilerplates adopted across 5+ teams.",
-        "D-Charge: Streamlined operations for 1,000+ charging stations (previously manual Excel tracking) by leading admin panel development with React, TypeScript, and Kubernetes.",
+        "D-Charge: Streamlined operations for 1,000+ charging stations (previously legacy tracking systems) by leading admin panel development with React, TypeScript, and Kubernetes.",
         "VDF Web: Shipped greenfield enterprise financing platform for Turkey's leading automotive finance company by leading 8-person cross-functional team with Next.js, design system, and .NET 8.",
       ],
     },
@@ -385,7 +385,7 @@ export const RESUME_DATA = {
         "Nginx",
       ],
       description:
-        "Replaced manual Excel tracking for 1,000+ EV charging stations with real-time admin panel. Led frontend and BFF API development, enabling distributors and operators to manage stations at scale.",
+        "Replaced legacy tracking systems for 1,000+ EV charging stations with real-time admin panel. Led frontend and BFF API development, enabling distributors and operators to manage stations at scale.",
       logo: ParabolLogo,
       link: {
         label: "https://www.linkedin.com/company/d-charge",
