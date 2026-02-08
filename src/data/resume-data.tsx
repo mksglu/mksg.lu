@@ -7,7 +7,8 @@ export const RESUME_DATA = {
   initials: "MK",
   location: "London Area, United Kingdom",
   locationLink: "https://www.google.com/maps/place/London/",
-  about: "Senior SWE (IC) with 10+ YoE building AI-native products and agentic systems.",
+  about:
+    "Senior SWE (IC) with 10+ YoE building AI-native products and agentic systems.",
   summary:
     "Senior SWE with 10+ years shipping production systems at scale. Strong IC with hands-on Tech Lead experience—scaled teams, improved DX, and delivered greenfield products for distributed orgs. Currently deep in AI/LLM space: agentic systems, RAG pipelines, tool-use patterns, and edge-native AI. Primary stack: TypeScript, Node.js, React/RN, Next.js, Cloudflare. Exploring Rust and Go.",
   availability:
@@ -36,15 +37,20 @@ export const RESUME_DATA = {
   },
   blogPosts: [
     {
-      title: "Gemini File Search + Cloudflare Workers: The Production RAG Stack That Just Works",
-      description: "Real-world RAG system implementation - wrong turns, 3am debugging, and decisions that actually mattered.",
-      linkedinUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7424553558924050432/",
+      title:
+        "Gemini File Search + Cloudflare Workers: The Production RAG Stack That Just Works",
+      description:
+        "Real-world RAG system implementation - wrong turns, 3am debugging, and decisions that actually mattered.",
+      linkedinUrl:
+        "https://www.linkedin.com/feed/update/urn:li:activity:7424553558924050432/",
       xUrl: "https://x.com/mksglu/status/2015747512292782123",
     },
     {
       title: "Clawdbot: Two Weeks In. What Actually Works.",
-      description: "Open-source AI agent that communicates through Telegram and WhatsApp - beyond conversation, it takes action.",
-      linkedinUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7421546642874699776/",
+      description:
+        "Open-source AI agent that communicates through Telegram and WhatsApp - beyond conversation, it takes action.",
+      linkedinUrl:
+        "https://www.linkedin.com/feed/update/urn:li:activity:7421546642874699776/",
       xUrl: "https://x.com/mksglu/status/2015422422950818205",
     },
   ],
@@ -57,11 +63,12 @@ export const RESUME_DATA = {
       logo: dt,
       start: "Sep 2025",
       end: null,
-      description: "Mert Köseoğlu, Software Forge is a software consultancy providing strategic guidance, AI-native architectures, and engineering solutions.",
+      description:
+        "Mert Köseoğlu, Software Forge is a software consultancy providing strategic guidance, AI-native architectures, and engineering solutions.",
       bullets: [
-        "Analytics SaaS: Architecting AI plugin for analytics platform (1B+ daily events) enabling natural language data queries via multi-tenant RAG with Cloudflare Workers AI and streaming LLM responses.",
-        "AI Agency: Reduced QA cycle time by 80% (from 2 days to 4 hours) by building autonomous testing infrastructure with browser-use agents, Playwright MCP, and Claude computer-use. Client: OpenAI.",
-        "Agentic E-commerce: Achieved sub-100ms agent response times (down from 800ms) by implementing Cloudflare-native architecture with MCP protocol orchestration for AI shopping workflows.",
+        "Stealth Startup: Architecting AI plugin for analytics platform (1B+ daily events) enabling natural language data queries via multi-tenant RAG with Cloudflare Workers AI and streaming LLM responses.",
+        "Stealth Startup: Reduced QA cycle time by 80% (from 2 days to 4 hours) by building autonomous testing infrastructure with browser-use agents, Playwright MCP, and Claude computer-use. Client: OpenAI.",
+        "Stealth Startup: Achieved sub-100ms agent response times (down from 800ms) by implementing Cloudflare-native architecture with MCP protocol orchestration for AI shopping workflows.",
       ],
     },
     {
@@ -72,7 +79,8 @@ export const RESUME_DATA = {
       logo: dt,
       start: "Jan 2024",
       end: "Sep 2025",
-      description: "Doğuş Group's technology arm founded in 2012, delivering next-generation digital solutions with 500+ engineers across AI, data analytics, IoT, and enterprise platforms.",
+      description:
+        "Doğuş Group's technology arm founded in 2012, delivering next-generation digital solutions with 500+ engineers across AI, data analytics, IoT, and enterprise platforms.",
       bullets: [
         "Clearing Service (EV Roaming): Led development of OCPI 2.2.1–compliant Clearing House enabling interoperability between 50+ CPOs/eMSPs. Built with Next.js (RSC), PostgreSQL, and AWS.",
         "Architectural Standards: Owned and delivered reusable boilerplates adopted across 5+ teams, reducing project setup time by 60% (2 weeks → 3 days).",
@@ -88,7 +96,8 @@ export const RESUME_DATA = {
       logo: ConsultlyLogo,
       start: "Aug 2023",
       end: "Jan 2024",
-      description: "Planhat is a customer platform that provides insights, manages workflows, and enhances customer experience for modern technology companies worldwide.",
+      description:
+        "Planhat is a customer platform that provides insights, manages workflows, and enhances customer experience for modern technology companies worldwide.",
       bullets: [
         "Shipped 15+ product features in 5 months for customer success platform serving 500+ B2B SaaS companies.",
         "Reduced bug resolution time by 30% (from 5 days to 3.5 days) by improving Vue.js/Node.js codebase quality and test coverage.",
@@ -102,7 +111,8 @@ export const RESUME_DATA = {
       logo: ConsultlyLogo,
       start: "Jun 2021",
       end: "Apr 2023",
-      description: "Qooper is a comprehensive people development platform that offers mentorship, coaching, learning, and opportunity solutions to support individuals in their professional growth.",
+      description:
+        "Qooper is a comprehensive people development platform that offers mentorship, coaching, learning, and opportunity solutions to support individuals in their professional growth.",
       bullets: [
         "Scaled engineering team 6x (1→6 engineers) in 18 months by establishing hiring processes and conducting 50+ technical interviews.",
         "Reduced deployment failures by 40% (from 10/month to 6/month) by implementing code review standards and CI/CD best practices.",
@@ -133,7 +143,8 @@ export const RESUME_DATA = {
       logo: ConsultlyLogo,
       start: "Jun 2019",
       end: "Feb 2021",
-      description: "Countly is a product analytics solution that helps organizations track product performance and user behavior across mobile, web, and desktop applications, processing billions of data points daily.",
+      description:
+        "Countly is a product analytics solution that helps organizations track product performance and user behavior across mobile, web, and desktop applications, processing billions of data points daily.",
       bullets: [
         "Contributed to OSS analytics platform processing 1B+ daily data points by building horizontally scalable Node.js/MongoDB solutions.",
         "Increased React Native SDK adoption by 25% (previously no official SDK) by developing and publishing mobile analytics SDK.",
@@ -149,7 +160,8 @@ export const RESUME_DATA = {
       logo: ConsultlyLogo,
       start: "May 2018",
       end: "Jun 2019",
-      description: "TDSmaker is a web-based solution for managing technical datasheets, designed to support the needs of professionals in various industries.",
+      description:
+        "TDSmaker is a web-based solution for managing technical datasheets, designed to support the needs of professionals in various industries.",
       bullets: [
         "Reduced deployment time by 50% (from 30min to 15min) by integrating AWS services and optimizing Jenkins CI/CD pipelines.",
         "Increased test coverage from 40% to 90%+ by implementing TDD practices across React/Node.js codebase.",
@@ -164,7 +176,8 @@ export const RESUME_DATA = {
       logo: ConsultlyLogo,
       start: "Feb 2018",
       end: "Apr 2018",
-      description: "San Francisco-based no-code form builder platform founded in 2006, now serving 35M+ users worldwide.",
+      description:
+        "San Francisco-based no-code form builder platform founded in 2006, now serving 35M+ users worldwide.",
       bullets: [
         "Contributed to form builder platform serving 4M+ users (grew to 25M by 2024) by developing React components for drag-and-drop form editor.",
       ],
