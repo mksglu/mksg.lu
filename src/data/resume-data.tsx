@@ -319,25 +319,6 @@ export const RESUME_DATA = {
       },
     },
     {
-      title: "LLMs Agency",
-      techStack: [
-        "LLMs",
-        "Agents",
-        "Generative AI",
-        "Prompt Engineering",
-        "Langchain",
-        "RAG",
-        "Vector Databases",
-      ],
-      description:
-        "Empowering Businesses through AI and Large Language Models. URL: llms.agency",
-      logo: ParabolLogo,
-      link: {
-        label: "https://llms.agency/",
-        href: "https://llms.agency/",
-      },
-    },
-    {
       title: "OXVO",
       techStack: [
         "CTO",
