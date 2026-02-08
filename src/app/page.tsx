@@ -188,7 +188,6 @@ export default function Page() {
                       {"link" in project && project.link.href !== "#" ? (
                         <a className="hover:underline" href={project.link.href} target="_blank">
                           {project.title}
-                          <span className="ml-1 inline-block size-1.5 rounded-full bg-green-500"></span>
                         </a>
                       ) : (
                         project.title

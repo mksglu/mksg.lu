@@ -240,6 +240,25 @@ export const RESUME_DATA = {
   ],
   projects: [
     {
+      title: "Vemotion AI",
+      techStack: [
+        "React",
+        "Remotion",
+        "TypeScript",
+        "AI/LLM",
+        "Video Generation",
+        "Code Generation",
+        "Next.js",
+      ],
+      description:
+        "Developer tool that transforms natural language prompts into production-ready Remotion React video components. Generate once, render thousands - enabling dynamic personalization for SaaS features, data visualization, and marketing materials without per-render costs.",
+      logo: ParabolLogo,
+      link: {
+        label: "vemotionai.com",
+        href: "https://vemotionai.com/",
+      },
+    },
+    {
       title: "MCP Directory & Hub",
       techStack: [
         "Cloudflare Pages",
