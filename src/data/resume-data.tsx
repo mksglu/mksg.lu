@@ -9,7 +9,7 @@ export const RESUME_DATA = {
   locationLink: "https://www.google.com/maps/place/London/",
   about: "Software Engineering, LLMs, Agents, Generative AI",
   summary:
-    "Senior SWE with 10+ years shipping production systems for distributed teams. Strong IC with Tech Lead experience. Currently building AI-native products: LLM agents, MCP/A2A protocols, autonomous QA. Stack: TypeScript, Node.js, React/RN, Next.js, Cloudflare edge, Rust, Go.",
+    "Senior SWE with 10+ years shipping production systems at scale. Strong IC with hands-on Tech Lead experience—scaled teams, improved DX, and delivered greenfield products for distributed orgs. Currently deep in AI/LLM space: building agents, MCP integrations, and edge-first architectures. Primary stack: TypeScript, Node.js, React/RN, Next.js, Cloudflare. Exploring Rust and Go.",
   availability:
     "Now open to consulting opportunities in AI, full-stack development, and technical leadership.",
   avatarUrl: Mert,
