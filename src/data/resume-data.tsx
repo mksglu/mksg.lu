@@ -72,6 +72,7 @@ export const RESUME_DATA = {
       logo: dt,
       start: "Jan 2024",
       end: "Sep 2025",
+      description: "Doğuş Group's technology arm founded in 2012, delivering next-generation digital solutions with 500+ engineers across AI, data analytics, IoT, and enterprise platforms:",
       bullets: [
         "Clearing Service (EV Roaming): Enabled interoperability between 50+ CPOs/eMSPs (previously siloed) by delivering OCPI 2.2.1–compliant Clearing House with Next.js (RSC), PostgreSQL, and AWS.",
         "Architectural Standards: Reduced project setup time by 60% (from 2 weeks to 3 days) by creating reusable boilerplates adopted across 5+ teams.",
@@ -87,6 +88,7 @@ export const RESUME_DATA = {
       logo: ConsultlyLogo,
       start: "Aug 2023",
       end: "Jan 2024",
+      description: "Planhat is a customer platform that provides insights, manages workflows, and enhances customer experience for modern technology companies worldwide:",
       bullets: [
         "Shipped 15+ product features in 5 months for customer success platform serving 500+ B2B SaaS companies.",
         "Reduced bug resolution time by 30% (from 5 days to 3.5 days) by improving Vue.js/Node.js codebase quality and test coverage.",
@@ -100,6 +102,7 @@ export const RESUME_DATA = {
       logo: ConsultlyLogo,
       start: "Jun 2021",
       end: "Apr 2023",
+      description: "Qooper is a comprehensive people development platform that offers mentorship, coaching, learning, and opportunity solutions to support individuals in their professional growth:",
       bullets: [
         "Scaled engineering team 6x (1→6 engineers) in 18 months by establishing hiring processes and conducting 50+ technical interviews.",
         "Reduced deployment failures by 40% (from 10/month to 6/month) by implementing code review standards and CI/CD best practices.",
@@ -130,6 +133,7 @@ export const RESUME_DATA = {
       logo: ConsultlyLogo,
       start: "Jun 2019",
       end: "Feb 2021",
+      description: "Countly is a product analytics solution that helps organizations track product performance and user behavior across mobile, web, and desktop applications, processing billions of data points daily:",
       bullets: [
         "Contributed to OSS analytics platform processing 1B+ daily data points by building horizontally scalable Node.js/MongoDB solutions.",
         "Increased React Native SDK adoption by 25% (previously no official SDK) by developing and publishing mobile analytics SDK.",
@@ -145,6 +149,7 @@ export const RESUME_DATA = {
       logo: ConsultlyLogo,
       start: "May 2018",
       end: "Jun 2019",
+      description: "TDSmaker is a web-based solution for managing technical datasheets, designed to support the needs of professionals in various industries:",
       bullets: [
         "Reduced deployment time by 50% (from 30min to 15min) by integrating AWS services and optimizing Jenkins CI/CD pipelines.",
         "Increased test coverage from 40% to 90%+ by implementing TDD practices across React/Node.js codebase.",
