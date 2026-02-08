@@ -76,7 +76,7 @@ export const RESUME_DATA = {
         "Clearing Service (EV Roaming): Enabled interoperability between 50+ CPOs/eMSPs (previously siloed) by delivering OCPI 2.2.1–compliant Clearing House with Next.js (RSC), PostgreSQL, and AWS.",
         "Architectural Standards: Reduced project setup time by 60% (from 2 weeks to 3 days) by creating reusable boilerplates adopted across 5+ teams.",
         "D-Charge: Streamlined operations for 1,000+ charging stations (previously manual Excel tracking) by leading admin panel development with React, TypeScript, and Kubernetes.",
-        "VDF Web: Delivered enterprise vehicle financing platform for Turkey's leading automotive finance company by leading 8-person team with Next.js, custom design system, and .NET 8.",
+        "VDF Web: Shipped greenfield enterprise financing platform for Turkey's leading automotive finance company by leading 8-person cross-functional team with Next.js, design system, and .NET 8.",
       ],
     },
     {
@@ -103,7 +103,7 @@ export const RESUME_DATA = {
       bullets: [
         "Scaled engineering team 6x (1→6 engineers) in 18 months by establishing hiring processes and conducting 50+ technical interviews.",
         "Reduced deployment failures by 40% (from 10/month to 6/month) by implementing code review standards and CI/CD best practices.",
-        "Improved developer velocity by 30% by removing architectural blockers and introducing modern tooling.",
+        "Improved team velocity by 30% by removing architectural blockers and improving DX with modern tooling.",
         "Mentored 5 engineers through regular 1:1s, resulting in 2 promotions within 12 months.",
       ],
     },
@@ -118,8 +118,8 @@ export const RESUME_DATA = {
       bullets: [
         "Reduced API response time by 50% (from 800ms to 400ms) by migrating backend from Ruby to Node.js with modular architecture.",
         "Decreased mobile development time by 40% (2 codebases → 1) by unifying iOS/Android into single React Native codebase.",
-        "Eliminated 30% of technical debt by conducting comprehensive audit and executing remediation roadmap.",
-        "Accelerated feature delivery by 25% through front-end architecture overhaul during major UI revamp.",
+        "Eliminated 30% of tech debt by conducting comprehensive audit and executing remediation roadmap.",
+        "Accelerated feature velocity by 25% through greenfield frontend architecture during major UI revamp.",
       ],
     },
     {
@@ -131,7 +131,7 @@ export const RESUME_DATA = {
       start: "Jun 2019",
       end: "Feb 2021",
       bullets: [
-        "Contributed to open-source analytics platform processing 1B+ daily data points by building scalable Node.js/MongoDB solutions.",
+        "Contributed to OSS analytics platform processing 1B+ daily data points by building horizontally scalable Node.js/MongoDB solutions.",
         "Increased React Native SDK adoption by 25% (previously no official SDK) by developing and publishing mobile analytics SDK.",
         "Enabled advanced segmentation for 1,000+ enterprise customers (previously limited to basic metrics) by implementing Top Events, Event Groups, and Drill features.",
         "Reduced dashboard load time by 35% (from 3s to 2s) by optimizing Vue.js components and refining UX workflows.",
@@ -172,8 +172,8 @@ export const RESUME_DATA = {
       start: "2013",
       end: "2018",
       bullets: [
-        "Delivered 20+ web applications for SMB clients by providing full-stack development (PHP, JavaScript, MySQL) and technical consulting.",
-        "Reduced client development costs by 40% (compared to agency rates) by offering direct freelance services with faster turnaround.",
+        "Delivered 20+ web applications for SMB clients as full-stack IC (PHP, JavaScript, MySQL) with end-to-end ownership.",
+        "Reduced client development costs by 40% vs agency rates through direct engagement and faster iteration cycles.",
       ],
     },
   ],
