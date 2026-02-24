@@ -260,6 +260,44 @@ export const RESUME_DATA = {
   ],
   projects: [
     {
+      title: "seclawai",
+      techStack: [
+        "TypeScript",
+        "Node.js",
+        "Docker",
+        "Cloudflare Tunnel",
+        "n8n",
+        "MCP",
+        "AI Agents",
+        "Security",
+      ],
+      description:
+        "Secure autonomous AI agents in 60 seconds. Open-source alternative to OpenClaw — sandboxed Docker execution, Cloudflare Tunnel integration, and pre-built agent templates. Addresses critical security gaps (RCE, bot takeover) in existing self-hosted agent platforms.",
+      logo: ParabolLogo,
+      link: {
+        label: "seclawai.com",
+        href: "https://seclawai.com",
+      },
+    },
+    {
+      title: "Context Mode",
+      techStack: [
+        "TypeScript",
+        "MCP Server",
+        "SQLite FTS5",
+        "BM25 Ranking",
+        "Sandbox Execution",
+        "CLI",
+      ],
+      description:
+        "MCP server that reduces Claude Code context consumption by 98%. Playwright snapshots (56 KB → 299 B), GitHub issues (59 KB → 1.1 KB), access logs (45 KB → 155 B). Spawns isolated subprocesses with 10 language runtimes and a built-in knowledge base with full-text search.",
+      logo: ParabolLogo,
+      link: {
+        label: "github.com/mksglu/claude-context-mode",
+        href: "https://github.com/mksglu/claude-context-mode",
+      },
+    },
+    {
       title: "Vemotion AI",
       techStack: [
         "React",
