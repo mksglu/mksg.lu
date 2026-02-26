@@ -1,0 +1,73 @@
+---
+title: "Gemini File Search + Cloudflare Workers: The Production RAG Stack That Just Works"
+description: "Real-world RAG system implementation - wrong turns, 3am debugging, and decisions that actually mattered."
+date: "2025-02-10"
+tags: ["RAG", "Cloudflare Workers", "Gemini", "AI"]
+linkedinUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7424553558924050432/"
+xUrl: "https://x.com/mksglu/status/2015747512292782123"
+published: true
+---
+
+Real-world RAG system implementation - wrong turns, 3am debugging, and decisions that actually mattered.
+
+## The Problem
+
+Building a production RAG system that actually works is harder than the tutorials suggest. Most guides show you a happy path: embed some documents, throw them into a vector database, and query with an LLM. Reality is messier.
+
+## The Stack
+
+After trying multiple approaches, we landed on:
+
+- **Gemini File Search** for document understanding
+- **Cloudflare Workers** for the edge runtime
+- **Workers AI** for embeddings
+- **Vectorize** for vector storage
+
+```typescript
+// The core of our RAG pipeline
+export default {
+  async fetch(request: Request, env: Env) {
+    const query = await request.json();
+
+    // 1. Generate embeddings at the edge
+    const embedding = await env.AI.run("@cf/baai/bge-base-en-v1.5", {
+      text: query.question,
+    });
+
+    // 2. Search vectors
+    const results = await env.VECTORIZE.query(embedding.data[0], {
+      topK: 5,
+      returnMetadata: true,
+    });
+
+    // 3. Build context and generate response
+    const context = results.matches
+      .map((m) => m.metadata?.text)
+      .join("\n\n");
+
+    return generateResponse(query.question, context);
+  },
+};
+```
+
+## What Actually Mattered
+
+The decisions that made the biggest difference weren't the ones I expected.
+
+### Chunk Size
+
+We started with 512 tokens. Too small — lost context. Moved to 1024 with 200-token overlap. The overlap was the key insight: without it, queries that spanned chunk boundaries returned garbage.
+
+### Embedding Model Selection
+
+BGE-base was good enough. We burned two days evaluating fancier models before realizing the bottleneck was chunking strategy, not embedding quality.
+
+### Edge Runtime Constraints
+
+Cloudflare Workers have a 128MB memory limit. This forced us to stream responses instead of buffering, which actually improved UX. Constraints breed better design.
+
+## Lessons Learned
+
+1. **Start with the simplest thing that works.** Add complexity only when you hit a real wall.
+2. **Measure retrieval quality before generation quality.** If your retriever returns bad context, no amount of prompt engineering will save you.
+3. **Edge deployment matters for RAG.** Latency compounds — embedding generation + vector search + LLM generation. Running the first two at the edge cuts total latency significantly.

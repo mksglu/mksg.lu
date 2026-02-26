@@ -41,6 +41,7 @@ export const RESUME_DATA = {
         "Gemini File Search + Cloudflare Workers: The Production RAG Stack That Just Works",
       description:
         "Real-world RAG system implementation - wrong turns, 3am debugging, and decisions that actually mattered.",
+      slug: "gemini-rag-cloudflare-workers",
       linkedinUrl:
         "https://www.linkedin.com/feed/update/urn:li:activity:7424553558924050432/",
       xUrl: "https://x.com/mksglu/status/2015747512292782123",
@@ -49,6 +50,7 @@ export const RESUME_DATA = {
       title: "Clawdbot: Two Weeks In. What Actually Works.",
       description:
         "Open-source AI agent that communicates through Telegram and WhatsApp - beyond conversation, it takes action.",
+      slug: "clawdbot-two-weeks-in",
       linkedinUrl:
         "https://www.linkedin.com/feed/update/urn:li:activity:7421546642874699776/",
       xUrl: "https://x.com/mksglu/status/2015422422950818205",

@@ -8,6 +8,7 @@ import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import Image from "next/image";
+import Link from "next/link";
 import { XIcon, LinkedInIcon } from "@/components/icons";
 
 import Mert from "@/images/pp-mert.jpg";
@@ -231,11 +232,28 @@ export default function Page() {
           <div className="space-y-2">
             {RESUME_DATA.blogPosts.map((post, index) => (
               <div key={index} className="border-l-2 border-muted pl-3 py-1">
-                <p className="text-sm font-medium">{post.title}</p>
+                {"slug" in post && post.slug ? (
+                  <Link
+                    href={`/blog/${post.slug}`}
+                    className="text-sm font-medium hover:underline"
+                  >
+                    {post.title}
+                  </Link>
+                ) : (
+                  <p className="text-sm font-medium">{post.title}</p>
+                )}
                 <p className="text-xs text-muted-foreground mt-0.5 print:text-[10px]">
                   {post.description}
                 </p>
                 <div className="flex gap-3 mt-1">
+                  {"slug" in post && post.slug && (
+                    <Link
+                      href={`/blog/${post.slug}`}
+                      className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:underline print:hidden"
+                    >
+                      <span>Read more &rarr;</span>
+                    </Link>
+                  )}
                   <a
                     href={post.linkedinUrl}
                     target="_blank"

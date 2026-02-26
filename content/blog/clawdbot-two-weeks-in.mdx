@@ -1,0 +1,64 @@
+---
+title: "Clawdbot: Two Weeks In. What Actually Works."
+description: "Open-source AI agent that communicates through Telegram and WhatsApp - beyond conversation, it takes action."
+date: "2025-02-03"
+tags: ["AI Agents", "Telegram", "WhatsApp", "Open Source"]
+linkedinUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7421546642874699776/"
+xUrl: "https://x.com/mksglu/status/2015422422950818205"
+published: true
+---
+
+Open-source AI agent that communicates through Telegram and WhatsApp — beyond conversation, it takes action.
+
+## What is Clawdbot?
+
+Two weeks ago, I shipped an open-source AI agent that lives in your messaging apps. Not a chatbot. An agent — it reads messages, understands intent, and *does things*.
+
+## The Architecture
+
+The system is surprisingly simple:
+
+- **n8n** orchestrates workflows
+- **Claude** handles reasoning
+- **MCP servers** provide tool access
+- **Telegram/WhatsApp** as the interface
+
+```
+User Message → Telegram API → n8n Webhook → Claude (reasoning)
+    ↓                                           ↓
+Response ← Telegram API ← n8n Response ← Tool Execution (MCP)
+```
+
+## What Works
+
+### Natural Language → Action
+
+"Remind me to review the PR tomorrow at 10am" doesn't just get acknowledged — it creates an actual scheduled trigger. "Check if the deployment succeeded" actually queries the CI/CD pipeline and reports back with real data.
+
+### Context Persistence
+
+The agent remembers. Not just the last message, but the full conversation thread. It knows that when you say "do the same thing for staging," you mean the deployment check you asked about 3 messages ago.
+
+### Multi-Step Workflows
+
+"Deploy the latest to staging, run the smoke tests, and let me know if anything breaks" triggers a chain of actions with real error handling and status updates at each step.
+
+## What Doesn't Work (Yet)
+
+- **Long-running tasks** — anything over 30 seconds hits Telegram's response timeout
+- **File handling** — uploading/downloading files through the messaging interface is clunky
+- **Multi-user** — currently single-tenant, auth is basic
+
+## The Honest Take
+
+The gap between "cool demo" and "reliable daily driver" is enormous. The agent works great 90% of the time. The other 10% — edge cases, API rate limits, ambiguous requests — that's where all the real work is.
+
+But here's the thing: even at 90%, it's already saving me meaningful time. The key was building it for my own workflows first, not trying to make a general-purpose agent.
+
+## What's Next
+
+- Persistent memory with vector search
+- Multi-agent delegation
+- Better error recovery
+
+The code is open source. Try it, break it, improve it.
