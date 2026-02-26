@@ -114,7 +114,7 @@ export default function BlogPostPage({ params }: PageProps) {
           </div>
         </div>
 
-        <article className="prose prose-sm prose-neutral max-w-none prose-headings:font-bold prose-a:text-primary prose-pre:p-0 prose-pre:bg-transparent prose-pre:border-0 prose-pre:rounded-none prose-code:before:content-none prose-code:after:content-none">
+        <article className="prose prose-sm prose-neutral max-w-none prose-headings:font-bold prose-a:text-primary prose-pre:bg-[#fafafa] prose-pre:border prose-pre:border-border prose-pre:rounded-md prose-code:before:content-none prose-code:after:content-none">
           <MDXRemote
             source={post.content}
             components={mdxComponents}
