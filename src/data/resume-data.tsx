@@ -38,6 +38,16 @@ export const RESUME_DATA = {
   blogPosts: [
     {
       title:
+        "Stop Burning Your Context Window — We Built Context Mode",
+      description:
+        "MCP server that reduces Claude Code context consumption by 98%. 315 KB becomes 5.4 KB.",
+      slug: "context-mode",
+      linkedinUrl:
+        "https://www.linkedin.com/in/mksglu",
+      xUrl: "https://x.com/mksglu",
+    },
+    {
+      title:
         "Gemini File Search + Cloudflare Workers: The Production RAG Stack That Just Works",
       description:
         "Real-world RAG system implementation - wrong turns, 3am debugging, and decisions that actually mattered.",
