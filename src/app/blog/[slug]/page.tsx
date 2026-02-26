@@ -27,6 +27,9 @@ export function generateMetadata({ params }: PageProps): Metadata {
   return {
     title: `${post.title} | ${RESUME_DATA.name}`,
     description: post.description,
+    alternates: {
+      canonical: `https://mksg.lu/blog/${post.slug}`,
+    },
     openGraph: {
       title: post.title,
       description: post.description,
@@ -48,8 +51,32 @@ export default function BlogPostPage({ params }: PageProps) {
   const post = getPostBySlug(params.slug);
   if (!post) notFound();
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.description,
+    datePublished: post.date,
+    url: `https://mksg.lu/blog/${post.slug}`,
+    author: {
+      "@type": "Person",
+      name: RESUME_DATA.name,
+      url: "https://mksg.lu",
+    },
+    publisher: {
+      "@type": "Person",
+      name: RESUME_DATA.name,
+      url: "https://mksg.lu",
+    },
+    keywords: post.tags,
+  };
+
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 md:p-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <section className="mx-auto w-full max-w-2xl space-y-8 bg-white">
         <div className="space-y-4">
           <Link

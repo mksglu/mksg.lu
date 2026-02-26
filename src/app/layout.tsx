@@ -8,8 +8,14 @@ import React from "react";
 import { RESUME_DATA } from "@/data/resume-data";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://mksg.lu"),
   title: `${RESUME_DATA.name} • ${RESUME_DATA.about}`,
   description: RESUME_DATA.summary,
+  alternates: {
+    types: {
+      "application/rss+xml": "/feed.xml",
+    },
+  },
   icons: {
     icon: [
       {

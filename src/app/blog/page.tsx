@@ -14,8 +14,32 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   const posts = getAllPosts();
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    name: `Blog | ${RESUME_DATA.name}`,
+    description: `Articles and insights by ${RESUME_DATA.name} on software engineering, AI, and building products.`,
+    url: "https://mksg.lu/blog",
+    author: {
+      "@type": "Person",
+      name: RESUME_DATA.name,
+      url: "https://mksg.lu",
+    },
+    blogPost: posts.map((post) => ({
+      "@type": "BlogPosting",
+      headline: post.title,
+      description: post.description,
+      datePublished: post.date,
+      url: `https://mksg.lu/blog/${post.slug}`,
+    })),
+  };
+
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 md:p-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <section className="mx-auto w-full max-w-2xl space-y-8 bg-white">
         <div className="space-y-1.5">
           <Link

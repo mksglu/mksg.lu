@@ -13,8 +13,22 @@ import { XIcon, LinkedInIcon } from "@/components/icons";
 
 import Mert from "@/images/pp-mert.jpg";
 export default function Page() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: RESUME_DATA.name,
+    url: "https://mksg.lu",
+    jobTitle: "Senior Software Engineering Consultant",
+    description: RESUME_DATA.about,
+    sameAs: RESUME_DATA.contact.social.map((s) => s.url),
+  };
+
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-0 md:p-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-3">
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
