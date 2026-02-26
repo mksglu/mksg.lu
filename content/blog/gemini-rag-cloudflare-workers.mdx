@@ -8,66 +8,192 @@ xUrl: "https://x.com/mksglu/status/2015747512292782123"
 published: true
 ---
 
-Real-world RAG system implementation - wrong turns, 3am debugging, and decisions that actually mattered.
+How Google's managed RAG and Cloudflare's edge computing solved problems I didn't know I had
 
-## The Problem
+I'm Mert Köseoğlu, Senior Software Engineer turned consultant. 12+ years building teams, leading as Tech Lead and EM, shipping products used by millions. Now I run Software Forge: AI-native architectures, RAG pipelines, Cloudflare AI stack. Built the MCP Directory & Hub handling 100K+ daily requests.
 
-Building a production RAG system that actually works is harder than the tutorials suggest. Most guides show you a happy path: embed some documents, throw them into a vector database, and query with an LLM. Reality is messier.
+This is the story of building a production RAG system. Not a tutorial. The real thing. Wrong turns, 3am debugging, and decisions that actually mattered.
 
-## The Stack
+## The Call That Started Everything
 
-After trying multiple approaches, we landed on:
+A product analytics company called. "Our Customer Success team is drowning."
 
-- **Gemini File Search** for document understanding
-- **Cloudflare Workers** for the edge runtime
-- **Workers AI** for embeddings
-- **Vectorize** for vector storage
+500+ Zendesk articles. Blog posts. SDK docs for 11 platforms: Android, iOS, Web, Flutter, React Native, Unity, Windows, Node.js, Java, C++, Cordova. Multiple versions each.
 
-```typescript
-// The core of our RAG pipeline
-export default {
-  async fetch(request: Request, env: Env) {
-    const query = await request.json();
+CS team answered the same questions daily. "How do I track events in iOS?" "What's new in Android SDK 24.7?" Hours of repetitive work.
 
-    // 1. Generate embeddings at the edge
-    const embedding = await env.AI.run("@cf/baai/bge-base-en-v1.5", {
-      text: query.question,
-    });
+Their AI assistant plugin needed a knowledge base. "Can you build it? 1 month."
 
-    // 2. Search vectors
-    const results = await env.VECTORIZE.query(embedding.data[0], {
-      topK: 5,
-      returnMetadata: true,
-    });
+I said yes. Then started panicking.
 
-    // 3. Build context and generate response
-    const context = results.matches
-      .map((m) => m.metadata?.text)
-      .join("\n\n");
+## The First Two Weeks (Where I Got Everything Wrong)
 
-    return generateResponse(query.question, context);
-  },
-};
+Built a "proper" RAG system. Qdrant. Chunking pipeline. Debated chunk sizes. Metadata filtering.
+
+Two weeks later: slow retrieval, complex infrastructure, not even deployed yet.
+
+Someone asked about "iOS SDK 24.11.3" and the system returned iOS SDK 23.01.2 docs. Three days debugging metadata.
+
+There had to be a better way.
+
+## Finding Gemini File Search
+
+Found it at 2am reading Google's docs. Not heavily marketed. The promise:
+
+> Upload your documents. We handle the rest.
+
+No chunking. No vector database. No embedding selection. Google handles:
+
+- Automatic chunking optimized for retrieval
+- Embedding with gemini-embedding-001
+- Semantic vector indexing
+- Retrieval integrated into generateContent
+
+Skeptical. Tried it anyway. Uploaded test docs. Asked questions. Got accurate answers with source citations.
+
+The code was embarrassingly simple. One API call. fileSearch tool. Done.
+
+Deleted my Qdrant setup. Two weeks of work, gone. Didn't miss it.
+
+## The "Aha" Moment: Grounding Metadata
+
+Gemini returns `groundingChunks`, structured data about which documents were used. Not generated text. Actual metadata from retrieval.
+
+The model can't hallucinate sources. They come from the retrieval layer.
+
+Saved weeks of prompt iteration. No more "please cite your sources" that works 70% of the time.
+
+## Why Cloudflare Workers
+
+I run 100K+ daily requests on Workers. Know the platform.
+
+The reason for this project: **cold starts.**
+
+Lambda: 100-500ms cold starts. Workers: ~0ms. Always warm.
+
+For chat interfaces, users notice. First message feels sluggish on Lambda. On Workers, first request feels like the hundredth.
+
+KV for caching:
+
+- 72-hour cache for GitHub releases (11 SDKs)
+- API docs index
+- System prompts
+
+No Redis. No connection pooling. Simple.
+
+## The Regex Disaster
+
+Week 3. Certain queries returned wrong results.
+
+"React Native SDK?" → returned iOS docs.
+
+Why? "React Native" contains "rn". I matched "rn" as abbreviation. "Internal" contains "rn" too. Everything matched everything.
+
+500+ lines of regex. Brittle. Non-English broke it. Typos broke it.
+
+Rewrote three times. New edge cases each time.
+
+Then: what if I used an LLM to classify queries?
+
+Gemini 2.0 Flash. JSON response schema. 5-second timeout.
+
+```text
+"React Native SDK?" → { isSDKQuery: true, platform: 'react-native' }
 ```
 
-## What Actually Mattered
+500 lines of regex → 20 lines of LLM call. Works with typos. Works with any language.
 
-The decisions that made the biggest difference weren't the ones I expected.
+Using one LLM to route another. Changed everything.
 
-### Chunk Size
+## The Caching Discovery
 
-We started with 512 tokens. Too small — lost context. Moved to 1024 with 200-token overlap. The overlap was the key insight: without it, queries that spanned chunk boundaries returned garbage.
+Week 3. SDK version questions: 25 seconds. Every query fetched GitHub releases real-time. Eleven repos. Rate limiting.
 
-### Embedding Model Selection
+Fix: 72-hour cache.
 
-BGE-base was good enough. We burned two days evaluating fancier models before realizing the bottleneck was chunking strategy, not embedding quality.
+SDK releases don't change hourly. Second query of the day? 7 seconds instead of 25.
 
-### Edge Runtime Constraints
+Results:
 
-Cloudflare Workers have a 128MB memory limit. This forced us to stream responses instead of buffering, which actually improved UX. Constraints breed better design.
+- SDK queries: 25s → 7s (72% faster)
+- API queries: 10s → 5-6s (40-50% faster)
+- General: 8s → 6s (25% faster)
 
-## Lessons Learned
+Simple pattern. Massive impact.
 
-1. **Start with the simplest thing that works.** Add complexity only when you hit a real wall.
-2. **Measure retrieval quality before generation quality.** If your retriever returns bad context, no amount of prompt engineering will save you.
-3. **Edge deployment matters for RAG.** Latency compounds — embedding generation + vector search + LLM generation. Running the first two at the edge cuts total latency significantly.
+## The Pricing Surprise
+
+Kept waiting for the catch.
+
+**Gemini File Search:**
+
+- Indexing: $0.15 / 1M tokens (one-time)
+- Storage: FREE
+- Query embeddings: FREE
+- 500+ documents: under $1 total indexing.
+
+**Cloudflare Workers:**
+
+- $5/month + $0.50/million requests
+- KV: $0.50/million reads
+
+Running production for under $20/month. No vector DB fees. No Redis.
+
+## MCP: One Endpoint, Many Clients
+
+Week 4. They wanted:
+
+- Claude Desktop for engineering
+- Cursor for developers
+- Internal AI assistant plugin
+
+Four clients. Same knowledge base needed.
+
+Model Context Protocol. One `chat_with_docs` tool. One implementation. Every client connects to same endpoint.
+
+Claude Desktop, Cursor, web UI, internal plugin. All get same answers. Fix a bug, everyone benefits.
+
+Single source of truth.
+
+## After One Month
+
+**Customer Success:**
+
+- Stopped answering same questions repeatedly
+- Documentation ticket volume dropped
+- Focus on complex issues needing human judgment
+
+**Engineering:**
+
+- Claude Desktop = instant doc access
+- Accurate SDK version answers
+- Real-time GitHub release data
+
+**AI Assistant:**
+
+- Actually knew things
+- Source citations built trust
+
+**Numbers:**
+
+- 500+ documents queryable
+- 11 SDK platforms with version-specific answers
+- Sub-10-second response times
+- Under $20/month
+
+## What I'd Tell My Week-1 Self
+
+1. **Start with managed RAG.** Wasted two weeks on infrastructure Gemini handles better.
+2. **Use LLMs for routing.** Intent classification replaced 500 lines of regex.
+3. **Cache aggressively.** 72-hour TTL solves 90% of latency problems.
+4. **Edge compute matters.** Cold starts add up. Workers eliminates that.
+5. **MCP for multi-consumer.** One endpoint, many clients.
+
+The boring choices were the right choices.
+
+Sometimes let Google and Cloudflare handle the hard parts. Focus on making the product work for users.
+
+---
+
+*Mert Köseoğlu, Senior Founding Engineer, AI consultant. Runs Software Forge. Built MCP Directory & Hub.*
+*[x.com/mksglu](https://x.com/mksglu) · [linkedin.com/in/mksglu](https://linkedin.com/in/mksglu) · [mksg.lu](https://mksg.lu)*

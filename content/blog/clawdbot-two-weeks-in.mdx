@@ -8,57 +8,125 @@ xUrl: "https://x.com/mksglu/status/2015422422950818205"
 published: true
 ---
 
-Open-source AI agent that communicates through Telegram and WhatsApp — beyond conversation, it takes action.
+$27/month. Runs 24/7. Here's the honest take.
 
-## What is Clawdbot?
+I'm Mert Köseoğlu, Senior Software Engineer turned consultant. Build AI systems for clients. Saw Clawdbot blowing up on Twitter. Had to try it.
 
-Two weeks ago, I shipped an open-source AI agent that lives in your messaging apps. Not a chatbot. An agent — it reads messages, understands intent, and *does things*.
+Two weeks later, still using it. Not for everything people claim. But for enough.
 
-## The Architecture
+## What Is This Thing
 
-The system is surprisingly simple:
+Open-source AI agent. Lives on a server. Talks to you via Telegram or WhatsApp.
 
-- **n8n** orchestrates workflows
-- **Claude** handles reasoning
-- **MCP servers** provide tool access
-- **Telegram/WhatsApp** as the interface
+Key difference from ChatGPT: doesn't just chat. **Does stuff.**
 
-```text
-User Message → Telegram API → n8n Webhook → Claude (reasoning)
-    ↓                                           ↓
-Response ← Telegram API ← n8n Response ← Tool Execution (MCP)
+- Researches companies while you commute.
+- Monitors prices while you sleep.
+- Reminds you about that thing you keep forgetting.
+
+Sounds too good? Partly is. Let me break it down.
+
+## What Stuck
+
+**Morning briefs.** Wake up, open Telegram, digest is there. What needs attention today. Took me a week to trust it. Now I rely on it.
+
+**Research on demand.** Voice note while walking: "what does [company] do, 3 bullets." By the time I park, it's done. This one's legit useful.
+
+**Reminders that actually remind.** Set something for Tuesday. Tuesday comes, ping arrives. Simple but I kept forgetting stuff before.
+
+**Background monitoring.** Competitor pricing. Job postings. News mentions. Only alerts when something changes. No noise.
+
+## What Didn't
+
+**Email access.** Everyone's connecting Gmail. I'm not. Don't want an agent with full inbox control. Maybe later. Not yet.
+
+**Content factories.** "Write me 200 articles overnight." Cool demo. But Claude Code does this too. Same prompt, same output.
+
+**Calendar shuffling.** Tried it. Honestly faster to drag things around myself.
+
+## The $27 Setup
+
+People buying Mac Minis for this. Why? A $7 VPS does the same job.
+
+- Claude Pro: $20/month
+- Cheap VPS: $7/month
+- Done.
+
+No hardware. No electricity. No fan noise. Runs from a datacenter somewhere.
+
+## 30 Minute Setup
+
+Looks technical. It's not. Here's the actual timeline.
+
+**0:00 - Server**
+
+AWS free tier. Create account if you don't have one. Launch EC2 instance, pick Ubuntu, click connect. You're in a terminal. Scary looking, does nothing scary.
+
+**0:05 - Install**
+
+One line:
+
+```bash
+curl -fsSL https://clawd.bot/install.sh | bash
 ```
 
-## What Works
+Wait. That's it. Everything else is a wizard.
 
-### Natural Language → Action
+**0:07 - Configure**
 
-"Remind me to review the PR tomorrow at 10am" doesn't just get acknowledged — it creates an actual scheduled trigger. "Check if the deployment succeeded" actually queries the CI/CD pipeline and reports back with real data.
+Wizard pops up. Pick Anthropic. Pick Opus 4.5. Pick Telegram. Click through.
 
-### Context Persistence
+**0:15 - Telegram Bot**
 
-The agent remembers. Not just the last message, but the full conversation thread. It knows that when you say "do the same thing for staging," you mean the deployment check you asked about 3 messages ago.
+Open Telegram. Find @botfather. Type /newbot. Name it whatever. Copy the token it gives you. Paste into wizard.
 
-### Multi-Step Workflows
+Find @useridbot. Copy your ID. Paste that too. Now only you can talk to your bot.
 
-"Deploy the latest to staging, run the smoke tests, and let me know if anything breaks" triggers a chain of actions with real error handling and status updates at each step.
+**0:22 - Identity**
 
-## What Doesn't Work (Yet)
+Clawdbot messages you. Asks your name. Asks what to call itself. Asks your timezone. Answer.
 
-- **Long-running tasks** — anything over 30 seconds hits Telegram's response timeout
-- **File handling** — uploading/downloading files through the messaging interface is clunky
-- **Multi-user** — currently single-tenant, auth is basic
+**0:25 - Done**
 
-## The Honest Take
+Bot responds. It's alive.
 
-The gap between "cool demo" and "reliable daily driver" is enormous. The agent works great 90% of the time. The other 10% — edge cases, API rate limits, ambiguous requests — that's where all the real work is.
+Stuck somewhere? Screenshot it. Paste to ChatGPT. "I'm here, what now?" Works every time. Did it twice myself.
 
-But here's the thing: even at 90%, it's already saving me meaningful time. The key was building it for my own workflows first, not trying to make a general-purpose agent.
+## How I Actually Use It
 
-## What's Next
+Voice notes mostly. Walking somewhere, remember something, send voice. Clawdbot handles it.
 
-- Persistent memory with vector search
-- Multi-agent delegation
-- Better error recovery
+**Morning:** check digest, see what's flagged.
 
-The code is open source. Try it, break it, improve it.
+**During day:** quick research asks, reminder setting, monitoring checks.
+
+Don't use it for writing. Don't use it for deep work. Use it for the stuff that slips through cracks.
+
+## Try These First
+
+Before trusting it with real work:
+
+1. Ask about a company you know. See if the brief is accurate.
+2. Set a reminder for tomorrow morning. See if it actually pings.
+3. Give it a URL, ask it to extract something specific. Check if it got it right.
+
+Build trust first. Expand later.
+
+## Verdict
+
+Not the AI revolution Twitter claims. Also not useless hype.
+
+**Good for:** background tasks, reminders, research, monitoring.
+
+**Not for:** anything needing real judgment, full context, or high stakes.
+
+$27/month worth it? For me, yes. Morning digest alone saves time. Research saves more.
+
+Think of it as a junior assistant. Clear tasks. Limited scope. Gets better as you feed it context.
+
+[clawd.bot](https://clawd.bot) · [clawdhub](https://clawdhub.com)
+
+---
+
+*Mert Köseoğlu, Senior Software Engineer, AI consultant.*
+*[x.com/mksglu](https://x.com/mksglu) · [linkedin.com/in/mksglu](https://linkedin.com/in/mksglu) · [mksg.lu](https://mksg.lu)*
