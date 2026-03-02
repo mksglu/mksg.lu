@@ -272,6 +272,42 @@ export const RESUME_DATA = {
   ],
   projects: [
     {
+      title: "Context Mode",
+      featured: true,
+      techStack: [
+        "TypeScript",
+        "MCP Server",
+        "SQLite FTS5",
+        "BM25 Ranking",
+        "Sandbox Execution",
+        "CLI",
+      ],
+      description:
+        "MCP server that reduces Claude Code context consumption by 98% — 2K+ GitHub stars, 7K+ active users. Playwright snapshots (56 KB → 299 B), GitHub issues (59 KB → 1.1 KB). Spawns isolated subprocesses with 10 language runtimes and a built-in knowledge base with full-text search.",
+      logo: ParabolLogo,
+      link: {
+        label: "github.com/mksglu/claude-context-mode",
+        href: "https://github.com/mksglu/claude-context-mode",
+      },
+    },
+    {
+      title: "Workflais",
+      techStack: [
+        "TypeScript",
+        "Cloudflare Workers",
+        "Cloudflare Workflows",
+        "Durable Execution",
+        "Saga Pattern",
+      ],
+      description:
+        "Declarative workflow primitives for Cloudflare Workflows. Fluent API with automatic result chaining, saga compensation (LIFO rollback), parallel fan-out/fan-in, compile-time validation, and typed context — replacing verbose native step definitions with clean one-liners.",
+      logo: ParabolLogo,
+      link: {
+        label: "github.com/mksglu/workflais",
+        href: "https://github.com/mksglu/workflais",
+      },
+    },
+    {
       title: "seclawai",
       techStack: [
         "TypeScript",
@@ -289,24 +325,6 @@ export const RESUME_DATA = {
       link: {
         label: "seclawai.com",
         href: "https://seclawai.com",
-      },
-    },
-    {
-      title: "Context Mode",
-      techStack: [
-        "TypeScript",
-        "MCP Server",
-        "SQLite FTS5",
-        "BM25 Ranking",
-        "Sandbox Execution",
-        "CLI",
-      ],
-      description:
-        "MCP server that reduces Claude Code context consumption by 98%. Playwright snapshots (56 KB → 299 B), GitHub issues (59 KB → 1.1 KB), access logs (45 KB → 155 B). Spawns isolated subprocesses with 10 language runtimes and a built-in knowledge base with full-text search.",
-      logo: ParabolLogo,
-      link: {
-        label: "github.com/mksglu/claude-context-mode",
-        href: "https://github.com/mksglu/claude-context-mode",
       },
     },
     {

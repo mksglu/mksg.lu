@@ -195,6 +195,98 @@ export default function Page() {
         <Section className="print:break-inside-avoid">
           <h2 className="text-xl font-bold">Projects</h2>
           {RESUME_DATA.projects.map((project) => {
+            const isFeatured = "featured" in project && project.featured;
+
+            if (isFeatured) {
+              return (
+                <div
+                  key={project.title}
+                  className="rounded-lg border border-border bg-card p-5 shadow-sm print:shadow-none print:break-inside-avoid"
+                >
+                  <div className="flex items-start justify-between gap-x-3">
+                    <h3 className="text-base font-bold leading-tight">
+                      <a
+                        className="hover:underline"
+                        href={project.link.href}
+                        target="_blank"
+                      >
+                        {project.title}
+                      </a>
+                    </h3>
+                    <span className="text-[11px] font-mono text-muted-foreground shrink-0 mt-0.5 print:text-[10px]">
+                      {project.link.label}
+                    </span>
+                  </div>
+
+                  <div className="flex gap-8 mt-4 print:mt-3">
+                    <div>
+                      <div className="text-2xl font-bold tabular-nums tracking-tight print:text-lg">
+                        2,000+
+                      </div>
+                      <div className="text-[11px] font-mono text-muted-foreground mt-0.5 print:text-[9px]">
+                        GitHub Stars
+                      </div>
+                    </div>
+                    <div className="w-px bg-border self-stretch" />
+                    <div>
+                      <div className="text-2xl font-bold tabular-nums tracking-tight print:text-lg">
+                        7,000+
+                      </div>
+                      <div className="text-[11px] font-mono text-muted-foreground mt-0.5 print:text-[9px]">
+                        Active Users
+                      </div>
+                    </div>
+                    <div className="w-px bg-border self-stretch" />
+                    <div>
+                      <div className="text-2xl font-bold tabular-nums tracking-tight print:text-lg">
+                        <a
+                          href="https://news.ycombinator.com/item?id=47193064"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-bold hover:underline"
+                        >
+                          548
+                        </a>
+                      </div>
+                      <div className="text-[11px] font-mono text-muted-foreground mt-0.5 print:text-[9px]">
+                        HN Points
+                      </div>
+                    </div>
+                  </div>
+
+                  <p className="text-xs font-mono text-muted-foreground mt-4 leading-relaxed print:text-[10px] print:mt-2">
+                    MCP server that reduces Claude Code context consumption by up to{" "}
+                    <strong className="text-foreground font-semibold">99%</strong>
+                    {" "}— a single Playwright snapshot compresses from 56 KB to 299 B,
+                    extending usable session time from 30 min to 3+ hours.
+                    Spawns isolated subprocesses with 10 language runtimes,
+                    built-in BM25 knowledge base, and intelligent search that returns
+                    relevant excerpts instead of truncated dumps.{" "}
+                    <a
+                      href="https://news.ycombinator.com/item?id=47193064"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-foreground font-semibold hover:underline"
+                    >
+                      Reached #1 on Hacker News
+                    </a>.
+                  </p>
+
+                  <div className="flex flex-wrap gap-1 mt-3 print:mt-2">
+                    {project.techStack.map((tech) => (
+                      <Badge
+                        variant="secondary"
+                        className="text-[10px] px-1 py-0 print:px-1 print:py-0.5 print:text-[8px] print:leading-tight"
+                        key={tech}
+                      >
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
+              );
+            }
+
             return (
               <Card key={project.title} className="print:break-inside-avoid">
                 <CardHeader>
