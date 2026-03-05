@@ -1,0 +1,156 @@
+---
+title: "Context Mode v1.0.0 — Five Platforms, Session Continuity, and a Thank You to Hacker News"
+description: "From a single-client MCP server to a multi-platform context engine. 2.6K stars, 134 forks, 107 comments. Here's what v1.0.0 ships."
+date: "2026-03-05"
+tags: ["MCP", "Claude Code", "Gemini CLI", "VS Code Copilot", "OpenCode", "Codex CLI", "Developer Tools", "Open Source"]
+linkedinUrl: "https://www.linkedin.com/in/mksglu"
+xUrl: "https://x.com/mksglu"
+published: true
+---
+
+Six days ago I posted a write-up on Hacker News explaining how Context Mode reduces Claude Code's context consumption by 98%. I expected a handful of comments. I got 565 points, 107 comments, and the kind of feedback that makes you stay up until 4 AM shipping features.
+
+This is that update.
+
+## To the Hacker News Community
+
+Before anything technical — thank you. To every person who upvoted, commented, opened an issue, sent a DM, or quietly starred the repo at 2 AM: you made this happen.
+
+The [original HN post](https://news.ycombinator.com/item?id=47193064) became the single biggest motivator for building v1.0.0. In six days, the repo went from 228 stars to **2,600+**. From one platform to five. From a weekend project to something people actually depend on.
+
+**danw1979** asked for a deeper write-up. **lkbm** caught a missing link. **tomhow** (HN mod) flagged a date typo. **ZeroGravitas** asked if reducing context pollution makes LLMs smarter (yes — fewer irrelevant tokens means better attention allocation). **doctorpangloss** called everything LLM-authored nonsense, which, fair enough, kept me honest. **WesBrownSQL** shared alternative approaches. **blakec** wrote an entire guide on hybrid retrieval inspired by the architecture.
+
+67 unique voices. Every single one read. Every single one appreciated.
+
+To the HN mods who kept the post alive and the discussion civil — respect. You run the best technical forum on the internet.
+
+This community gave me the motivation to turn a Claude Code experiment into a multi-platform context engine. v1.0.0 is yours as much as it is mine.
+
+## What Ships in v1.0.0
+
+### Five Platform Adapters
+
+Context Mode no longer requires Claude Code. The MCP server now runs on **five platforms**, each with its own adapter implementing the `HookAdapter` interface:
+
+| Platform | MCP Server | Hooks | Session Continuity | Tool Blocking |
+|---|:---:|:---:|:---:|:---:|
+| **Claude Code** | ✓ | Full | Full | ✓ |
+| **Gemini CLI** | ✓ | Full | High | ✓ |
+| **VS Code Copilot** | ✓ | Full | High | ✓ |
+| **OpenCode** | ✓ | Plugin | High | Plugin |
+| **Codex CLI** | ✓ | — | — | — |
+
+Each adapter handles platform-specific input parsing, response formatting, config paths, diagnostics, and upgrade logic. One codebase, five runtimes.
+
+### Session Continuity
+
+The headline feature. When your context window compacts, the model forgets everything — files, tasks, decisions, errors. Session Continuity fixes this.
+
+Five hooks working together:
+
+- **PostToolUse** — captures events after each tool call (file edits, git operations, errors, decisions)
+- **UserPromptSubmit** — records user corrections and preferences
+- **PreCompact** — builds a priority-tiered snapshot (≤2 KB) before compaction hits
+- **SessionStart** — restores state into FTS5 on resume
+- **PreToolUse** — routes tools through the sandbox
+
+Fifteen event categories tracked: files, tasks, git, errors, decisions, environment, MCP tools, subagents, and more. The model receives a structured Session Guide and continues from your last prompt without re-prompting.
+
+**Before:** ~30 minutes before context degradation. **After:** ~3 hours. Context remaining at 45 minutes: 99%.
+
+### New Tools
+
+- **`ctx_batch_execute`** — Run multiple commands + search multiple queries in one call. One `batch_execute` replaces 30+ individual calls.
+- **`ctx_fetch_and_index`** — Fetch URL, detect content type (HTML/JSON/text), chunk and index. The raw page never enters context.
+- **Background mode** — Persistent processes with network stats tracking. Run a dev server and fetch from it in the same call.
+- **`ctx_stats`**, **`ctx_doctor`**, **`ctx_upgrade`** — Universal commands that work on all platforms.
+
+### Search Improvements
+
+- **AND-first semantics** with OR fallback cascade ([#23](https://github.com/mksglu/context-mode/issues/23))
+- **Three-layer fuzzy search**: Porter stemming → Trigram substring → Levenshtein distance
+- **Smart Snippets**: windows around matches with heading context, not truncation
+- **Progressive Throttling**: calls 1–3 normal, 4–8 reduced, 9+ blocked
+- **FTS5 deduplication** ([#67](https://github.com/mksglu/context-mode/issues/67)): re-indexing with the same source replaces previous content atomically
+
+### Security & Sandbox
+
+- Sandbox env passthrough for **direnv, nix, asdf, mise, venv, conda** ([#22](https://github.com/mksglu/context-mode/issues/22))
+- Gradle/Maven build tool routing to sandbox ([#38](https://github.com/mksglu/context-mode/issues/38))
+- **SSL cert auto-detection** for Python on macOS
+- Zombie process cleanup for backgrounded subprocesses
+- Cross-platform permission enforcement (deny/allow rules, command splitting)
+
+### Breaking Changes
+
+Three things moved:
+
+1. **Repository renamed**: `claude-context-mode` → `context-mode` (GitHub auto-redirects)
+2. **Tool names prefixed**: `execute` → `ctx_execute`, `batch_execute` → `ctx_batch_execute`
+3. **Plugin marketplace path**: `mksglu/claude-context-mode` → `mksglu/context-mode`
+
+Existing installs auto-upgrade via `/context-mode:ctx-upgrade`.
+
+## Contributors
+
+Open source lives on contributions. Four people shipped code into v1.0.0:
+
+- **[@rjkaes](https://github.com/rjkaes)** — `searchWithFallback`, stream byte cap, shell expansion fix
+- **[@ekosz](https://github.com/ekosz)** — Elixir language support (runtime #11)
+- **[@dunika](https://github.com/dunika)** — `CLAUDE_PROJECT_DIR` relative paths
+- **[@RicoKirstein](https://github.com/RicoKirstein)** — FTS5 dedup feature request
+
+## Call for Contributors: Agentic Engineering
+
+Four of the five adapters are in **beta**. They work, they pass tests, but they need real-world usage from people who actually use these platforms daily.
+
+This is where **Agentic Engineering** comes in. Each adapter lives in `src/adapters/<platform>/` and exports a standard `HookAdapter` interface. The architecture is documented, the test suite is comprehensive (32 files, 689 tests), and the codebase is designed to be navigated by AI coding agents.
+
+If you use **Gemini CLI**, **VS Code Copilot**, **OpenCode**, or **Codex CLI** — open a PR:
+
+- **Test the adapter** on your real projects and fix what breaks
+- **Improve platform-specific routing** for tools we haven't encountered
+- **Add missing hook events** that your platform supports but we don't capture yet
+
+Point your coding agent at the repo, tell it what's broken, and let it propose the fix. That's the workflow. PRs over issues.
+
+**Fork it, fix it, PR it:** [github.com/mksglu/context-mode](https://github.com/mksglu/context-mode)
+
+## How to Install
+
+We recommend **Claude Code** for the full experience — plugin marketplace, auto-routing hooks, session continuity, slash commands. Everything works out of the box.
+
+```bash
+/install context-mode
+```
+
+For other platforms:
+
+```bash
+npm install -g context-mode
+```
+
+Then configure your platform's MCP settings. Full setup guides in the [README](https://github.com/mksglu/context-mode#install).
+
+## The Presentation
+
+We put together a [10-slide technical presentation](/presentation.html) covering the architecture, benchmarks, and v1.0.0 features. Use it for your team, your meetup, or your own reference.
+
+## Star the Repo
+
+If Context Mode saved you time, saved you tokens, or just made your sessions less frustrating — consider giving it a star on GitHub. It helps new developers find the project and tells us we're building something worth maintaining.
+
+**[github.com/mksglu/context-mode](https://github.com/mksglu/context-mode)**
+
+## The Numbers
+
+32 test files. 689 tests. 11 language runtimes. 5 platform adapters. 98% context savings. 2,600+ stars. One MCP server.
+
+The context window is finite. Stop filling it with raw bytes. Feed it answers.
+
+---
+
+*Mert Köseoğlu, Senior Software Engineer, AI consultant.*
+*[x.com/mksglu](https://x.com/mksglu) · [linkedin.com/in/mksglu](https://linkedin.com/in/mksglu) · [mksg.lu](https://mksg.lu)*
+
+*[GitHub](https://github.com/mksglu/context-mode) · [Hacker News](https://news.ycombinator.com/item?id=47193064) · [v1.0.0 Release Notes](https://github.com/mksglu/context-mode/releases/tag/v1.0.0)*
