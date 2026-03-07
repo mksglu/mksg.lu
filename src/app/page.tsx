@@ -8,12 +8,14 @@ import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import { getAllPosts } from "@/lib/blog";
+import { getContextModeStats, formatStat } from "@/lib/stats";
 import Image from "next/image";
 import Link from "next/link";
 import { XIcon, LinkedInIcon } from "@/components/icons";
 
 import Mert from "@/images/pp-mert.jpg";
-export default function Page() {
+export default async function Page() {
+  const stats = await getContextModeStats();
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -222,7 +224,7 @@ export default function Page() {
                   <div className="flex gap-8 mt-4 print:mt-3">
                     <div>
                       <div className="text-2xl font-bold tabular-nums tracking-tight print:text-lg">
-                        2,000+
+                        {formatStat(stats.githubStars)}
                       </div>
                       <div className="text-[11px] font-mono text-muted-foreground mt-0.5 print:text-[9px]">
                         GitHub Stars
@@ -231,10 +233,10 @@ export default function Page() {
                     <div className="w-px bg-border self-stretch" />
                     <div>
                       <div className="text-2xl font-bold tabular-nums tracking-tight print:text-lg">
-                        7,000+
+                        {formatStat(stats.npmDownloads)}
                       </div>
                       <div className="text-[11px] font-mono text-muted-foreground mt-0.5 print:text-[9px]">
-                        Active Users
+                        Weekly Downloads
                       </div>
                     </div>
                     <div className="w-px bg-border self-stretch" />
@@ -246,7 +248,7 @@ export default function Page() {
                           rel="noopener noreferrer"
                           className="font-bold hover:underline"
                         >
-                          548
+                          {stats.hnPoints}
                         </a>
                       </div>
                       <div className="text-[11px] font-mono text-muted-foreground mt-0.5 print:text-[9px]">
