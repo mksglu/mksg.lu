@@ -7,6 +7,7 @@ import { Section } from "@/components/ui/section";
 import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
+import { getAllPosts } from "@/lib/blog";
 import Image from "next/image";
 import Link from "next/link";
 import { XIcon, LinkedInIcon } from "@/components/icons";
@@ -336,48 +337,46 @@ export default function Page() {
         <Section className="print:break-inside-avoid">
           <h2 className="text-xl font-bold">Blog & Insights</h2>
           <div className="space-y-2">
-            {RESUME_DATA.blogPosts.map((post, index) => (
-              <div key={index} className="border-l-2 border-muted pl-3 py-1">
-                {"slug" in post && post.slug ? (
-                  <Link
-                    href={`/blog/${post.slug}`}
-                    className="text-sm font-medium hover:underline"
-                  >
-                    {post.title}
-                  </Link>
-                ) : (
-                  <p className="text-sm font-medium">{post.title}</p>
-                )}
+            {getAllPosts().map((post) => (
+              <div key={post.slug} className="border-l-2 border-muted pl-3 py-1">
+                <Link
+                  href={`/blog/${post.slug}`}
+                  className="text-sm font-medium hover:underline"
+                >
+                  {post.title}
+                </Link>
                 <p className="text-xs text-muted-foreground mt-0.5 print:text-[10px]">
                   {post.description}
                 </p>
                 <div className="flex gap-3 mt-1">
-                  {"slug" in post && post.slug && (
-                    <Link
-                      href={`/blog/${post.slug}`}
-                      className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:underline print:hidden"
+                  <Link
+                    href={`/blog/${post.slug}`}
+                    className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:underline print:hidden"
+                  >
+                    <span>Read more &rarr;</span>
+                  </Link>
+                  {post.linkedinUrl && (
+                    <a
+                      href={post.linkedinUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:underline"
                     >
-                      <span>Read more &rarr;</span>
-                    </Link>
+                      <LinkedInIcon className="size-3" />
+                      <span>LinkedIn</span>
+                    </a>
                   )}
-                  <a
-                    href={post.linkedinUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:underline"
-                  >
-                    <LinkedInIcon className="size-3" />
-                    <span>LinkedIn</span>
-                  </a>
-                  <a
-                    href={post.xUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:underline"
-                  >
-                    <XIcon className="size-3" />
-                    <span>X</span>
-                  </a>
+                  {post.xUrl && (
+                    <a
+                      href={post.xUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:underline"
+                    >
+                      <XIcon className="size-3" />
+                      <span>X</span>
+                    </a>
+                  )}
                 </div>
               </div>
             ))}

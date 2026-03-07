@@ -35,37 +35,6 @@ export const RESUME_DATA = {
       },
     ],
   },
-  blogPosts: [
-    {
-      title:
-        "Stop Burning Your Context Window — We Built Context Mode",
-      description:
-        "MCP server that reduces Claude Code context consumption by 98%. 315 KB becomes 5.4 KB.",
-      slug: "context-mode",
-      linkedinUrl:
-        "https://www.linkedin.com/in/mksglu",
-      xUrl: "https://x.com/mksglu",
-    },
-    {
-      title:
-        "Gemini File Search + Cloudflare Workers: The Production RAG Stack That Just Works",
-      description:
-        "Real-world RAG system implementation - wrong turns, 3am debugging, and decisions that actually mattered.",
-      slug: "gemini-rag-cloudflare-workers",
-      linkedinUrl:
-        "https://www.linkedin.com/feed/update/urn:li:activity:7424553558924050432/",
-      xUrl: "https://x.com/mksglu/status/2015747512292782123",
-    },
-    {
-      title: "Clawdbot: Two Weeks In. What Actually Works.",
-      description:
-        "Open-source AI agent that communicates through Telegram and WhatsApp - beyond conversation, it takes action.",
-      slug: "clawdbot-two-weeks-in",
-      linkedinUrl:
-        "https://www.linkedin.com/feed/update/urn:li:activity:7421546642874699776/",
-      xUrl: "https://x.com/mksglu/status/2015422422950818205",
-    },
-  ],
   work: [
     {
       company: "Mert Koseoglu, Software Forge",
@@ -271,6 +240,27 @@ export const RESUME_DATA = {
     "Founding Engineer",
   ],
   projects: [
+    {
+      title: "Hatice",
+      techStack: [
+        "TypeScript",
+        "Claude Code Agent SDK",
+        "Hono",
+        "Pino",
+        "Zod",
+        "LiquidJS",
+        "SSE",
+        "Linear API",
+        "GitHub API",
+      ],
+      description:
+        "Autonomous issue orchestration for the agent-first era. Polls Linear/GitHub Issues, spins up isolated workspaces, and dispatches parallel Claude Code agents to solve issues end-to-end — dispatch, multi-turn execution, retry with exponential backoff, reconciliation, and real-time SSE dashboard. 4,148 lines of source, 328 tests, zero type errors.",
+      logo: ParabolLogo,
+      link: {
+        label: "github.com/mksglu/hatice",
+        href: "https://github.com/mksglu/hatice",
+      },
+    },
     {
       title: "Context Mode",
       featured: true,
