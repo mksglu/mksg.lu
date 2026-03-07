@@ -1,0 +1,3 @@
+[   62946ms] [ERROR] WebSocket connection to 'ws://localhost:3848/_next/webpack-hmr' failed:  @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/use-websocket.js:41
+[   63075ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3848/favicon/favicon-32x32.png:0
+[   63077ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3848/favicon/favicon-16x16.png:0

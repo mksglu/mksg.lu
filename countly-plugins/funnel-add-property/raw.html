@@ -1,0 +1,311 @@
+<!-- Funnel "+ Add property" — Property Filter Component (cly-vue-qb-seg) -->
+<!-- Extracted from: http://mert.count.ly/dashboard#/6908ab02fece9ef06eca7285/funnels -->
+<!-- State: Country property selected, operator "is" selected, value dropdown visible with checkbox list -->
+<!-- Compact format: c=class, t=data-test-id, tp=type, ph=placeholder -->
+
+<!-- ============================================ -->
+<!-- SECTION 1: Property Filter Row (cly-vue-qb-seg) -->
+<!-- ============================================ -->
+<div c="cly-vue-qb-seg">
+  <span>
+    <div c="bu-columns bu-is-gapless bu-is-multiline">
+      <div c="bu-column bu-is-12">
+        <!-- Loading overlay (shown during data fetch) -->
+        <div c="el-loading-mask">
+          <div c="el-loading-spinner">
+            <i c="el-icon-loading"></i>
+            <p c="el-loading-text">Loading...</p>
+          </div>
+        </div>
+
+        <!-- Property filter row -->
+        <div c="bu-columns bu-is-gapless bu-is-mobile cly-vue-qb-seg__row cly-vue-qb-seg__row--first cly-vue-qb-seg__row--last">
+          <div c="bu-column bu-is-12">
+            <div c="bu-columns bu-is-gapless bu-is-mobile cly-vue-qb-seg__row-selects">
+
+              <!-- Column 1: Property Select (4/12 width) -->
+              <div c="bu-column bu-is-4">
+                <span>
+                  <div c="cly-vue-dropdown el-select cly-vue-select-x"
+                       t="funnel-steps-step-1-property-select-property-dropdown-0-dropdown-el-select"
+                       ph="Select Property">
+                    <div>
+                      <div c="cly-input-dropdown-trigger el-input el-input--suffix is-arrow">
+                        <input c="el-input__inner"
+                               t="funnel-steps-step-1-property-select-property-dropdown-0"
+                               tp="text" ph="Select Property">
+                        <span c="el-input__suffix">
+                          <span c="el-input__suffix-inner">
+                            <i c="el-select__caret ion-arrow-up-b"></i>
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </span>
+              </div>
+
+              <!-- Column 2: Operator Select (3/12 width) -->
+              <div c="bu-column bu-is-3">
+                <span>
+                  <div c="el-select">
+                    <div c="el-input el-input--suffix is-arrow">
+                      <input c="el-input__inner"
+                             t="funnel-steps-step-1-property-select-condition-dropdown-0-select-input"
+                             tp="text" ph="Select">
+                      <span c="el-input__suffix">
+                        <span c="el-input__suffix-inner">
+                          <i c="el-select__caret ion-arrow-up-b"
+                             t="funnel-steps-step-1-property-select-condition-dropdown-0-select-icon"></i>
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </span>
+              </div>
+
+              <!-- Column 3: Value Field (4/12 width) — VARIES by property type -->
+              <!-- For numeric properties: -->
+              <div c="bu-column bu-is-4">
+                <span c="cly-vue-qb-seg__row-wrapper">
+                  <div c="el-input is-disabled">
+                    <input c="el-input__inner"
+                           t="funnel-steps-step-1-property-select-value-dropdown-0"
+                           tp="text" ph="String">
+                  </div>
+                </span>
+              </div>
+              <!-- For list properties (Country + "is" selected): value becomes cly-vue-select-x dropdown -->
+              <!--
+              <div c="bu-column bu-is-4">
+                <span c="cly-vue-qb-seg__row-wrapper">
+                  <form>
+                    <div c="cly-vue-dropdown el-select cly-vue-select-x"
+                         t="funnel-steps-step-1-property-select-value-dropdown-0-dropdown-el-select"
+                         ph="Select">
+                      <div>
+                        <div c="el-select el-select-head">
+                          <div c="el-select__tags"></div>
+                          <div c="el-input el-input--suffix is-arrow">
+                            <input c="el-input__inner"
+                                   t="funnel-steps-step-1-property-select-value-dropdown-0"
+                                   tp="text" ph="Select">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </span>
+              </div>
+              -->
+
+              <!-- Column 4: Close/Remove Button (1/12 width) -->
+              <div c="bu-column bu-is-1 bu-is-flex bu-is-align-items-center bu-is-justify-content-center">
+                <div c="cly-icon-button cly-icon-button--gray cly-vue-qb-icon">
+                  <i c="el-icon-close" t="funnel-steps-step-1-qbs-close-button-0"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- + Add property button -->
+      <div c="bu-column bu-is-12 bu-mt-2">
+        <div c="bu-columns bu-is-gapless bu-is-mobile">
+          <div c="bu-column bu-is-2">
+            <div c="cly-text-button cly-text-button--disabled"
+                 t="funnel-steps-step-1-add-property-button">
+              + Add property
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </span>
+</div>
+
+<!-- ============================================ -->
+<!-- SECTION 2: Property Select Dropdown (body-level popper) -->
+<!-- ============================================ -->
+<div c="cly-vue-select-x__pop">
+  <div c="cly-vue-select-x__header">
+    <div c="bu-level">
+      <div c="bu-level-item">
+        <div c="el-input el-input--prefix">
+          <input c="el-input__inner"
+                 t="funnel-steps-step-1-property-select-property-dropdown-0-search-box"
+                 tp="text" ph="Search in Properties">
+          <span c="el-input__prefix">
+            <i c="el-input__icon el-icon-search"
+               t="funnel-steps-step-1-property-select-property-dropdown-0-search-icon"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div c="el-tabs el-tabs--top">
+    <div c="el-tabs__header is-top">
+      <div c="el-tabs__nav is-top">
+        <div c="el-tabs__item is-top">
+          <span t="funnel-steps-step-1-property-select-property-dropdown-0-el-tab-all-properties">All Properties</span>
+        </div>
+        <div c="el-tabs__item is-top">
+          <span t="funnel-steps-step-1-property-select-property-dropdown-0-el-tab-event">Event</span>
+        </div>
+        <div c="el-tabs__item is-top is-active">
+          <span t="funnel-steps-step-1-property-select-property-dropdown-0-el-tab-user">User</span>
+        </div>
+        <div c="el-tabs__item is-top">
+          <span t="funnel-steps-step-1-property-select-property-dropdown-0-el-tab-custom">Custom</span>
+        </div>
+        <div c="el-tabs__item is-top">
+          <span t="funnel-steps-step-1-property-select-property-dropdown-0-el-tab-campaign">Campaign</span>
+        </div>
+      </div>
+    </div>
+
+    <div c="el-tabs__content">
+      <div c="el-tab-pane">
+        <div c="cly-vue-listbox scroll-keep-show cly-vue-listbox--has-margin cly-vue-listbox--has-default-skin">
+          <div c="__vuescroll hasVBar vBarVisible hBarVisible"
+               t="funnel-steps-step-1-property-select-property-dropdown-0-scroll">
+            <div c="cly-vue-listbox__items-wrapper">
+              <!-- Each property item -->
+              <div c="text-medium font-weight-bold cly-vue-listbox__item">
+                <div c="cly-vue-listbox__item-content"
+                     t="funnel-steps-step-1-property-select-property-dropdown-0-item">
+                  <div c="bu-level">
+                    <div c="bu-level-left">
+                      <div c="cly-vue-listbox__item-prefix bu-mr-1"></div>
+                      <div c="cly-vue-listbox__item-label has-tooltip"
+                           t="funnel-steps-step-1-property-select-property-dropdown-0-item-{property-slug}">
+                        {Property Name}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Repeat for each property -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SECTION 3: Value Dropdown for List Properties (body-level popper) -->
+<!-- ============================================ -->
+<div c="cly-vue-select-x__pop">
+  <div c="cly-vue-select-x__header">
+    <div c="bu-level">
+      <div c="bu-level-item">
+        <div c="el-input el-input--prefix">
+          <input c="el-input__inner"
+                 t="funnel-steps-step-1-property-select-value-dropdown-0-search-box"
+                 tp="text" ph="Search in Values">
+          <span c="el-input__prefix">
+            <i c="el-input__icon el-icon-search"
+               t="funnel-steps-step-1-property-select-value-dropdown-0-search-icon"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div c="el-tabs el-tabs--top">
+    <div c="el-tabs__header is-top">
+      <div c="el-tabs__nav is-top">
+        <div c="el-tabs__item is-top is-active">
+          <span t="funnel-steps-step-1-property-select-value-dropdown-0-el-tab-values">Values</span>
+        </div>
+      </div>
+    </div>
+    <div c="el-tabs__content">
+      <div c="el-tab-pane">
+        <div c="cly-vue-listbox scroll-keep-show cly-vue-listbox--has-margin cly-vue-listbox--has-default-skin">
+          <div c="cly-vue-listbox__items-wrapper">
+            <div c="el-checkbox-group">
+              <!-- Each value item (checkbox for multi-select) -->
+              <div c="text-medium cly-vue-listbox__item">
+                <label c="el-checkbox has-tooltip">
+                  <span c="el-checkbox__input"
+                        t="funnel-steps-step-1-property-select-value-dropdown-0-checklistbox-{value-slug}-el-checkbox-input">
+                    <span c="el-checkbox__inner"></span>
+                    <input c="el-checkbox__original"
+                           t="funnel-steps-step-1-property-select-value-dropdown-0-checklistbox-{value-slug}-el-checkbox-button"
+                           tp="checkbox">
+                  </span>
+                  <span c="el-checkbox__label"
+                        t="funnel-steps-step-1-property-select-value-dropdown-0-checklistbox-{value-slug}-el-checkbox-label">
+                    {Value Name}
+                  </span>
+                </label>
+              </div>
+              <!-- Sample values for Country: Austria, China, Germany, Spain, Hungary, ... -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- OPERATOR SETS BY PROPERTY TYPE -->
+<!-- ============================================ -->
+<!--
+NUMERIC (Duration, Age, Session Count, etc.):
+  - is between
+  - greater than
+  - at least
+  - less than
+  - at most
+  - is
+  - is not
+  - is set
+
+STRING (Browser, App Version, Email, Name, etc.):
+  - is
+  - is not
+  - contains
+  - doesn't contain
+  - is set
+  - begins with
+
+LIST (Country, City, Platform, Gender, Device, etc.):
+  - is
+  - is not
+  - is set
+-->
+
+<!-- ============================================ -->
+<!-- PROPERTY TABS AND THEIR CONTENTS -->
+<!-- ============================================ -->
+<!--
+All Properties tab: Combined list of Event + User + Custom + Campaign properties
+
+Event tab:
+  - Duration [DYNAMIC/DB]
+
+User tab (46 properties):
+  - ID, Age, App Version, Browser, Browser version, Birth year, Carrier,
+    Days of retention, Months of retention, Weeks of retention,
+    Country, City, Device, Density, Local Day of the Week, Device Type,
+    Email, First Seen On, Gender, Local Hour, Language, Last Seen On,
+    Last view name, Manufacturer, Name, Organization, Device Orientation,
+    Platform, Phone, Platform Version, Resolution, Region, Session Count,
+    Source, Total Session Duration, Username, Locale, Source Channel,
+    Engagement Score, Last Payment, Last Purchase Amount,
+    Total Purchase Amount, Total Purchase Count, Hinge, Cohorts, Profile Group
+
+Custom tab:
+  - Acquisition Source, Industry, Onboarding Method, Subscription Plan,
+    Team Size, populator, Referral Campaign [DYNAMIC/DB - app-specific]
+
+Campaign tab:
+  - (campaign attribution properties) [DYNAMIC/DB]
+-->

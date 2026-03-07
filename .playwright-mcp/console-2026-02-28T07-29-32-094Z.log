@@ -1,0 +1,3 @@
+[    9969ms] Object
+[   10295ms] [ERROR] Failed to load resource: the server responded with a status of 403 (Forbidden) @ http://mert.count.ly/o/ai-assistants/load-thread?app_id=6908ab02fece9ef06eca7285&threadId=c29c2596-df7d-4e75-a2f3-54718c0e4903:0
+[   14458ms] [ERROR] Failed to load resource: the server responded with a status of 403 (Forbidden) @ http://mert.count.ly/o/ai-assistants/load-thread?app_id=6908ab02fece9ef06eca7285&threadId=c29c2596-df7d-4e75-a2f3-54718c0e4903:0

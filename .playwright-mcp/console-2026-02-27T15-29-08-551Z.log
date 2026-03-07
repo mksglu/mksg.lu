@@ -1,0 +1,526 @@
+[     387ms] [ERROR] [Vue warn]: Error in render: "TypeError: periodClause.name.toLowerCase is not a function"
+
+found in
+
+---> <ClyCohortTargeting>
+       <ElTableBody>
+         <ElTable> at packages/table/src/table.vue
+           <ClyDatatableN>
+             <HomeTable>
+               <ClySection>
+                 <ClyMain>
+                   <MainView>
+                     <Root> @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:633
+[     388ms] [ERROR] TypeError: periodClause.name.toLowerCase is not a function
+    at http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:316:145
+    at Array.forEach (<anonymous>)
+    at Object.getSegmentationDescription (http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:237:26)
+    at VueComponent.targetingDescription (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:42:39)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25)
+    at VueComponent.computedGetter [as targetingDescription] (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4828:21)
+    at VueComponent.hasTargeting (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:54:41)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25) @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:1898
+[     389ms] [ERROR] [Vue warn]: Error in render: "TypeError: periodClause.name.toLowerCase is not a function"
+
+found in
+
+---> <ClyCohortTargeting>
+       <ElTableBody>
+         <ElTable> at packages/table/src/table.vue
+           <ClyDatatableN>
+             <HomeTable>
+               <ClySection>
+                 <ClyMain>
+                   <MainView>
+                     <Root> @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:633
+[     389ms] [ERROR] TypeError: periodClause.name.toLowerCase is not a function
+    at http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:316:145
+    at Array.forEach (<anonymous>)
+    at Object.getSegmentationDescription (http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:237:26)
+    at VueComponent.targetingDescription (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:42:39)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25)
+    at VueComponent.computedGetter [as targetingDescription] (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4828:21)
+    at VueComponent.hasTargeting (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:54:41)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25) @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:1898
+[     391ms] [ERROR] [Vue warn]: Error in render: "TypeError: periodClause.name.toLowerCase is not a function"
+
+found in
+
+---> <ClyCohortTargeting>
+       <ElTableBody>
+         <ElTable> at packages/table/src/table.vue
+           <ClyDatatableN>
+             <HomeTable>
+               <ClySection>
+                 <ClyMain>
+                   <MainView>
+                     <Root> @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:633
+[     391ms] [ERROR] TypeError: periodClause.name.toLowerCase is not a function
+    at http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:316:145
+    at Array.forEach (<anonymous>)
+    at Object.getSegmentationDescription (http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:237:26)
+    at VueComponent.targetingDescription (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:42:39)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25)
+    at VueComponent.computedGetter [as targetingDescription] (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4828:21)
+    at VueComponent.hasTargeting (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:54:41)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25) @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:1898
+[     392ms] [ERROR] [Vue warn]: Error in render: "TypeError: periodClause.name.toLowerCase is not a function"
+
+found in
+
+---> <ClyCohortTargeting>
+       <ElTableBody>
+         <ElTable> at packages/table/src/table.vue
+           <ClyDatatableN>
+             <HomeTable>
+               <ClySection>
+                 <ClyMain>
+                   <MainView>
+                     <Root> @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:633
+[     392ms] [ERROR] TypeError: periodClause.name.toLowerCase is not a function
+    at http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:316:145
+    at Array.forEach (<anonymous>)
+    at Object.getSegmentationDescription (http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:237:26)
+    at VueComponent.targetingDescription (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:42:39)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25)
+    at VueComponent.computedGetter [as targetingDescription] (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4828:21)
+    at VueComponent.hasTargeting (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:54:41)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25) @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:1898
+[     392ms] [ERROR] [Vue warn]: Error in render: "TypeError: periodClause.name.toLowerCase is not a function"
+
+found in
+
+---> <ClyCohortTargeting>
+       <ElTableBody>
+         <ElTable> at packages/table/src/table.vue
+           <ClyDatatableN>
+             <HomeTable>
+               <ClySection>
+                 <ClyMain>
+                   <MainView>
+                     <Root> @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:633
+[     392ms] [ERROR] TypeError: periodClause.name.toLowerCase is not a function
+    at http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:316:145
+    at Array.forEach (<anonymous>)
+    at Object.getSegmentationDescription (http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:237:26)
+    at VueComponent.targetingDescription (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:42:39)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25)
+    at VueComponent.computedGetter [as targetingDescription] (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4828:21)
+    at VueComponent.hasTargeting (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:54:41)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25) @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:1898
+[     397ms] [ERROR] [Vue warn]: Error in render: "TypeError: periodClause.name.toLowerCase is not a function"
+
+found in
+
+---> <ClyCohortTargeting>
+       <ElTableBody>
+         <ElTable> at packages/table/src/table.vue
+           <ClyDatatableN>
+             <HomeTable>
+               <ClySection>
+                 <ClyMain>
+                   <MainView>
+                     <Root> @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:633
+[     397ms] [ERROR] TypeError: periodClause.name.toLowerCase is not a function
+    at http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:316:145
+    at Array.forEach (<anonymous>)
+    at Object.getSegmentationDescription (http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:237:26)
+    at VueComponent.targetingDescription (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:42:39)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25)
+    at VueComponent.computedGetter [as targetingDescription] (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4828:21)
+    at VueComponent.hasTargeting (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:54:41)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25) @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:1898
+[     398ms] [ERROR] [Vue warn]: Error in render: "TypeError: periodClause.name.toLowerCase is not a function"
+
+found in
+
+---> <ClyCohortTargeting>
+       <ElTableBody>
+         <ElTable> at packages/table/src/table.vue
+           <ClyDatatableN>
+             <HomeTable>
+               <ClySection>
+                 <ClyMain>
+                   <MainView>
+                     <Root> @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:633
+[     398ms] [ERROR] TypeError: periodClause.name.toLowerCase is not a function
+    at http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:316:145
+    at Array.forEach (<anonymous>)
+    at Object.getSegmentationDescription (http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:237:26)
+    at VueComponent.targetingDescription (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:42:39)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25)
+    at VueComponent.computedGetter [as targetingDescription] (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4828:21)
+    at VueComponent.hasTargeting (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:54:41)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25) @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:1898
+[     400ms] [ERROR] [Vue warn]: Error in render: "TypeError: periodClause.name.toLowerCase is not a function"
+
+found in
+
+---> <ClyCohortTargeting>
+       <ElTableBody>
+         <ElTable> at packages/table/src/table.vue
+           <ClyDatatableN>
+             <HomeTable>
+               <ClySection>
+                 <ClyMain>
+                   <MainView>
+                     <Root> @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:633
+[     400ms] [ERROR] TypeError: periodClause.name.toLowerCase is not a function
+    at http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:316:145
+    at Array.forEach (<anonymous>)
+    at Object.getSegmentationDescription (http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:237:26)
+    at VueComponent.targetingDescription (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:42:39)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25)
+    at VueComponent.computedGetter [as targetingDescription] (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4828:21)
+    at VueComponent.hasTargeting (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:54:41)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25) @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:1898
+[     401ms] [ERROR] [Vue warn]: Error in render: "TypeError: periodClause.name.toLowerCase is not a function"
+
+found in
+
+---> <ClyCohortTargeting>
+       <ElTableBody>
+         <ElTable> at packages/table/src/table.vue
+           <ClyDatatableN>
+             <HomeTable>
+               <ClySection>
+                 <ClyMain>
+                   <MainView>
+                     <Root> @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:633
+[     401ms] [ERROR] TypeError: periodClause.name.toLowerCase is not a function
+    at http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:316:145
+    at Array.forEach (<anonymous>)
+    at Object.getSegmentationDescription (http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:237:26)
+    at VueComponent.targetingDescription (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:42:39)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25)
+    at VueComponent.computedGetter [as targetingDescription] (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4828:21)
+    at VueComponent.hasTargeting (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:54:41)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25) @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:1898
+[     401ms] [ERROR] [Vue warn]: Error in render: "TypeError: periodClause.name.toLowerCase is not a function"
+
+found in
+
+---> <ClyCohortTargeting>
+       <ElTableBody>
+         <ElTable> at packages/table/src/table.vue
+           <ClyDatatableN>
+             <HomeTable>
+               <ClySection>
+                 <ClyMain>
+                   <MainView>
+                     <Root> @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:633
+[     401ms] [ERROR] TypeError: periodClause.name.toLowerCase is not a function
+    at http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:316:145
+    at Array.forEach (<anonymous>)
+    at Object.getSegmentationDescription (http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:237:26)
+    at VueComponent.targetingDescription (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:42:39)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25)
+    at VueComponent.computedGetter [as targetingDescription] (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4828:21)
+    at VueComponent.hasTargeting (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:54:41)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25) @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:1898
+[     407ms] [ERROR] [Vue warn]: Error in render: "TypeError: periodClause.name.toLowerCase is not a function"
+
+found in
+
+---> <ClyCohortTargeting>
+       <ElTableBody>
+         <ElTable> at packages/table/src/table.vue
+           <ClyDatatableN>
+             <HomeTable>
+               <ClySection>
+                 <ClyMain>
+                   <MainView>
+                     <Root> @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:633
+[     407ms] [ERROR] TypeError: periodClause.name.toLowerCase is not a function
+    at http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:316:145
+    at Array.forEach (<anonymous>)
+    at Object.getSegmentationDescription (http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:237:26)
+    at VueComponent.targetingDescription (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:42:39)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25)
+    at VueComponent.computedGetter [as targetingDescription] (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4828:21)
+    at VueComponent.hasTargeting (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:54:41)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25) @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:1898
+[     408ms] [ERROR] [Vue warn]: Error in render: "TypeError: periodClause.name.toLowerCase is not a function"
+
+found in
+
+---> <ClyCohortTargeting>
+       <ElTableBody>
+         <ElTable> at packages/table/src/table.vue
+           <ClyDatatableN>
+             <HomeTable>
+               <ClySection>
+                 <ClyMain>
+                   <MainView>
+                     <Root> @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:633
+[     408ms] [ERROR] TypeError: periodClause.name.toLowerCase is not a function
+    at http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:316:145
+    at Array.forEach (<anonymous>)
+    at Object.getSegmentationDescription (http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:237:26)
+    at VueComponent.targetingDescription (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:42:39)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25)
+    at VueComponent.computedGetter [as targetingDescription] (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4828:21)
+    at VueComponent.hasTargeting (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:54:41)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25) @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:1898
+[     409ms] [ERROR] [Vue warn]: Error in render: "TypeError: periodClause.name.toLowerCase is not a function"
+
+found in
+
+---> <ClyCohortTargeting>
+       <ElTableBody>
+         <ElTable> at packages/table/src/table.vue
+           <ClyDatatableN>
+             <HomeTable>
+               <ClySection>
+                 <ClyMain>
+                   <MainView>
+                     <Root> @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:633
+[     409ms] [ERROR] TypeError: periodClause.name.toLowerCase is not a function
+    at http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:316:145
+    at Array.forEach (<anonymous>)
+    at Object.getSegmentationDescription (http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:237:26)
+    at VueComponent.targetingDescription (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:42:39)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25)
+    at VueComponent.computedGetter [as targetingDescription] (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4828:21)
+    at VueComponent.hasTargeting (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:54:41)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25) @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:1898
+[     411ms] [ERROR] [Vue warn]: Error in render: "TypeError: periodClause.name.toLowerCase is not a function"
+
+found in
+
+---> <ClyCohortTargeting>
+       <ElTableBody>
+         <ElTable> at packages/table/src/table.vue
+           <ClyDatatableN>
+             <HomeTable>
+               <ClySection>
+                 <ClyMain>
+                   <MainView>
+                     <Root> @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:633
+[     411ms] [ERROR] TypeError: periodClause.name.toLowerCase is not a function
+    at http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:316:145
+    at Array.forEach (<anonymous>)
+    at Object.getSegmentationDescription (http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:237:26)
+    at VueComponent.targetingDescription (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:42:39)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25)
+    at VueComponent.computedGetter [as targetingDescription] (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4828:21)
+    at VueComponent.hasTargeting (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:54:41)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25) @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:1898
+[     413ms] [ERROR] [Vue warn]: Error in render: "TypeError: periodClause.name.toLowerCase is not a function"
+
+found in
+
+---> <ClyCohortTargeting>
+       <ElTableBody>
+         <ElTable> at packages/table/src/table.vue
+           <ClyDatatableN>
+             <HomeTable>
+               <ClySection>
+                 <ClyMain>
+                   <MainView>
+                     <Root> @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:633
+[     414ms] [ERROR] TypeError: periodClause.name.toLowerCase is not a function
+    at http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:316:145
+    at Array.forEach (<anonymous>)
+    at Object.getSegmentationDescription (http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:237:26)
+    at VueComponent.targetingDescription (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:42:39)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25)
+    at VueComponent.computedGetter [as targetingDescription] (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4828:21)
+    at VueComponent.hasTargeting (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:54:41)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25) @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:1898
+[   60118ms] Object
+[   60130ms] Object
+[   67960ms] [WARNING] [Vue tip]: <crash-badge v-for="badge in badgesFor(col.row)">: component lists rendered with v-for should have explicit keys. See https://vuejs.org/guide/list.html#key for more info.
+
+found in
+
+---> <MainView>
+       <Root> @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:639
+[   70665ms] [WARNING] [Vue tip]: <el-button v-for="button in externalActionButtons">: component lists rendered with v-for should have explicit keys. See https://vuejs.org/guide/list.html#key for more info.
+
+found in
+
+---> <MainView>
+       <Root> @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:639
+[   70842ms] [ERROR] TypeError: Cannot read properties of undefined (reading 'list')
+    at http://mert.count.ly/push/javascripts/countly.models.js?25.03:2319:94 @ http://mert.count.ly/push/javascripts/countly.models.js?25.03:2321
+[   70842ms] [ERROR] Error: Unknown error occurred. Please try again later or contact support team.
+    at http://mert.count.ly/push/javascripts/countly.models.js?25.03:2323:36 @ http://mert.count.ly/push/javascripts/countly.views.js?25.03:1047
+[   73564ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://mert.count.ly/o/data-manager/event-segment?app_id=6908ab02fece9ef06eca7285&preventRequestAbort=true:0
+[   73566ms] Object
+[  153750ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o?app_id=6908ab02fece9ef06eca7285&method=concurrent&mode=0&add_new=true&r_apps=%5B%226908ab02fece9ef06eca7285%22%5D:0
+[  153750ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o?app_id=6908ab02fece9ef06eca7285&method=get_events&period=30days&preventRequestAbort=true:0
+[  153756ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o?app_id=6908ab02fece9ef06eca7285&method=users&action=refresh:0
+[  153756ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o?app_id=6908ab02fece9ef06eca7285&method=concurrent&mode=5&add_new=true&r_apps=%5B%226908ab02fece9ef06eca7285%22%5D:0
+[  153757ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o?app_id=6908ab02fece9ef06eca7285&method=concurrent&mode=2&add_new=true&r_apps=%5B%226908ab02fece9ef06eca7285%22%5D:0
+[  153760ms] Object
+[  153761ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o?app_id=6908ab02fece9ef06eca7285&notes_apps=%5B%226908ab02fece9ef06eca7285%22%5D&period=%5B1769634000000%2C1772225999999%5D&method=notes&dt=1772206302165:0
+[  153863ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o/active_users?app_id=6908ab02fece9ef06eca7285&period=%2230days%22:0
+[  153875ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o?app_id=6908ab02fece9ef06eca7285&method=views&period=30days&action=getTotals:0
+[  153876ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o?app_id=6908ab02fece9ef06eca7285&notes_apps=%5B%226908ab02fece9ef06eca7285%22%5D&period=%5B1769634000000%2C1772225999999%5D&method=notes&dt=1772206302166:0
+[  153881ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o?app_id=6908ab02fece9ef06eca7285&method=devices&action=refresh:0
+[  153881ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o?app_id=6908ab02fece9ef06eca7285&method=total_users&metric=users&period=hour&action=refresh&_dt=1772206302166:0
+[  153884ms] Object
+[  153887ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o?app_id=6908ab02fece9ef06eca7285&method=device_details&action=refresh:0
+[  153980ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o?app_id=6908ab02fece9ef06eca7285&method=total_users&metric=devices&period=hour&action=refresh&_dt=1772206302167:0
+[  153986ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o?app_id=6908ab02fece9ef06eca7285&method=total_users&metric=device_type&period=hour&action=refresh&_dt=1772206302167:0
+[  153986ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o?app_id=6908ab02fece9ef06eca7285&period=30days&method=crashes&graph=1&display_loader=true:0
+[  153986ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o?app_id=6908ab02fece9ef06eca7285&method=total_users&metric=platforms&period=hour&action=refresh&_dt=1772206302167:0
+[  153986ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o?app_id=6908ab02fece9ef06eca7285&method=total_users&metric=app_versions&period=hour&action=refresh&_dt=1772206302167:0
+[  153989ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o?app_id=6908ab02fece9ef06eca7285&method=total_users&metric=users&period=hour&action=refresh&_dt=1772206302167:0
+[  286100ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o/tasks/count?app_id=6908ab02fece9ef06eca7285&query=%7B%22status%22%3A%7B%22%24in%22%3A%5B%22running%22%2C%22rerunning%22%5D%7D%2C%22manually_create%22%3A%7B%22%24ne%22%3Atrue%7D%2C%22type%22%3A%22formulas%22%7D:0
+[  296100ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o/tasks/count?app_id=6908ab02fece9ef06eca7285&query=%7B%22status%22%3A%7B%22%24in%22%3A%5B%22running%22%2C%22rerunning%22%5D%7D%2C%22manually_create%22%3A%7B%22%24ne%22%3Atrue%7D%2C%22type%22%3A%22formulas%22%7D:0
+[  526611ms] [ERROR] TypeError: Cannot read properties of undefined (reading 'list')
+    at http://mert.count.ly/push/javascripts/countly.models.js?25.03:2319:94 @ http://mert.count.ly/push/javascripts/countly.models.js?25.03:2321
+[  526629ms] [ERROR] Error: Unknown error occurred. Please try again later or contact support team.
+    at http://mert.count.ly/push/javascripts/countly.models.js?25.03:2323:36 @ http://mert.count.ly/push/javascripts/countly.views.js?25.03:1047
+[  532100ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://mert.count.ly/o/data-manager/event-segment?app_id=6908ab02fece9ef06eca7285&preventRequestAbort=true:0
+[  532101ms] Object
+[  845804ms] Object
+[  845736ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o/apm/overview?app_id=6908ab02fece9ef06eca7285&app_type=mobile&period=30days&bucket=daily:0
+[  845808ms] Object
+[  845739ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o/cms/entries?_id=server-guide-config:0
+[  845808ms] undefined
+[  845762ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o/cms/entries?_id=server-guides&populate=true&query=%7B%22sectionID%22%3A%22%2Fperformance-monitoring%2Foverview%22%7D:0
+[  845763ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o/apm/issues?app_id=6908ab02fece9ef06eca7285&app_type=mobile&period=30days:0
+[  845763ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o/cms/entries?_id=server-guides&populate=true&query=%7B%22sectionID%22%3A%22%2Fperformance-monitoring%22%7D:0
+[  845810ms] undefined
+[  845810ms] Object
+[  845810ms] undefined
+[  878973ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://mert.count.ly/o/data-manager/event-segment?app_id=6908ab02fece9ef06eca7285&preventRequestAbort=true:0
+[  878975ms] Object
+[  913770ms] TypeError: Cannot read properties of null (reading 'subType')
+    at Proxy.updateFlowBlock (http://mert.count.ly/journey_engine/dist/assets/main.BwWwYje5.js:1:12661)
+    at Proxy.journeyBlockEventHandler (http://mert.count.ly/journey_engine/dist/assets/main.BwWwYje5.js:1:7962)
+[ 1091765ms] TypeError: Cannot read properties of null (reading 'subType')
+    at Proxy.updateFlowBlock (http://mert.count.ly/journey_engine/dist/assets/main.BwWwYje5.js:1:12661)
+    at Proxy.journeyBlockEventHandler (http://mert.count.ly/journey_engine/dist/assets/main.BwWwYje5.js:1:7962)
+[ 1091766ms] TypeError: Cannot read properties of null (reading 'subType')
+    at Proxy.updateFlowBlock (http://mert.count.ly/journey_engine/dist/assets/main.BwWwYje5.js:1:12661)
+    at Proxy.journeyBlockEventHandler (http://mert.count.ly/journey_engine/dist/assets/main.BwWwYje5.js:1:7962)
+[ 1124620ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o?app_id=6908ab02fece9ef06eca7285&notes_apps=%5B%226908ab02fece9ef06eca7285%22%5D&period=%5B1769634000000%2C1772225999999%5D&method=notes&dt=1772207273069:0
+[ 1124625ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o/push/dashboard?app_id=6908ab02fece9ef06eca7285:0
+[ 1124625ms] [ERROR] {readyState: 4, getResponseHeader: , getAllResponseHeaders: , setRequestHeader: , overrideMimeType: } @ http://mert.count.ly/push/javascripts/countly.models.js?25.03:649
+[ 1124626ms] [ERROR] Error: Unknown error occurred. Please try again later or contact support team.
+    at Object.error (http://mert.count.ly/push/javascripts/countly.models.js?25.03:652:32)
+    at fire (http://mert.count.ly/javascripts/dom/jquery/jquery.js?25.03:3223:31)
+    at Object.fireWith [as rejectWith] (http://mert.count.ly/javascripts/dom/jquery/jquery.js?25.03:3353:7)
+    at done (http://mert.count.ly/javascripts/dom/jquery/jquery.js?25.03:9629:14)
+    at XMLHttpRequest.<anonymous> (http://mert.count.ly/javascripts/dom/jquery/jquery.js?25.03:9888:9) @ http://mert.count.ly/push/javascripts/countly.models.js?25.03:2383
+[ 1124626ms] [ERROR] Error: Unknown error occurred. Please try again later or contact support team.
+    at Object.error (http://mert.count.ly/push/javascripts/countly.models.js?25.03:652:32)
+    at fire (http://mert.count.ly/javascripts/dom/jquery/jquery.js?25.03:3223:31)
+    at Object.fireWith [as rejectWith] (http://mert.count.ly/javascripts/dom/jquery/jquery.js?25.03:3353:7)
+    at done (http://mert.count.ly/javascripts/dom/jquery/jquery.js?25.03:9629:14)
+    at XMLHttpRequest.<anonymous> (http://mert.count.ly/javascripts/dom/jquery/jquery.js?25.03:9888:9) @ http://mert.count.ly/push/javascripts/countly.models.js?25.03:3033
+[ 1124630ms] Object
+[ 1131859ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o/cms/entries?_id=server-guide-config:0
+[ 1131860ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o/cms/entries?_id=server-guides&populate=true&query=%7B%22sectionID%22%3A%22%2Fanalytics%22%7D:0
+[ 1131860ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o/cms/entries?_id=server-guides&populate=true&query=%7B%22sectionID%22%3A%22%2Fanalytics%2Fformulas%22%7D:0
+[ 1131861ms] undefined
+[ 1131862ms] undefined
+[ 1131862ms] undefined
+[ 1131897ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o/tasks/count?app_id=6908ab02fece9ef06eca7285&query=%7B%22status%22%3A%7B%22%24in%22%3A%5B%22running%22%2C%22rerunning%22%5D%7D%2C%22manually_create%22%3A%7B%22%24ne%22%3Atrue%7D%2C%22type%22%3A%22formulas%22%7D:0
+[ 1131897ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o?app_id=6908ab02fece9ef06eca7285&method=get_cohort_list:0
+[ 1131897ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o?app_id=6908ab02fece9ef06eca7285&method=get_events:0
+[ 1131988ms] Object
+[ 1132039ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o?app_id=6908ab02fece9ef06eca7285&method=get_events:0
+[ 1134863ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o?app_id=6908ab02fece9ef06eca7285&method=get_events:0
+[ 1137527ms] TypeError: Cannot read properties of null (reading 'subType')
+    at Proxy.updateFlowBlock (http://mert.count.ly/journey_engine/dist/assets/main.BwWwYje5.js:1:12661)
+    at Proxy.journeyBlockEventHandler (http://mert.count.ly/journey_engine/dist/assets/main.BwWwYje5.js:1:7962)
+[ 1137527ms] TypeError: Cannot read properties of null (reading 'subType')
+    at Proxy.updateFlowBlock (http://mert.count.ly/journey_engine/dist/assets/main.BwWwYje5.js:1:12661)
+    at Proxy.journeyBlockEventHandler (http://mert.count.ly/journey_engine/dist/assets/main.BwWwYje5.js:1:7962)
+[ 1137528ms] TypeError: Cannot read properties of null (reading 'subType')
+    at Proxy.updateFlowBlock (http://mert.count.ly/journey_engine/dist/assets/main.BwWwYje5.js:1:12661)
+    at Proxy.journeyBlockEventHandler (http://mert.count.ly/journey_engine/dist/assets/main.BwWwYje5.js:1:7962)
+[ 1137560ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o/cms/entries?_id=server-guide-config:0
+[ 1137561ms] undefined
+[ 1137572ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o/journey-engine/list?app_id=6908ab02fece9ef06eca7285:0
+[ 1137581ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o/cms/entries?_id=server-guides&populate=true&query=%7B%22sectionID%22%3A%22%2Fengagement%22%7D:0
+[ 1137582ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o/cms/entries?_id=server-guides&populate=true&query=%7B%22sectionID%22%3A%22%2Fengagement%2Fjourney%22%7D:0
+[ 1137582ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o/tasks/count?app_id=6908ab02fece9ef06eca7285&query=%7B%22status%22%3A%7B%22%24in%22%3A%5B%22running%22%2C%22rerunning%22%5D%7D%2C%22manually_create%22%3A%7B%22%24ne%22%3Atrue%7D%2C%22type%22%3A%22journey_engine%22%7D:0
+[ 1137633ms] undefined
+[ 1137633ms] undefined
+[ 1143281ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o/cms/entries?_id=server-guide-config:0
+[ 1143282ms] undefined
+[ 1143287ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o/cms/entries?_id=server-guides&populate=true&query=%7B%22sectionID%22%3A%22%2Fmanage%22%7D:0
+[ 1143288ms] undefined
+[ 1143294ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o/cms/entries?_id=server-guides&populate=true&query=%7B%22sectionID%22%3A%22%2Fmanage%2Fpopulate%22%7D:0
+[ 1143294ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o/populator/environment/list?app_id=6908ab02fece9ef06eca7285:0
+[ 1143295ms] undefined
+[ 1143405ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o/cms/entries?_id=server-guide-config:0
+[ 1143406ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o/cms/entries?_id=server-guides&populate=true&query=%7B%22sectionID%22%3A%22%2Fmanage%2Fpopulate%22%7D:0
+[ 1143407ms] undefined
+[ 1143407ms] undefined
+[ 1143411ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o/cms/entries?_id=server-guides&populate=true&query=%7B%22sectionID%22%3A%22%2Fmanage%22%7D:0
+[ 1143412ms] undefined
+[ 1150317ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o/cms/entries?_id=server-guide-config:0
+[ 1150320ms] undefined
+[ 1150329ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o?app_id=6908ab02fece9ef06eca7285&notes_apps=%5B%226908ab02fece9ef06eca7285%22%5D&period=%5B1769634000000%2C1772225999999%5D&method=notes&dt=1772207298781:0
+[ 1150338ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o/cms/entries?_id=server-guides&populate=true&query=%7B%22sectionID%22%3A%22%2Fmessaging%22%7D:0
+[ 1150340ms] undefined
+[ 1150380ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o/push/message/all?app_id=6908ab02fece9ef06eca7285&visibleColumns=%5B%5D&iDisplayStart=0&iDisplayLength=10&ready=true&sEcho=8:0
+[ 1150390ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o/push/message/all?app_id=6908ab02fece9ef06eca7285&visibleColumns=%5B%5D&iDisplayStart=0&iDisplayLength=10&ready=true&sEcho=9:0
+[ 1150394ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o?app_id=6908ab02fece9ef06eca7285&method=get_cohorts&outputFormat=full:0
+[ 1150394ms] [ERROR] {readyState: 4, getResponseHeader: , getAllResponseHeaders: , setRequestHeader: , overrideMimeType: } @ http://mert.count.ly/push/javascripts/countly.models.js?25.03:2266
+[ 1150394ms] [ERROR] {readyState: 4, getResponseHeader: , getAllResponseHeaders: , setRequestHeader: , overrideMimeType: } @ http://mert.count.ly/push/javascripts/countly.views.js?25.03:1015
+[ 1150396ms] Object
+[ 1150414ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o?app_id=6908ab02fece9ef06eca7285&method=get_locations:0
+[ 1150414ms] [ERROR] {readyState: 4, getResponseHeader: , getAllResponseHeaders: , setRequestHeader: , overrideMimeType: } @ http://mert.count.ly/push/javascripts/countly.models.js?25.03:2307
+[ 1150414ms] [ERROR] {readyState: 4, getResponseHeader: , getAllResponseHeaders: , setRequestHeader: , overrideMimeType: } @ http://mert.count.ly/push/javascripts/countly.views.js?25.03:1031
+[ 1150417ms] Object
+[ 1150419ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o?app_id=6908ab02fece9ef06eca7285&method=get_events:0
+[ 1150420ms] [ERROR] TypeError: Cannot read properties of undefined (reading 'list')
+    at http://mert.count.ly/push/javascripts/countly.models.js?25.03:2319:94 @ http://mert.count.ly/push/javascripts/countly.models.js?25.03:2321
+[ 1150420ms] [ERROR] Error: Unknown error occurred. Please try again later or contact support team.
+    at http://mert.count.ly/push/javascripts/countly.models.js?25.03:2323:36 @ http://mert.count.ly/push/javascripts/countly.views.js?25.03:1047
+[ 1150451ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o?app_id=6908ab02fece9ef06eca7285&notes_apps=%5B%226908ab02fece9ef06eca7285%22%5D&period=%5B1769634000000%2C1772225999999%5D&method=notes&dt=1772207298845:0
+[ 1271935ms] TypeError: Cannot read properties of null (reading 'subType')
+    at Proxy.updateFlowBlock (http://mert.count.ly/journey_engine/dist/assets/main.BwWwYje5.js:1:12661)
+    at Proxy.journeyBlockEventHandler (http://mert.count.ly/journey_engine/dist/assets/main.BwWwYje5.js:1:7962)
+[ 1271935ms] TypeError: Cannot read properties of null (reading 'subType')
+    at Proxy.updateFlowBlock (http://mert.count.ly/journey_engine/dist/assets/main.BwWwYje5.js:1:12661)
+    at Proxy.journeyBlockEventHandler (http://mert.count.ly/journey_engine/dist/assets/main.BwWwYje5.js:1:7962)
+[ 1271935ms] TypeError: Cannot read properties of null (reading 'subType')
+    at Proxy.updateFlowBlock (http://mert.count.ly/journey_engine/dist/assets/main.BwWwYje5.js:1:12661)
+    at Proxy.journeyBlockEventHandler (http://mert.count.ly/journey_engine/dist/assets/main.BwWwYje5.js:1:7962)
+[ 1271935ms] TypeError: Cannot read properties of null (reading 'subType')
+    at Proxy.updateFlowBlock (http://mert.count.ly/journey_engine/dist/assets/main.BwWwYje5.js:1:12661)
+    at Proxy.journeyBlockEventHandler (http://mert.count.ly/journey_engine/dist/assets/main.BwWwYje5.js:1:7962)
+[ 1308358ms] Object
+[ 1317840ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://mert.count.ly/o/data-manager/event-segment?app_id=6908ab02fece9ef06eca7285&preventRequestAbort=true:0
+[ 1317843ms] Object
+[ 1367858ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o?app_id=6908ab02fece9ef06eca7285&notes_apps=%5B%226908ab02fece9ef06eca7285%22%5D&period=%5B1769634000000%2C1772225999999%5D&method=notes&dt=1772207516296:0
+[ 1507895ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o?app_id=6908ab02fece9ef06eca7285&notes_apps=%5B%226908ab02fece9ef06eca7285%22%5D&period=%5B1769634000000%2C1772225999999%5D&method=notes&dt=1772207656295:0

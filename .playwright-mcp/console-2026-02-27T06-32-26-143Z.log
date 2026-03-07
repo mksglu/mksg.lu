@@ -1,0 +1,585 @@
+[   10254ms] [ERROR] [Vue warn]: Error in render: "TypeError: periodClause.name.toLowerCase is not a function"
+
+found in
+
+---> <ClyCohortTargeting>
+       <ElTableBody>
+         <ElTable> at packages/table/src/table.vue
+           <ClyDatatableN>
+             <HomeTable>
+               <ClySection>
+                 <ClyMain>
+                   <MainView>
+                     <Root> @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:633
+[   10254ms] [ERROR] TypeError: periodClause.name.toLowerCase is not a function
+    at http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:316:145
+    at Array.forEach (<anonymous>)
+    at Object.getSegmentationDescription (http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:237:26)
+    at VueComponent.targetingDescription (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:42:39)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25)
+    at VueComponent.computedGetter [as targetingDescription] (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4828:21)
+    at VueComponent.hasTargeting (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:54:41)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25) @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:1898
+[   10265ms] [ERROR] [Vue warn]: Error in render: "TypeError: periodClause.name.toLowerCase is not a function"
+
+found in
+
+---> <ClyCohortTargeting>
+       <ElTableBody>
+         <ElTable> at packages/table/src/table.vue
+           <ClyDatatableN>
+             <HomeTable>
+               <ClySection>
+                 <ClyMain>
+                   <MainView>
+                     <Root> @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:633
+[   10265ms] [ERROR] TypeError: periodClause.name.toLowerCase is not a function
+    at http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:316:145
+    at Array.forEach (<anonymous>)
+    at Object.getSegmentationDescription (http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:237:26)
+    at VueComponent.targetingDescription (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:42:39)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25)
+    at VueComponent.computedGetter [as targetingDescription] (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4828:21)
+    at VueComponent.hasTargeting (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:54:41)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25) @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:1898
+[   10271ms] [ERROR] [Vue warn]: Error in render: "TypeError: periodClause.name.toLowerCase is not a function"
+
+found in
+
+---> <ClyCohortTargeting>
+       <ElTableBody>
+         <ElTable> at packages/table/src/table.vue
+           <ClyDatatableN>
+             <HomeTable>
+               <ClySection>
+                 <ClyMain>
+                   <MainView>
+                     <Root> @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:633
+[   10271ms] [ERROR] TypeError: periodClause.name.toLowerCase is not a function
+    at http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:316:145
+    at Array.forEach (<anonymous>)
+    at Object.getSegmentationDescription (http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:237:26)
+    at VueComponent.targetingDescription (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:42:39)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25)
+    at VueComponent.computedGetter [as targetingDescription] (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4828:21)
+    at VueComponent.hasTargeting (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:54:41)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25) @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:1898
+[  109824ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o?app_id=6908ab02fece9ef06eca7285&method=get_cohorts&outputFormat=full&type=auto&iDisplayStart=0&iDisplayLength=10&ready=true&selectedDynamicCols%5B%5D=segmentation&selectedDynamicCols%5B%5D=result&selectedDynamicCols%5B%5D=todayschange&sEcho=10:0
+[  109962ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/user/settings/column-order:0
+[  119863ms] [ERROR] [Vue warn]: Error in render: "TypeError: periodClause.name.toLowerCase is not a function"
+
+found in
+
+---> <ClyCohortTargeting>
+       <ElTableBody>
+         <ElTable> at packages/table/src/table.vue
+           <ClyDatatableN>
+             <HomeTable>
+               <ClySection>
+                 <ClyMain>
+                   <MainView>
+                     <Root> @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:633
+[  119863ms] [ERROR] TypeError: periodClause.name.toLowerCase is not a function
+    at http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:316:145
+    at Array.forEach (<anonymous>)
+    at Object.getSegmentationDescription (http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:237:26)
+    at VueComponent.targetingDescription (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:42:39)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25)
+    at VueComponent.computedGetter [as targetingDescription] (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4828:21)
+    at VueComponent.hasTargeting (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:54:41)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25) @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:1898
+[  119872ms] [ERROR] [Vue warn]: Error in render: "TypeError: periodClause.name.toLowerCase is not a function"
+
+found in
+
+---> <ClyCohortTargeting>
+       <ElTableBody>
+         <ElTable> at packages/table/src/table.vue
+           <ClyDatatableN>
+             <HomeTable>
+               <ClySection>
+                 <ClyMain>
+                   <MainView>
+                     <Root> @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:633
+[  119872ms] [ERROR] TypeError: periodClause.name.toLowerCase is not a function
+    at http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:316:145
+    at Array.forEach (<anonymous>)
+    at Object.getSegmentationDescription (http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:237:26)
+    at VueComponent.targetingDescription (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:42:39)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25)
+    at VueComponent.computedGetter [as targetingDescription] (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4828:21)
+    at VueComponent.hasTargeting (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:54:41)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25) @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:1898
+[  119877ms] [ERROR] [Vue warn]: Error in render: "TypeError: periodClause.name.toLowerCase is not a function"
+
+found in
+
+---> <ClyCohortTargeting>
+       <ElTableBody>
+         <ElTable> at packages/table/src/table.vue
+           <ClyDatatableN>
+             <HomeTable>
+               <ClySection>
+                 <ClyMain>
+                   <MainView>
+                     <Root> @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:633
+[  119878ms] [ERROR] TypeError: periodClause.name.toLowerCase is not a function
+    at http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:316:145
+    at Array.forEach (<anonymous>)
+    at Object.getSegmentationDescription (http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:237:26)
+    at VueComponent.targetingDescription (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:42:39)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25)
+    at VueComponent.computedGetter [as targetingDescription] (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4828:21)
+    at VueComponent.hasTargeting (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:54:41)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25) @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:1898
+[  359802ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o?app_id=6908ab02fece9ef06eca7285&method=get_cohorts&outputFormat=full&type=auto&iDisplayStart=0&iDisplayLength=10&ready=true&selectedDynamicCols%5B%5D=segmentation&selectedDynamicCols%5B%5D=result&selectedDynamicCols%5B%5D=todayschange&sEcho=36:0
+[  359891ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/user/settings/column-order:0
+[  369929ms] [ERROR] [Vue warn]: Error in render: "TypeError: periodClause.name.toLowerCase is not a function"
+
+found in
+
+---> <ClyCohortTargeting>
+       <ElTableBody>
+         <ElTable> at packages/table/src/table.vue
+           <ClyDatatableN>
+             <HomeTable>
+               <ClySection>
+                 <ClyMain>
+                   <MainView>
+                     <Root> @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:633
+[  369929ms] [ERROR] TypeError: periodClause.name.toLowerCase is not a function
+    at http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:316:145
+    at Array.forEach (<anonymous>)
+    at Object.getSegmentationDescription (http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:237:26)
+    at VueComponent.targetingDescription (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:42:39)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25)
+    at VueComponent.computedGetter [as targetingDescription] (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4828:21)
+    at VueComponent.hasTargeting (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:54:41)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25) @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:1898
+[  369936ms] [ERROR] [Vue warn]: Error in render: "TypeError: periodClause.name.toLowerCase is not a function"
+
+found in
+
+---> <ClyCohortTargeting>
+       <ElTableBody>
+         <ElTable> at packages/table/src/table.vue
+           <ClyDatatableN>
+             <HomeTable>
+               <ClySection>
+                 <ClyMain>
+                   <MainView>
+                     <Root> @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:633
+[  369936ms] [ERROR] TypeError: periodClause.name.toLowerCase is not a function
+    at http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:316:145
+    at Array.forEach (<anonymous>)
+    at Object.getSegmentationDescription (http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:237:26)
+    at VueComponent.targetingDescription (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:42:39)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25)
+    at VueComponent.computedGetter [as targetingDescription] (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4828:21)
+    at VueComponent.hasTargeting (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:54:41)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25) @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:1898
+[  369943ms] [ERROR] [Vue warn]: Error in render: "TypeError: periodClause.name.toLowerCase is not a function"
+
+found in
+
+---> <ClyCohortTargeting>
+       <ElTableBody>
+         <ElTable> at packages/table/src/table.vue
+           <ClyDatatableN>
+             <HomeTable>
+               <ClySection>
+                 <ClyMain>
+                   <MainView>
+                     <Root> @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:633
+[  369943ms] [ERROR] TypeError: periodClause.name.toLowerCase is not a function
+    at http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:316:145
+    at Array.forEach (<anonymous>)
+    at Object.getSegmentationDescription (http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:237:26)
+    at VueComponent.targetingDescription (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:42:39)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25)
+    at VueComponent.computedGetter [as targetingDescription] (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4828:21)
+    at VueComponent.hasTargeting (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:54:41)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25) @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:1898
+[  899827ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o?app_id=6908ab02fece9ef06eca7285&method=get_cohorts&outputFormat=full&type=auto&iDisplayStart=0&iDisplayLength=10&ready=true&selectedDynamicCols%5B%5D=segmentation&selectedDynamicCols%5B%5D=result&selectedDynamicCols%5B%5D=todayschange&sEcho=91:0
+[  899941ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/user/settings/column-order:0
+[  909825ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o?app_id=6908ab02fece9ef06eca7285&method=get_cohorts&outputFormat=full&type=auto&iDisplayStart=0&iDisplayLength=10&ready=true&selectedDynamicCols%5B%5D=segmentation&selectedDynamicCols%5B%5D=result&selectedDynamicCols%5B%5D=todayschange&sEcho=92:0
+[  909878ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o?app_id=6908ab02fece9ef06eca7285&method=get_cohorts&outputFormat=full&type=auto&iDisplayStart=0&iDisplayLength=10&ready=true&selectedDynamicCols%5B%5D=segmentation&selectedDynamicCols%5B%5D=result&selectedDynamicCols%5B%5D=todayschange&sEcho=93:0
+[  919923ms] [ERROR] [Vue warn]: Error in render: "TypeError: periodClause.name.toLowerCase is not a function"
+
+found in
+
+---> <ClyCohortTargeting>
+       <ElTableBody>
+         <ElTable> at packages/table/src/table.vue
+           <ClyDatatableN>
+             <HomeTable>
+               <ClySection>
+                 <ClyMain>
+                   <MainView>
+                     <Root> @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:633
+[  919923ms] [ERROR] TypeError: periodClause.name.toLowerCase is not a function
+    at http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:316:145
+    at Array.forEach (<anonymous>)
+    at Object.getSegmentationDescription (http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:237:26)
+    at VueComponent.targetingDescription (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:42:39)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25)
+    at VueComponent.computedGetter [as targetingDescription] (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4828:21)
+    at VueComponent.hasTargeting (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:54:41)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25) @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:1898
+[  919930ms] [ERROR] [Vue warn]: Error in render: "TypeError: periodClause.name.toLowerCase is not a function"
+
+found in
+
+---> <ClyCohortTargeting>
+       <ElTableBody>
+         <ElTable> at packages/table/src/table.vue
+           <ClyDatatableN>
+             <HomeTable>
+               <ClySection>
+                 <ClyMain>
+                   <MainView>
+                     <Root> @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:633
+[  919930ms] [ERROR] TypeError: periodClause.name.toLowerCase is not a function
+    at http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:316:145
+    at Array.forEach (<anonymous>)
+    at Object.getSegmentationDescription (http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:237:26)
+    at VueComponent.targetingDescription (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:42:39)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25)
+    at VueComponent.computedGetter [as targetingDescription] (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4828:21)
+    at VueComponent.hasTargeting (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:54:41)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25) @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:1898
+[  919937ms] [ERROR] [Vue warn]: Error in render: "TypeError: periodClause.name.toLowerCase is not a function"
+
+found in
+
+---> <ClyCohortTargeting>
+       <ElTableBody>
+         <ElTable> at packages/table/src/table.vue
+           <ClyDatatableN>
+             <HomeTable>
+               <ClySection>
+                 <ClyMain>
+                   <MainView>
+                     <Root> @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:633
+[  919937ms] [ERROR] TypeError: periodClause.name.toLowerCase is not a function
+    at http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:316:145
+    at Array.forEach (<anonymous>)
+    at Object.getSegmentationDescription (http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:237:26)
+    at VueComponent.targetingDescription (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:42:39)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25)
+    at VueComponent.computedGetter [as targetingDescription] (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4828:21)
+    at VueComponent.hasTargeting (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:54:41)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25) @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:1898
+[ 1099914ms] [ERROR] [Vue warn]: Error in render: "TypeError: periodClause.name.toLowerCase is not a function"
+
+found in
+
+---> <ClyCohortTargeting>
+       <ElTableBody>
+         <ElTable> at packages/table/src/table.vue
+           <ClyDatatableN>
+             <HomeTable>
+               <ClySection>
+                 <ClyMain>
+                   <MainView>
+                     <Root> @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:633
+[ 1099914ms] [ERROR] TypeError: periodClause.name.toLowerCase is not a function
+    at http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:316:145
+    at Array.forEach (<anonymous>)
+    at Object.getSegmentationDescription (http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:237:26)
+    at VueComponent.targetingDescription (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:42:39)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25)
+    at VueComponent.computedGetter [as targetingDescription] (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4828:21)
+    at VueComponent.hasTargeting (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:54:41)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25) @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:1898
+[ 1099919ms] [ERROR] [Vue warn]: Error in render: "TypeError: periodClause.name.toLowerCase is not a function"
+
+found in
+
+---> <ClyCohortTargeting>
+       <ElTableBody>
+         <ElTable> at packages/table/src/table.vue
+           <ClyDatatableN>
+             <HomeTable>
+               <ClySection>
+                 <ClyMain>
+                   <MainView>
+                     <Root> @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:633
+[ 1099920ms] [ERROR] TypeError: periodClause.name.toLowerCase is not a function
+    at http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:316:145
+    at Array.forEach (<anonymous>)
+    at Object.getSegmentationDescription (http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:237:26)
+    at VueComponent.targetingDescription (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:42:39)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25)
+    at VueComponent.computedGetter [as targetingDescription] (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4828:21)
+    at VueComponent.hasTargeting (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:54:41)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25) @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:1898
+[ 1099923ms] [ERROR] [Vue warn]: Error in render: "TypeError: periodClause.name.toLowerCase is not a function"
+
+found in
+
+---> <ClyCohortTargeting>
+       <ElTableBody>
+         <ElTable> at packages/table/src/table.vue
+           <ClyDatatableN>
+             <HomeTable>
+               <ClySection>
+                 <ClyMain>
+                   <MainView>
+                     <Root> @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:633
+[ 1099923ms] [ERROR] TypeError: periodClause.name.toLowerCase is not a function
+    at http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:316:145
+    at Array.forEach (<anonymous>)
+    at Object.getSegmentationDescription (http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:237:26)
+    at VueComponent.targetingDescription (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:42:39)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25)
+    at VueComponent.computedGetter [as targetingDescription] (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4828:21)
+    at VueComponent.hasTargeting (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:54:41)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25) @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:1898
+[ 1359843ms] [ERROR] Failed to load resource: the server responded with a status of 502 (Bad Gateway) @ http://mert.count.ly/o?app_id=6908ab02fece9ef06eca7285&method=get_cohorts&outputFormat=full&type=auto&iDisplayStart=0&iDisplayLength=10&ready=true&selectedDynamicCols%5B%5D=segmentation&selectedDynamicCols%5B%5D=result&selectedDynamicCols%5B%5D=todayschange&sEcho=139:0
+[ 1369893ms] [ERROR] [Vue warn]: Error in render: "TypeError: periodClause.name.toLowerCase is not a function"
+
+found in
+
+---> <ClyCohortTargeting>
+       <ElTableBody>
+         <ElTable> at packages/table/src/table.vue
+           <ClyDatatableN>
+             <HomeTable>
+               <ClySection>
+                 <ClyMain>
+                   <MainView>
+                     <Root> @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:633
+[ 1369893ms] [ERROR] TypeError: periodClause.name.toLowerCase is not a function
+    at http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:316:145
+    at Array.forEach (<anonymous>)
+    at Object.getSegmentationDescription (http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:237:26)
+    at VueComponent.targetingDescription (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:42:39)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25)
+    at VueComponent.computedGetter [as targetingDescription] (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4828:21)
+    at VueComponent.hasTargeting (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:54:41)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25) @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:1898
+[ 1369894ms] [ERROR] [Vue warn]: Error in render: "TypeError: periodClause.name.toLowerCase is not a function"
+
+found in
+
+---> <ClyCohortTargeting>
+       <ElTableBody>
+         <ElTable> at packages/table/src/table.vue
+           <ClyDatatableN>
+             <HomeTable>
+               <ClySection>
+                 <ClyMain>
+                   <MainView>
+                     <Root> @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:633
+[ 1369894ms] [ERROR] TypeError: periodClause.name.toLowerCase is not a function
+    at http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:316:145
+    at Array.forEach (<anonymous>)
+    at Object.getSegmentationDescription (http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:237:26)
+    at VueComponent.targetingDescription (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:42:39)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25)
+    at VueComponent.computedGetter [as targetingDescription] (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4828:21)
+    at VueComponent.hasTargeting (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:54:41)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25) @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:1898
+[ 1369901ms] [ERROR] [Vue warn]: Error in render: "TypeError: periodClause.name.toLowerCase is not a function"
+
+found in
+
+---> <ClyCohortTargeting>
+       <ElTableBody>
+         <ElTable> at packages/table/src/table.vue
+           <ClyDatatableN>
+             <HomeTable>
+               <ClySection>
+                 <ClyMain>
+                   <MainView>
+                     <Root> @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:633
+[ 1369901ms] [ERROR] TypeError: periodClause.name.toLowerCase is not a function
+    at http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:316:145
+    at Array.forEach (<anonymous>)
+    at Object.getSegmentationDescription (http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:237:26)
+    at VueComponent.targetingDescription (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:42:39)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25)
+    at VueComponent.computedGetter [as targetingDescription] (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4828:21)
+    at VueComponent.hasTargeting (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:54:41)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25) @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:1898
+[ 1369901ms] [ERROR] [Vue warn]: Error in render: "TypeError: periodClause.name.toLowerCase is not a function"
+
+found in
+
+---> <ClyCohortTargeting>
+       <ElTableBody>
+         <ElTable> at packages/table/src/table.vue
+           <ClyDatatableN>
+             <HomeTable>
+               <ClySection>
+                 <ClyMain>
+                   <MainView>
+                     <Root> @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:633
+[ 1369901ms] [ERROR] TypeError: periodClause.name.toLowerCase is not a function
+    at http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:316:145
+    at Array.forEach (<anonymous>)
+    at Object.getSegmentationDescription (http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:237:26)
+    at VueComponent.targetingDescription (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:42:39)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25)
+    at VueComponent.computedGetter [as targetingDescription] (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4828:21)
+    at VueComponent.hasTargeting (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:54:41)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25) @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:1898
+[ 1369906ms] [ERROR] [Vue warn]: Error in render: "TypeError: periodClause.name.toLowerCase is not a function"
+
+found in
+
+---> <ClyCohortTargeting>
+       <ElTableBody>
+         <ElTable> at packages/table/src/table.vue
+           <ClyDatatableN>
+             <HomeTable>
+               <ClySection>
+                 <ClyMain>
+                   <MainView>
+                     <Root> @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:633
+[ 1369906ms] [ERROR] TypeError: periodClause.name.toLowerCase is not a function
+    at http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:316:145
+    at Array.forEach (<anonymous>)
+    at Object.getSegmentationDescription (http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:237:26)
+    at VueComponent.targetingDescription (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:42:39)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25)
+    at VueComponent.computedGetter [as targetingDescription] (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4828:21)
+    at VueComponent.hasTargeting (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:54:41)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25) @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:1898
+[ 1369907ms] [ERROR] [Vue warn]: Error in render: "TypeError: periodClause.name.toLowerCase is not a function"
+
+found in
+
+---> <ClyCohortTargeting>
+       <ElTableBody>
+         <ElTable> at packages/table/src/table.vue
+           <ClyDatatableN>
+             <HomeTable>
+               <ClySection>
+                 <ClyMain>
+                   <MainView>
+                     <Root> @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:633
+[ 1369907ms] [ERROR] TypeError: periodClause.name.toLowerCase is not a function
+    at http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:316:145
+    at Array.forEach (<anonymous>)
+    at Object.getSegmentationDescription (http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:237:26)
+    at VueComponent.targetingDescription (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:42:39)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25)
+    at VueComponent.computedGetter [as targetingDescription] (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4828:21)
+    at VueComponent.hasTargeting (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:54:41)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25) @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:1898
+[ 1549877ms] [ERROR] [Vue warn]: Error in render: "TypeError: periodClause.name.toLowerCase is not a function"
+
+found in
+
+---> <ClyCohortTargeting>
+       <ElTableBody>
+         <ElTable> at packages/table/src/table.vue
+           <ClyDatatableN>
+             <HomeTable>
+               <ClySection>
+                 <ClyMain>
+                   <MainView>
+                     <Root> @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:633
+[ 1549877ms] [ERROR] TypeError: periodClause.name.toLowerCase is not a function
+    at http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:316:145
+    at Array.forEach (<anonymous>)
+    at Object.getSegmentationDescription (http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:237:26)
+    at VueComponent.targetingDescription (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:42:39)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25)
+    at VueComponent.computedGetter [as targetingDescription] (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4828:21)
+    at VueComponent.hasTargeting (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:54:41)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25) @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:1898
+[ 1549881ms] [ERROR] [Vue warn]: Error in render: "TypeError: periodClause.name.toLowerCase is not a function"
+
+found in
+
+---> <ClyCohortTargeting>
+       <ElTableBody>
+         <ElTable> at packages/table/src/table.vue
+           <ClyDatatableN>
+             <HomeTable>
+               <ClySection>
+                 <ClyMain>
+                   <MainView>
+                     <Root> @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:633
+[ 1549881ms] [ERROR] TypeError: periodClause.name.toLowerCase is not a function
+    at http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:316:145
+    at Array.forEach (<anonymous>)
+    at Object.getSegmentationDescription (http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:237:26)
+    at VueComponent.targetingDescription (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:42:39)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25)
+    at VueComponent.computedGetter [as targetingDescription] (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4828:21)
+    at VueComponent.hasTargeting (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:54:41)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25) @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:1898
+[ 1549884ms] [ERROR] [Vue warn]: Error in render: "TypeError: periodClause.name.toLowerCase is not a function"
+
+found in
+
+---> <ClyCohortTargeting>
+       <ElTableBody>
+         <ElTable> at packages/table/src/table.vue
+           <ClyDatatableN>
+             <HomeTable>
+               <ClySection>
+                 <ClyMain>
+                   <MainView>
+                     <Root> @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:633
+[ 1549884ms] [ERROR] TypeError: periodClause.name.toLowerCase is not a function
+    at http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:316:145
+    at Array.forEach (<anonymous>)
+    at Object.getSegmentationDescription (http://mert.count.ly/cohorts/javascripts/countly.models.js?25.03:237:26)
+    at VueComponent.targetingDescription (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:42:39)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25)
+    at VueComponent.computedGetter [as targetingDescription] (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4828:21)
+    at VueComponent.hasTargeting (http://mert.count.ly/cohorts/javascripts/countly.common.components.js?25.03:54:41)
+    at Watcher.get (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4473:29)
+    at Watcher.evaluate (http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:4578:25) @ http://mert.count.ly/javascripts/utils/vue/vue.min.js?25.03:1898
