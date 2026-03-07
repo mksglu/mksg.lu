@@ -1,0 +1,89 @@
+---
+title: "Hatice: I Stopped Writing Code. Agents Do It Now."
+description: "Open-source autonomous issue orchestration. Poll your tracker, spin up agents, ship code. Built with Claude Code Agent SDK."
+date: "2026-03-07"
+tags: ["AI Agents", "Claude Code", "Open Source", "Developer Tools"]
+linkedinUrl: "https://www.linkedin.com/in/mksglu"
+xUrl: "https://x.com/mksglu"
+published: true
+---
+
+5 Linear issues. 5 Claude agents. Zero lines written by a human. Here's how.
+
+## The Idea
+
+OpenAI published "Harness Engineering" in February 2026. The thesis: engineers don't write code anymore. They design environments, specify intent, and build feedback loops. Agents do the rest.
+
+Codex proved the concept. Symphony showed the architecture in Elixir/OTP. I wanted the same thing with Claude Code.
+
+So I built Hatice.
+
+## What It Does
+
+Hatice polls your issue tracker — Linear or GitHub Issues. When it finds assigned work, it spins up an isolated workspace, clones your repo, and dispatches a Claude Code agent to solve the issue end-to-end. Tests first, implementation second, commit when done.
+
+Not one agent. Multiple. In parallel. Each in its own workspace. Each with its own session. Each tracked independently.
+
+The full lifecycle: dispatch, multi-turn execution, retry with exponential backoff, reconciliation, workspace cleanup. If an agent crashes, the supervisor restarts it. If the API rate-limits you, it backs off and retries. If the issue gets closed while the agent is working, it detects the state change and cleans up.
+
+One config file controls everything:
+
+```yaml
+tracker:
+  kind: linear
+  apiKey: $LINEAR_API_KEY
+  projectSlug: "TEAM"
+  assignee: "me"
+workspace:
+  rootDir: /tmp/workspaces
+hooks:
+  afterCreate: "git clone repo . && npm i"
+claude:
+  permissionMode: bypassPermissions
+  model: claude-sonnet-4-20250514
+```
+
+That's it. `WORKFLOW.md`. YAML frontmatter for config, markdown body for the agent prompt. LiquidJS templates inject issue details: `{{ issue.title }}`, `{{ issue.description }}`.
+
+## The Demo
+
+I pointed Hatice at a blank HTML file. Created 5 Linear issues — hero section, features grid, how-it-works flow, configuration showcase, footer. Moved them all to "In Progress" at once.
+
+Five agents spun up simultaneously. Each picked a section. Each read the design system from `.claude/CLAUDE.md`. Each wrote code to the same file through symlinked workspaces. Live-server hot-reloaded every change.
+
+The presentation website for Hatice was built by Hatice. While I watched.
+
+## What I Learned Building This
+
+**Strip the CLAUDECODE env var.** Claude Code sets this to prevent nested sessions. When you're spawning agents from inside a Claude session, you have to delete it from the child's environment. Cost me hours of debugging agents that exited immediately with code 1.
+
+**`allowDangerouslySkipPermissions` is required.** If you set `permissionMode: 'bypassPermissions'` in the SDK, you also need this flag set to `true`. Otherwise agents complete in one turn without doing anything. The SDK silently accepts the config but doesn't actually bypass.
+
+**`maxTurns: 10` is too low.** Agents spend their first 5-6 turns exploring the codebase. Set it to 0 (unlimited) and let the agent decide when it's done.
+
+**Polling interval matters.** Default 30 seconds feels like forever when you're demoing. 5 seconds is responsive enough without hammering the API.
+
+## Symphony vs Hatice
+
+Symphony is Elixir/OTP — BEAM VM, Phoenix LiveView, GenServer supervision trees. Beautiful architecture. Wrong stack for my team.
+
+Hatice is TypeScript — Node.js, Hono for HTTP, Pino for logging, Zod for validation. Same architectural patterns, different runtime. Claude Code Agent SDK instead of Codex JSON-RPC.
+
+What Hatice adds: GitHub Issues support, SSE dashboard (no WebSocket dependency), per-session cost tracking in USD, fine-grained tool control, MCP server tools so agents can query your tracker's API directly.
+
+4,148 lines of source. 328 tests across 30 files. Zero type errors. Every line written by AI agents, guided by humans.
+
+## Should You Use This
+
+If you're already using Claude Code and have a structured tracker workflow — yes. Point it at your backlog. Start with low-risk issues. Watch how agents handle them.
+
+If you're looking for magic — no. Agents still need good specifications. Vague issues produce vague code. The quality of your issue descriptions is the quality of your output.
+
+Hatice doesn't replace engineering judgment. It replaces the typing.
+
+Open source. MIT. [github.com/mksglu/hatice](https://github.com/mksglu/hatice)
+
+---
+
+*Mert Koseoglu, Senior Software Engineer, AI consultant.*
+*[x.com/mksglu](https://x.com/mksglu) · [linkedin.com/in/mksglu](https://linkedin.com/in/mksglu) · [mksg.lu](https://mksg.lu)*
