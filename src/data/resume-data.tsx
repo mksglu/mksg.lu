@@ -281,6 +281,24 @@ export const RESUME_DATA = {
       },
     },
     {
+      title: "browsirai",
+      techStack: [
+        "TypeScript",
+        "MCP Server",
+        "Chrome DevTools Protocol",
+        "Playwright",
+        "CLI",
+        "Cookie Sync",
+      ],
+      description:
+        "MCP server + CLI that connects AI coding agents to your real Chrome via CDP. Cookie sync from your actual browser sessions, daemon architecture that survives crashes, server-side CDP event capture, source inspection (React/Vue/Svelte), pixel diff, and 30 commands for navigation, observation, and actions.",
+      logo: ParabolLogo,
+      link: {
+        label: "github.com/mksglu/browsirai",
+        href: "https://github.com/mksglu/browsirai",
+      },
+    },
+    {
       title: "Workflais",
       techStack: [
         "TypeScript",
