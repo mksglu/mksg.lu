@@ -33,7 +33,7 @@ export async function getContextModeStats(): Promise<ProjectStats> {
       DEFAULTS.githubStars
     ),
     fetchWithFallback<{ downloads: number }>(
-      "https://api.npmjs.org/downloads/point/last-week/context-mode",
+      "https://api.npmjs.org/downloads/point/2025-01-01:2099-12-31/context-mode",
       (d) => d.downloads,
       DEFAULTS.npmDownloads
     ),

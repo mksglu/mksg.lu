@@ -236,7 +236,7 @@ export default async function Page() {
                         {formatStat(stats.npmDownloads)}
                       </div>
                       <div className="text-[11px] font-mono text-muted-foreground mt-0.5 print:text-[9px]">
-                        Weekly Downloads
+                        Total Downloads
                       </div>
                     </div>
                     <div className="w-px bg-border self-stretch" />
