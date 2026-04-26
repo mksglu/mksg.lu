@@ -1,0 +1,177 @@
+---
+title: "Cloudflare Built Code Mode. We Built Think in Code. Same War, Different Front."
+description: "Two independent teams, solving different problems, arrived at the same answer: stop treating the LLM as a data processor. Treat it as a programmer."
+date: "2026-04-04"
+tags: ["Context Mode", "Cloudflare", "Code Mode", "Think in Code", "MCP", "Open Source"]
+linkedinUrl: "https://www.linkedin.com/in/mksglu"
+xUrl: "https://x.com/mksglu"
+published: true
+---
+
+I've been staring at the same problem for months: AI agents burn through their context windows because every tool call dumps raw data into the conversation. Your agent reads a file, that file stays in memory. It reads another. And another. 50 files later, the model forgets what you asked it to do.
+
+Cloudflare just shipped their answer. They call it **Code Mode**.
+
+I shipped mine in context-mode v1.0.64. I call it **Think in Code**.
+
+I'll be honest: Code Mode inspired context-mode from the very beginning. When I first saw what [Sunil Pai](https://x.com/threepointone) and the Cloudflare team were building, the core idea stuck with me — let the LLM write code instead of calling tools one by one. That's where context-mode started. The sandbox execution, the `ctx_execute` tool, the routing engine that intercepts tool calls — all of it traces back to that initial inspiration.
+
+Think in Code is the next step. It takes what Code Mode proved at the API layer and turns it into a mandatory paradigm for coding agents. Not an optional tool. The default way of working.
+
+## The Philosophy First
+
+There's a deeper idea here than "put code in a sandbox." It's about what role the LLM should play.
+
+Right now, most AI coding agents treat the LLM as a data processor. Read this file. Parse this JSON. Count these functions. Filter these errors. The LLM reads the data into its context window and reasons about it in its head.
+
+That's like hiring a senior engineer and asking them to count rows in a spreadsheet. Manually.
+
+The alternative: treat the LLM as a programmer. It doesn't process data — it writes programs that process data. The LLM thinks about what to compute, writes the code, and a sandbox computes it. The LLM never sees the raw data. It only sees the result.
+
+This is the paradigm shift. The LLM should think in code, not in tokens. And both Cloudflare and context-mode arrived at this conclusion from completely different starting points.
+
+## From Inspiration to Paradigm
+
+context-mode was born from Code Mode's idea. The sandbox execution, the FTS5 knowledge base, the routing engine — all of it grew out of that initial insight: code in a sandbox beats raw data in context.
+
+But for months, it was optional. The LLM could choose `ctx_execute` or not. Most of the time, it chose not. It defaulted to calling `Read()` 47 times instead of writing 30 lines of code.
+
+v1.0.64 is where the inspiration became a paradigm. I looked at how Cloudflare handled it. They didn't add execute as tool #2,501. They replaced 2,500 tools with 2. They made the decision for the LLM.
+
+That's what Think in Code does. It's now a mandatory instruction across all 12 platform configs. Every tool description, every routing message, every instruction file says the same thing: *"Your role is to PROGRAM the analysis, not to COMPUTE it."*
+
+context-mode started because of Code Mode. Think in Code exists because Code Mode showed that making the paradigm mandatory is what actually works.
+
+## What Cloudflare Did
+
+[Sunil Pai](https://x.com/threepointone), [Katrina Sokol](https://x.com/whoiskatrin), and the Cloudflare agents team built Code Mode into their MCP server. The insight is simple: instead of the LLM calling tools one at a time, it writes a program that calls all the tools at once.
+
+Their Cloudflare API has 2,500+ endpoints. Exposing each as an MCP tool would cost the agent 60,000+ tokens just to read the tool definitions. Code Mode collapses that to **2 tools** and about **1,000 tokens**. The LLM writes TypeScript, the code runs in a Dynamic Worker (a V8 isolate that spins up in milliseconds), and only `console.log()` output comes back.
+
+N sequential tool calls become 1 code execution. Intermediate results flow through variables in code instead of re-entering the conversation. The LLM's context stays clean.
+
+[Dina Kozlov](https://x.com/dok2001) and the infrastructure team backed this with Dynamic Workers, now in open beta. V8 isolates boot 100x faster than containers. They use 10–100x less memory. The entire Cloudflare Workers platform has run on this technology for 8+ years. It's not new — it's battle-tested. They just opened it up to runtime code generation.
+
+## What We Did
+
+context-mode is an MCP plugin used by 57,800+ developers across 12 platforms. It started as a context window protector: intercept tool output, sandbox it, index it into FTS5, let the agent search instead of read.
+
+That solves the output side. But the input side was still burning tokens.
+
+In v1.0.64, we shipped Think in Code as a mandatory paradigm across all 12 platform instruction files. The rule is one sentence: **when you need to analyze, count, filter, or process data, write code that does it. Don't read raw data into context to process it mentally.**
+
+The instruction we inject into every platform:
+
+```
+THINK IN CODE: When you need to analyze, count, filter, compare, or process
+data, write code that does the work and console.log() only the answer. Don't
+read raw data into context to process mentally. Program the analysis, don't
+compute it in your reasoning. Write robust, pure JavaScript. No npm
+dependencies. Only Node.js built-ins (fs, path, child_process). Always
+try/catch. Node.js and Bun compatible.
+```
+
+## Try It Yourself
+
+Here's a prompt that will burn tokens without Think in Code. Try it on any project:
+
+```
+Read every source file in this project. For each file, count the number of
+functions, classes, and interfaces. Calculate a complexity score per file
+(functions + classes×2 + interfaces×1.5). Rank all files by complexity.
+Show the top 10 most complex files with their scores.
+```
+
+Without Think in Code, the LLM will call `Read()` on every file. Each file enters context. For a 50-file project, that's 500KB+ in your conversation, re-sent on every turn.
+
+With Think in Code (or context-mode's routing), the LLM writes this:
+
+```javascript
+ctx_execute("javascript", `
+const fs = require('fs');
+const path = require('path');
+
+function findFiles(dir) {
+  let results = [];
+  for (const entry of fs.readdirSync(dir, {withFileTypes: true})) {
+    const full = path.join(dir, entry.name);
+    if (entry.name === 'node_modules') continue;
+    if (entry.isDirectory()) results.push(...findFiles(full));
+    else if (entry.name.endsWith('.ts')) results.push(full);
+  }
+  return results;
+}
+
+const files = findFiles('src');
+const results = files.map(f => {
+  const c = fs.readFileSync(f, 'utf8');
+  const fns = (c.match(/function\\s+\\w+/g) || []).length;
+  const cls = (c.match(/class\\s+\\w+/g) || []).length;
+  const ifc = (c.match(/interface\\s+\\w+/g) || []).length;
+  return {
+    file: path.relative('.', f),
+    score: fns + cls * 2 + ifc * 1.5,
+    fns, cls, ifc
+  };
+}).sort((a, b) => b.score - a.score);
+
+results.slice(0, 10).forEach((r, i) =>
+  console.log(
+    (i+1) + '. ' + r.file + ' — ' + r.score +
+    ' (fn:' + r.fns + ' cls:' + r.cls + ' ifc:' + r.ifc + ')'
+  )
+);
+console.log(
+  'Total: ' + files.length + ' files, ' +
+  results.reduce((s, r) => s + r.score, 0) + ' complexity'
+);
+`)
+```
+
+Result: **200 bytes** in context. All 50 files processed locally. The LLM never saw the raw code. It wrote a program that saw it.
+
+## Same Pattern, Different Execution
+
+Code Mode was the direct inspiration. But the execution is our own. The architecture ended up nearly identical.
+
+The core idea is the same: the LLM's job is to program the analysis, not to compute it. Local CPU is free. LLM tokens are expensive. Delegate computation to code.
+
+### Where They Diverge
+
+**Code Mode is server-side.** Your code runs on Cloudflare's edge, in an isolated V8 sandbox with RPC back to the MCP server. It's designed for cloud APIs, where the tools live on remote servers.
+
+**Think in Code is local.** Your code runs on your machine, in a child process, with direct filesystem access. It's designed for coding agents that work with local files, git repos, and shell commands.
+
+**Code Mode collapses the tool definition problem.** 2,500 API endpoints become 2 tools. The agent discovers capabilities through code, not through a giant tool list.
+
+**Think in Code collapses the context flooding problem.** 47 files become 3.6KB. The agent processes data in a sandbox instead of reading it into the conversation to process mentally.
+
+Both solve the same fundamental issue: **LLMs are bad at being computers. They're good at being programmers.**
+
+## The Paradigm, Not the Feature
+
+I keep coming back to this because I think it's important: Think in Code isn't a feature we added. It's a paradigm we adopted. The infrastructure existed for months. What changed is we stopped letting the LLM choose between reading data and writing code. We made the choice for it.
+
+Every routing message now says "Think in Code." Every tool description says "program the analysis, don't compute it." Every platform instruction file — across 12 platforms, from Claude Code to Cursor to Gemini CLI — carries this same rule.
+
+Cloudflare did the same thing with Code Mode. They didn't add execute as an optional tool alongside 2,500 others. They replaced 2,500 tools with 2. They made the paradigm the default.
+
+That's the lesson. The infrastructure is the easy part. The hard part is deciding that this is how things should work, and building everything around that decision.
+
+## Why This Matters
+
+The AI coding tool market is converging on this pattern. When two independent teams — solving different problems, with different constraints — arrive at the same architectural answer, that's worth paying attention to.
+
+The answer is: stop treating the LLM as a data processor. Treat it as a code generator. Let it write programs that do the work. Run those programs in sandboxes. Return only the results.
+
+Cloudflare proved it works at the API layer with 2,500 endpoints collapsed to 2 tools. We proved it works at the coding agent layer with 700KB collapsed to 3.6KB. Your limit lasts 30x longer. Same work. Same results. Fraction of the tokens.
+
+**The LLM should think in code. Not in tokens.**
+
+---
+
+context-mode v1.0.64, with Think in Code across all 12 platforms: [github.com/mksglu/context-mode](https://github.com/mksglu/context-mode)
+
+Cloudflare Code Mode, with Dynamic Workers: [github.com/cloudflare/agents](https://github.com/cloudflare/agents)
+
+Thanks to [Sunil Pai](https://x.com/threepointone), [Katrina Sokol](https://x.com/whoiskatrin), [Matt Carey](https://x.com/mattzcarey), and [Dina Kozlov](https://x.com/dok2001). Code Mode inspired context-mode from day one. Think in Code wouldn't exist without it. Open source works like this: someone builds something, someone else sees it, adapts it to a different problem, pushes it further. Both ecosystems get stronger. That's the whole point.
