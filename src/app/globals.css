@@ -102,6 +102,11 @@ figure[data-rehype-pretty-code-figure] [data-line] {
   padding: 0 0.25rem;
 }
 
+/* Ensure all code blocks have readable text */
+article.prose pre {
+  color: hsl(var(--foreground));
+}
+
 /* Inline code */
 :not(pre) > code {
   border-radius: 0.25rem;
