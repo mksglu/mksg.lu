@@ -87,6 +87,15 @@ figure[data-rehype-pretty-code-figure] pre {
   padding: 1rem;
   font-size: 0.8125rem;
   line-height: 1.7;
+  color: hsl(var(--foreground));
+}
+
+figure[data-rehype-pretty-code-figure] code {
+  color: inherit;
+}
+
+figure[data-rehype-pretty-code-figure] code [data-line] span {
+  color: var(--shiki-light, inherit) !important;
 }
 
 figure[data-rehype-pretty-code-figure] [data-line] {
