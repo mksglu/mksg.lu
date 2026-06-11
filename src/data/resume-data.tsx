@@ -37,6 +37,18 @@ export const RESUME_DATA = {
   },
   work: [
     {
+      company: "Context Mode",
+      link: "https://context-mode.com",
+      badges: ["London Area, United Kingdom", "Remote"],
+      title: "Founder",
+      logo: dt,
+      start: "Mar 2026",
+      end: null,
+      description:
+        "MCP is the protocol. We're the context layer.",
+      bullets: [],
+    },
+    {
       company: "G2i Inc.",
       link: "https://www.linkedin.com/company/g2i-inc",
       badges: ["Miami, Florida, United States", "Remote", "Contract"],
@@ -54,7 +66,7 @@ export const RESUME_DATA = {
       company: "Doğuş Teknoloji",
       link: "https://www.linkedin.com/company/dogus-teknoloji",
       badges: ["Istanbul, Turkey", "Remote", "Contract"],
-      title: "Senior Software Engineering Consultant",
+      title: "Engineering Consultant",
       logo: dt,
       start: "Jan 2024",
       end: "Sep 2025",
