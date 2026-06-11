@@ -8,9 +8,9 @@ export const RESUME_DATA = {
   location: "London Area, United Kingdom",
   locationLink: "https://www.google.com/maps/place/London/",
   about:
-    "Senior SWE (IC) with 10+ YoE building AI-native products and agentic systems.",
+    "Senior SWE (IC) with 12+ YoE building AI-native products and agentic systems.",
   summary:
-    "Senior SWE with 10+ years shipping production systems at scale. Strong IC with hands-on Tech Lead experience—scaled teams, improved DX, and delivered greenfield products for distributed orgs. Currently deep in AI/LLM space: agentic systems, RAG pipelines, tool-use patterns, and edge-native AI. Primary stack: TypeScript, Node.js, React/RN, Next.js, Cloudflare. Exploring Rust and Go.",
+    "Senior SWE with 12+ years shipping production systems at scale. Strong IC with hands-on Tech Lead experience—scaled teams, improved DX, and delivered greenfield products for distributed orgs. Currently deep in AI/LLM space: agentic systems, RAG pipelines, tool-use patterns, and edge-native AI. Primary stack: TypeScript, Node.js, React/RN, Next.js, Cloudflare. Exploring Rust and Go.",
   availability:
     "Now open to consulting opportunities in AI, full-stack development, and technical leadership.",
   avatarUrl: Mert,
@@ -37,19 +37,17 @@ export const RESUME_DATA = {
   },
   work: [
     {
-      company: "Mert Koseoglu, Software Forge",
-      link: "https://mksg.lu",
-      badges: ["London Area, United Kingdom", "Remote"],
-      title: "Senior Software Engineering Consultant",
+      company: "G2i Inc.",
+      link: "https://www.linkedin.com/company/g2i-inc",
+      badges: ["Miami, Florida, United States", "Remote", "Contract"],
+      title: "Engineering Consultant",
       logo: dt,
-      start: "Sep 2025",
-      end: null,
+      start: "Dec 2025",
+      end: "Feb 2026",
       description:
-        "Mert Köseoğlu, Software Forge is a software consultancy providing strategic guidance, AI-native architectures, and engineering solutions.",
+        "AI engineering company helping frontier labs, enterprises, and high-growth startups hire, train, and ship AI systems.",
       bullets: [
-        "Stealth Startup: Architecting AI plugin for analytics platform (1B+ daily events) enabling natural language data queries via multi-tenant RAG with Cloudflare Workers AI and streaming LLM responses.",
-        "Stealth Startup: Reduced QA cycle time by 80% (from 2 days to 4 hours) by building autonomous testing infrastructure with browser-use agents, Playwright MCP, and Claude computer-use. Client: OpenAI.",
-        "Stealth Startup: Achieved sub-100ms agent response times (down from 800ms) by implementing Cloudflare-native architecture with MCP protocol orchestration for AI shopping workflows.",
+        "Reduced QA cycle time by 80% (from 2 days to 4 hours) on an OpenAI internal project by building autonomous testing infrastructure with browser-use agents, Playwright MCP, and Claude computer-use.",
       ],
     },
     {
